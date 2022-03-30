@@ -7,7 +7,7 @@ import java.io.Closeable
 import java.time.Duration
 import java.util.*
 
-abstract class OsnovaAPI(token: String): Closeable {
+abstract class OsnovaAPI(token: String) : Closeable {
     abstract val serverURL: String
 
     private val rateLimitConfig = RateLimiterConfig
@@ -27,4 +27,6 @@ abstract class OsnovaAPI(token: String): Closeable {
         client.close()
         rateLimiterRegistry.remove(rateLimitID)
     }
+
+
 }
