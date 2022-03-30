@@ -35,9 +35,10 @@ class HttpClientAdapter(override val client: HttpClient, rateLimitConfig: RateLi
     override fun isSupported(capability: HttpClientEngineCapability<*>): Boolean = client.isSupported(capability)
 
     override fun config(block: HttpClientConfig<*>.() -> Unit): HttpClient = client.config(block)
-    suspend inline fun <reified T : Any> request(block: HttpRequestBuilder.() -> Unit): T {
-        return client.request<T>(block)
-    }
+
+//    suspend inline fun <reified T : Any> request(block: HttpRequestBuilder.() -> Unit): T {
+//        return client.request<T>(block)
+//    }
 
     override fun toString(): String = client.toString()
 
