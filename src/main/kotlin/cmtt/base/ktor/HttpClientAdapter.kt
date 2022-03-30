@@ -12,14 +12,7 @@ import java.time.Duration
 import java.util.*
 import kotlin.coroutines.CoroutineContext
 
-class HttpClientAdapter(override val client: HttpClient): IHttpClient{
-    private val rateLimitConfig = RateLimiterConfig
-        .custom()
-        .limitRefreshPeriod(Duration.ofSeconds(1))
-        .limitForPeriod(3)
-        .timeoutDuration(Duration.ofHours(100))
-        .build()
-
+class HttpClientAdapter(override val client: HttpClient, rateLimitConfig: RateLimiterConfig): IHttpClient{
     private val rateLimitID = UUID.randomUUID().toString()
     private val rateLimiterRegistry = RateLimiterRegistry.of(rateLimitConfig)
     override val rateLimiter: RateLimiter = rateLimiterRegistry.rateLimiter(rateLimitID)
