@@ -1,6 +1,7 @@
 package cmtt.base.api
 
-import io.ktor.client.*
+import cmtt.base.ktor.IHttpClient
 
-class AuthAPI(private val httpClient: HttpClient) {
+class AuthAPI(private val httpClient: IHttpClient) {
+
 }
