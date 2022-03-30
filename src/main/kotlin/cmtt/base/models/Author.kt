@@ -8,19 +8,54 @@
  */
 package cmtt.base.models
 
-import cmtt.base.models.entry.Entry
 import kotlinx.serialization.json.JsonNames
 
 /**
  * 
  *
- * @param result 
+ * @param id 
+ * @param created 
+ * @param firstName 
+ * @param lastName 
+ * @param name 
+ * @param gender 
+ * @param url 
+ * @param avatarUrl 
+ * @param karma 
+ * @param socialAccounts 
  */
 
-data class TimelineResponse (
+data class Author (
 
-    @JsonNames("result")
-    val result: List<Entry>? = null
+    @JsonNames("id")
+    val id: java.math.BigDecimal? = null,
+
+    @JsonNames("created")
+    val created: java.math.BigDecimal? = null,
+
+    @JsonNames("first_name")
+    val firstName: String? = null,
+
+    @JsonNames("last_name")
+    val lastName: String? = null,
+
+    @JsonNames("name")
+    val name: String? = null,
+
+    @JsonNames("gender")
+    val gender: Int? = null,
+
+    @JsonNames("url")
+    val url: String? = null,
+
+    @JsonNames("avatar_url")
+    val avatarUrl: String? = null,
+
+    @JsonNames("karma")
+    val karma: Int? = null,
+
+    @JsonNames("social_accounts")
+    val socialAccounts: List<SocialAccount>? = null
 
 )
 

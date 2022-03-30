@@ -8,19 +8,50 @@
  */
 package cmtt.base.models
 
-import cmtt.base.models.entry.Entry
 import kotlinx.serialization.json.JsonNames
 
 /**
  * 
  *
- * @param result 
+ * @param type Тип медиафайла:   * `1` - TYPE_IMAGE   * `2` - TYPE_VIDEO 
+ * @param imageUrl 
+ * @param iframeUrl 
+ * @param service 
+ * @param additionalData 
+ * @param propertySize 
  */
 
-data class TimelineResponse (
+data class Medium (
 
-    @JsonNames("result")
-    val result: List<Entry>? = null
+    /* Тип медиафайла:   * `1` - TYPE_IMAGE   * `2` - TYPE_VIDEO  */
+    @JsonNames("type")
+    val type: Medium.Type? = null,
 
-)
+    @JsonNames("imageUrl")
+    val imageUrl: String? = null,
+
+    @JsonNames("iframeUrl")
+    val iframeUrl: String? = null,
+
+    @JsonNames("service")
+    val service: String? = null,
+
+    @JsonNames("additionalData")
+    val additionalData: AdditionalData? = null,
+
+    @JsonNames("size")
+    val propertySize: Size? = null
+
+) {
+
+    /**
+     * Тип медиафайла:   * `1` - TYPE_IMAGE   * `2` - TYPE_VIDEO 
+     *
+     * Values: _1,_2
+     */
+    enum class Type(val value: Int) {
+        @JsonNames("1") _1(1),
+        @JsonNames("2") _2(2);
+    }
+}
 

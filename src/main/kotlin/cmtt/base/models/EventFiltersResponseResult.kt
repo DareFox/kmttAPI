@@ -8,19 +8,22 @@
  */
 package cmtt.base.models
 
-import cmtt.base.models.entry.Entry
 import kotlinx.serialization.json.JsonNames
 
 /**
  * 
  *
- * @param result 
+ * @param cities 
+ * @param specializations 
  */
 
-data class TimelineResponse (
+data class EventFiltersResponseResult (
 
-    @JsonNames("result")
-    val result: List<Entry>? = null
+    @JsonNames("cities")
+    val cities: List<JobOrEventFilter>? = null,
+
+    @JsonNames("specializations")
+    val specializations: List<JobOrEventFilter>? = null
 
 )
 

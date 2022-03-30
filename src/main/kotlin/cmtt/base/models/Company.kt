@@ -8,19 +8,35 @@
  */
 package cmtt.base.models
 
-import cmtt.base.models.entry.Entry
+
 import kotlinx.serialization.json.JsonNames
 
 /**
  * 
  *
- * @param result 
+ * @param id 
+ * @param name 
+ * @param logo 
+ * @param url 
+ * @param isVerified 
  */
 
-data class TimelineResponse (
+data class Company (
 
-    @JsonNames("result")
-    val result: List<Entry>? = null
+    @JsonNames("id")
+    val id: java.math.BigDecimal? = null,
+
+    @JsonNames("name")
+    val name: String? = null,
+
+    @JsonNames("logo")
+    val logo: String? = null,
+
+    @JsonNames("url")
+    val url: String? = null,
+
+    @JsonNames("is_verified")
+    val isVerified: Boolean? = null
 
 )
 

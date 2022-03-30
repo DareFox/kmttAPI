@@ -6,21 +6,35 @@
  * The version of the OpenAPI document: 1.9.0
  * Contact: support@cmtt.ru
  */
-package cmtt.base.models
+package cmtt.base.models.entry
 
-import cmtt.base.models.entry.Entry
+
 import kotlinx.serialization.json.JsonNames
 
 /**
  * 
  *
- * @param result 
+ * @param type Тип блока
+ * @param `data` информация о блоке
+ * @param cover 
+ * @param anchor 
  */
 
-data class TimelineResponse (
+data class EntryBlock (
 
-    @JsonNames("result")
-    val result: List<Entry>? = null
+    /* Тип блока */
+    @JsonNames("type")
+    val type: String? = null,
+
+    /* информация о блоке */
+    @JsonNames("data")
+    val `data`: Any? = null,
+
+    @JsonNames("cover")
+    val cover: Boolean? = null,
+
+    @JsonNames("anchor")
+    val anchor: String? = null
 
 )
 

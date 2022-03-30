@@ -8,19 +8,38 @@
  */
 package cmtt.base.models
 
-import cmtt.base.models.entry.Entry
 import kotlinx.serialization.json.JsonNames
 
 /**
  * 
  *
- * @param result 
+ * @param type 
+ * @param additionalData 
+ * @param thumbnailUrl 
+ * @param url 
+ * @param propertySize 
+ * @param sizeSimple 
  */
 
-data class TimelineResponse (
+data class Cover (
 
-    @JsonNames("result")
-    val result: List<Entry>? = null
+    @JsonNames("type")
+    val type: Int? = null,
+
+    @JsonNames("additionalData")
+    val additionalData: AdditionalData? = null,
+
+    @JsonNames("thumbnailUrl")
+    val thumbnailUrl: String? = null,
+
+    @JsonNames("url")
+    val url: String? = null,
+
+    @JsonNames("size")
+    val propertySize: Size? = null,
+
+    @JsonNames("sizeSimple")
+    val sizeSimple: String? = null
 
 )
 

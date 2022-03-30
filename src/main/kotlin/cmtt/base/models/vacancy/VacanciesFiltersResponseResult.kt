@@ -6,21 +6,33 @@
  * The version of the OpenAPI document: 1.9.0
  * Contact: support@cmtt.ru
  */
-package cmtt.base.models
+package cmtt.base.models.vacancy
 
-import cmtt.base.models.entry.Entry
+import cmtt.base.models.JobOrEventFilter
 import kotlinx.serialization.json.JsonNames
 
 /**
  * 
  *
- * @param result 
+ * @param area 
+ * @param cities 
+ * @param schedule 
+ * @param specializations 
  */
 
-data class TimelineResponse (
+data class VacanciesFiltersResponseResult (
 
-    @JsonNames("result")
-    val result: List<Entry>? = null
+    @JsonNames("area")
+    val area: List<JobOrEventFilter>? = null,
+
+    @JsonNames("cities")
+    val cities: List<JobOrEventFilter>? = null,
+
+    @JsonNames("schedule")
+    val schedule: List<JobOrEventFilter>? = null,
+
+    @JsonNames("specializations")
+    val specializations: List<JobOrEventFilter>? = null
 
 )
 

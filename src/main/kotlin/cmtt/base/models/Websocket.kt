@@ -8,19 +8,54 @@
  */
 package cmtt.base.models
 
-import cmtt.base.models.entry.Entry
+
 import kotlinx.serialization.json.JsonNames
 
 /**
  * 
  *
- * @param result 
+ * @param type тип события
+ * @param contentId id статьи
+ * @param count 
+ * @param id id контента
+ * @param state 
+ * @param userHash хэш пользователя, для сравнения с авторизованным
  */
 
-data class TimelineResponse (
+data class Websocket (
 
-    @JsonNames("result")
-    val result: List<Entry>? = null
+    /* тип события */
+    @JsonNames("type")
+    val type: Websocket.Type? = null,
 
-)
+    /* id статьи */
+    @JsonNames("content_id")
+    val contentId: java.math.BigDecimal? = null,
+
+    @JsonNames("count")
+    val count: Int? = null,
+
+    /* id контента */
+    @JsonNames("id")
+    val id: java.math.BigDecimal? = null,
+
+    @JsonNames("state")
+    val state: Int? = null,
+
+    /* хэш пользователя, для сравнения с авторизованным */
+    @JsonNames("user_hash")
+    val userHash: String? = null
+
+) {
+
+    /**
+     * тип события
+     *
+     * Values: commentVoted,contentVoted
+     */
+    enum class Type(val value: String) {
+        @JsonNames("comment voted") commentVoted("comment voted"),
+        @JsonNames("content voted") contentVoted("content voted");
+    }
+}
 

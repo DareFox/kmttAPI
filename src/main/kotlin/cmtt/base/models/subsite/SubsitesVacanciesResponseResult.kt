@@ -6,21 +6,26 @@
  * The version of the OpenAPI document: 1.9.0
  * Contact: support@cmtt.ru
  */
-package cmtt.base.models
+package cmtt.base.models.subsite
 
-import cmtt.base.models.entry.Entry
+import cmtt.base.models.vacancy.Vacancy
 import kotlinx.serialization.json.JsonNames
 
 /**
  * 
  *
- * @param result 
+ * @param items 
+ * @param lastId ID последнего элемента для подгрузки
  */
 
-data class TimelineResponse (
+data class SubsitesVacanciesResponseResult (
 
-    @JsonNames("result")
-    val result: List<Entry>? = null
+    @JsonNames("items")
+    val items: List<Vacancy>? = null,
+
+    /* ID последнего элемента для подгрузки */
+    @JsonNames("last_id")
+    val lastId: java.math.BigDecimal? = null
 
 )
 

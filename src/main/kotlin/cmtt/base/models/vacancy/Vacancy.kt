@@ -6,21 +6,77 @@
  * The version of the OpenAPI document: 1.9.0
  * Contact: support@cmtt.ru
  */
-package cmtt.base.models
+package cmtt.base.models.vacancy
 
-import cmtt.base.models.entry.Entry
+import cmtt.base.models.Company
 import kotlinx.serialization.json.JsonNames
 
 /**
  * 
  *
- * @param result 
+ * @param id 
+ * @param title 
+ * @param salaryTo 
+ * @param salaryFrom 
+ * @param salaryText 
+ * @param area 
+ * @param areaText 
+ * @param schedule 
+ * @param scheduleText 
+ * @param entryId 
+ * @param cityId 
+ * @param cityName 
+ * @param favoritesCount 
+ * @param isFavorited 
+ * @param company 
  */
 
-data class TimelineResponse (
+data class Vacancy (
 
-    @JsonNames("result")
-    val result: List<Entry>? = null
+    @JsonNames("id")
+    val id: java.math.BigDecimal? = null,
+
+    @JsonNames("title")
+    val title: String? = null,
+
+    @JsonNames("salary_to")
+    val salaryTo: String? = null,
+
+    @JsonNames("salary_from")
+    val salaryFrom: String? = null,
+
+    @JsonNames("salary_text")
+    val salaryText: String? = null,
+
+    @JsonNames("area")
+    val area: java.math.BigDecimal? = null,
+
+    @JsonNames("area_text")
+    val areaText: String? = null,
+
+    @JsonNames("schedule")
+    val schedule: Int? = null,
+
+    @JsonNames("schedule_text")
+    val scheduleText: String? = null,
+
+    @JsonNames("entry_id")
+    val entryId: java.math.BigDecimal? = null,
+
+    @JsonNames("city_id")
+    val cityId: java.math.BigDecimal? = null,
+
+    @JsonNames("city_name")
+    val cityName: String? = null,
+
+    @JsonNames("favoritesCount")
+    val favoritesCount: java.math.BigDecimal? = null,
+
+    @JsonNames("isFavorited")
+    val isFavorited: Boolean? = null,
+
+    @JsonNames("company")
+    val company: Company? = null
 
 )
 

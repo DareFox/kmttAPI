@@ -8,19 +8,23 @@
  */
 package cmtt.base.models
 
-import cmtt.base.models.entry.Entry
 import kotlinx.serialization.json.JsonNames
 
 /**
  * 
  *
- * @param result 
+ * @param items 
+ * @param lastId ID последнего элемента для подгрузки
  */
 
-data class TimelineResponse (
+data class EventsResponseResult (
 
-    @JsonNames("result")
-    val result: List<Entry>? = null
+    @JsonNames("items")
+    val items: List<Event>? = null,
+
+    /* ID последнего элемента для подгрузки */
+    @JsonNames("last_id")
+    val lastId: java.math.BigDecimal? = null
 
 )
 

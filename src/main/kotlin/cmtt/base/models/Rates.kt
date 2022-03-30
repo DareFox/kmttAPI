@@ -8,19 +8,30 @@
  */
 package cmtt.base.models
 
-import cmtt.base.models.entry.Entry
 import kotlinx.serialization.json.JsonNames
 
 /**
  * 
  *
- * @param result 
+ * @param usd 
+ * @param eur 
+ * @param btc 
+ * @param eth 
  */
 
-data class TimelineResponse (
+data class Rates (
 
-    @JsonNames("result")
-    val result: List<Entry>? = null
+    @JsonNames("usd")
+    val usd: Rate? = null,
+
+    @JsonNames("eur")
+    val eur: Rate? = null,
+
+    @JsonNames("btc")
+    val btc: Rate? = null,
+
+    @JsonNames("eth")
+    val eth: Rate? = null
 
 )
 

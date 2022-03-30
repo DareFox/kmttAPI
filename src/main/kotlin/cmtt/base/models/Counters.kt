@@ -8,19 +8,27 @@
  */
 package cmtt.base.models
 
-import cmtt.base.models.entry.Entry
+
 import kotlinx.serialization.json.JsonNames
 
 /**
  * 
  *
- * @param result 
+ * @param propertyEntries 
+ * @param comments 
+ * @param favorites 
  */
 
-data class TimelineResponse (
+data class Counters (
 
-    @JsonNames("result")
-    val result: List<Entry>? = null
+    @JsonNames("entries")
+    val propertyEntries: java.math.BigDecimal? = null,
+
+    @JsonNames("comments")
+    val comments: java.math.BigDecimal? = null,
+
+    @JsonNames("favorites")
+    val favorites: java.math.BigDecimal? = null
 
 )
 

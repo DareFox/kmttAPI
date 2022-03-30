@@ -8,19 +8,35 @@
  */
 package cmtt.base.models
 
-import cmtt.base.models.entry.Entry
 import kotlinx.serialization.json.JsonNames
 
 /**
  * 
  *
- * @param result 
+ * @param type Тип контента
+ * @param `data` 
  */
 
-data class TimelineResponse (
+data class LocateResponseResult (
 
-    @JsonNames("result")
-    val result: List<Entry>? = null
+    /* Тип контента */
+    @JsonNames("type")
+    val type: LocateResponseResult.Type? = null,
 
-)
+    @JsonNames("data")
+    val `data`: OneOfLessThanEntryCommaSubsiteGreaterThan? = null
+
+) {
+
+    /**
+     * Тип контента
+     *
+     * Values: user,entry,section
+     */
+    enum class Type(val value: String) {
+        @JsonNames("user") user("user"),
+        @JsonNames("entry") entry("entry"),
+        @JsonNames("section") section("section");
+    }
+}
 

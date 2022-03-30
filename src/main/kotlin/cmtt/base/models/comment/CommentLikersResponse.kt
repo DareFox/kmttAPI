@@ -6,21 +6,22 @@
  * The version of the OpenAPI document: 1.9.0
  * Contact: support@cmtt.ru
  */
-package cmtt.base.models
+package cmtt.base.models.comment
 
-import cmtt.base.models.entry.Entry
+
 import kotlinx.serialization.json.JsonNames
 
 /**
  * 
  *
- * @param result 
+ * @param result Hashmap Id пользователя - объект Liker
  */
 
-data class TimelineResponse (
+data class CommentLikersResponse (
 
+    /* Hashmap Id пользователя - объект Liker */
     @JsonNames("result")
-    val result: List<Entry>? = null
+    val result: Any? = null
 
 )
 

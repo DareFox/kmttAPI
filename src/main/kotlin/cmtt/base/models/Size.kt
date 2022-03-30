@@ -8,19 +8,27 @@
  */
 package cmtt.base.models
 
-import cmtt.base.models.entry.Entry
+
 import kotlinx.serialization.json.JsonNames
 
 /**
  * 
  *
- * @param result 
+ * @param width 
+ * @param height 
+ * @param ratio 
  */
 
-data class TimelineResponse (
+data class Size (
 
-    @JsonNames("result")
-    val result: List<Entry>? = null
+    @JsonNames("width")
+    val width: java.math.BigDecimal? = null,
+
+    @JsonNames("height")
+    val height: java.math.BigDecimal? = null,
+
+    @JsonNames("ratio")
+    val ratio: java.math.BigDecimal? = null
 
 )
 

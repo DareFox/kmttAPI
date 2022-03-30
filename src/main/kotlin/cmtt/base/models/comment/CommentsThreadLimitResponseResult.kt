@@ -6,21 +6,24 @@
  * The version of the OpenAPI document: 1.9.0
  * Contact: support@cmtt.ru
  */
-package cmtt.base.models
+package cmtt.base.models.comment
 
-import cmtt.base.models.entry.Entry
 import kotlinx.serialization.json.JsonNames
 
 /**
  * 
  *
- * @param result 
+ * @param items 
+ * @param rootLoadMore 
  */
 
-data class TimelineResponse (
+data class CommentsThreadLimitResponseResult (
 
-    @JsonNames("result")
-    val result: List<Entry>? = null
+    @JsonNames("items")
+    val items: List<Comment>? = null,
+
+    @JsonNames("root_load_more")
+    val rootLoadMore: CommentsLoadMore? = null
 
 )
 

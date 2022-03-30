@@ -8,7 +8,6 @@
  */
 package cmtt.base.models
 
-import cmtt.base.models.entry.Entry
 import kotlinx.serialization.json.JsonNames
 
 /**
@@ -17,10 +16,10 @@ import kotlinx.serialization.json.JsonNames
  * @param result 
  */
 
-data class TimelineResponse (
+data class SaveAvatarResponse (
 
     @JsonNames("result")
-    val result: List<Entry>? = null
+    val result: SaveAvatarResponseResult? = null
 
 )
 

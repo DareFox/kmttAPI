@@ -8,19 +8,46 @@
  */
 package cmtt.base.models
 
-import cmtt.base.models.entry.Entry
 import kotlinx.serialization.json.JsonNames
 
 /**
  * 
  *
- * @param result 
+ * @param id 
+ * @param text 
+ * @param user 
+ * @param retweetCount 
+ * @param favoriteCount 
+ * @param hasMedia 
+ * @param media 
+ * @param createdAt 
  */
 
-data class TimelineResponse (
+data class Tweet (
 
-    @JsonNames("result")
-    val result: List<Entry>? = null
+    @JsonNames("id")
+    val id: String? = null,
+
+    @JsonNames("text")
+    val text: String? = null,
+
+    @JsonNames("user")
+    val user: TweetUser? = null,
+
+    @JsonNames("retweet_count")
+    val retweetCount: java.math.BigDecimal? = null,
+
+    @JsonNames("favorite_count")
+    val favoriteCount: java.math.BigDecimal? = null,
+
+    @JsonNames("has_media")
+    val hasMedia: Boolean? = null,
+
+    @JsonNames("media")
+    val media: List<TweetMedium>? = null,
+
+    @JsonNames("created_at")
+    val createdAt: java.math.BigDecimal? = null
 
 )
 

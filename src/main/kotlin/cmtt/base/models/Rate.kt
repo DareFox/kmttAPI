@@ -8,19 +8,27 @@
  */
 package cmtt.base.models
 
-import cmtt.base.models.entry.Entry
+
 import kotlinx.serialization.json.JsonNames
 
 /**
  * 
  *
- * @param result 
+ * @param rate 
+ * @param change 
+ * @param sym 
  */
 
-data class TimelineResponse (
+data class Rate (
 
-    @JsonNames("result")
-    val result: List<Entry>? = null
+    @JsonNames("rate")
+    val rate: String? = null,
+
+    @JsonNames("change")
+    val change: java.math.BigDecimal? = null,
+
+    @JsonNames("sym")
+    val sym: String? = null
 
 )
 

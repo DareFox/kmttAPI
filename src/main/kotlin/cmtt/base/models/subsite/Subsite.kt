@@ -6,21 +6,115 @@
  * The version of the OpenAPI document: 1.9.0
  * Contact: support@cmtt.ru
  */
-package cmtt.base.models
+package cmtt.base.models.subsite
 
-import cmtt.base.models.entry.Entry
+import cmtt.base.models.AdvancedAccess
+import cmtt.base.models.Counters
+import cmtt.base.models.SocialAccount
 import kotlinx.serialization.json.JsonNames
 
 /**
  * 
  *
- * @param result 
+ * @param id 
+ * @param url 
+ * @param type 
+ * @param name 
+ * @param description 
+ * @param avatarUrl Аватарка профиля
+ * @param cover 
+ * @param isSubscribed 
+ * @param isVerified 
+ * @param isUnsubscribable 
+ * @param subscribersCount 
+ * @param commentsCount 
+ * @param entriesCount 
+ * @param vacanciesCount 
+ * @param created 
+ * @param createdRFC 
+ * @param karma 
+ * @param socialAccounts Список прикрепленных аккаунтов
+ * @param pushTopic Личный топик пользователя в Firebase Messaging
+ * @param advancedAccess 
+ * @param counters 
+ * @param userHash Хеш ID пользователя. Используется для сравнения данных, где ID захеширован
+ * @param contacts 
  */
 
-data class TimelineResponse (
+data class Subsite (
 
-    @JsonNames("result")
-    val result: List<Entry>? = null
+    @JsonNames("id")
+    val id: java.math.BigDecimal? = null,
+
+    @JsonNames("url")
+    val url: String? = null,
+
+    @JsonNames("type")
+    val type: java.math.BigDecimal? = null,
+
+    @JsonNames("name")
+    val name: String? = null,
+
+    @JsonNames("description")
+    val description: String? = null,
+
+    /* Аватарка профиля */
+    @JsonNames("avatar_url")
+    val avatarUrl: String? = null,
+
+    @JsonNames("cover")
+    val cover: SubsiteCover? = null,
+
+    @JsonNames("is_subscribed")
+    val isSubscribed: Boolean? = null,
+
+    @JsonNames("is_verified")
+    val isVerified: Boolean? = null,
+
+    @JsonNames("is_unsubscribable")
+    val isUnsubscribable: Boolean? = null,
+
+    @JsonNames("subscribers_count")
+    val subscribersCount: Int? = null,
+
+    @JsonNames("comments_count")
+    val commentsCount: Int? = null,
+
+    @JsonNames("entries_count")
+    val entriesCount: Int? = null,
+
+    @JsonNames("vacancies_count")
+    val vacanciesCount: Int? = null,
+
+    @JsonNames("created")
+    val created: java.math.BigDecimal? = null,
+
+    @JsonNames("createdRFC")
+    val createdRFC: String? = null,
+
+    @JsonNames("karma")
+    val karma: java.math.BigDecimal? = null,
+
+    /* Список прикрепленных аккаунтов */
+    @JsonNames("social_accounts")
+    val socialAccounts: List<SocialAccount>? = null,
+
+    /* Личный топик пользователя в Firebase Messaging */
+    @JsonNames("push_topic")
+    val pushTopic: String? = null,
+
+    @JsonNames("advanced_access")
+    val advancedAccess: AdvancedAccess? = null,
+
+    @JsonNames("counters")
+    val counters: Counters? = null,
+
+    /* Хеш ID пользователя. Используется для сравнения данных, где ID захеширован */
+    @JsonNames("user_hash")
+    val userHash: String? = null,
+
+    @JsonNames("contacts")
+    val contacts: SubsiteContacts? = null
 
 )
 

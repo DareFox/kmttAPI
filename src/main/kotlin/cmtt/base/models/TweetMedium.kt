@@ -8,19 +8,39 @@
  */
 package cmtt.base.models
 
-import cmtt.base.models.entry.Entry
+
 import kotlinx.serialization.json.JsonNames
 
 /**
  * 
  *
- * @param result 
+ * @param type 
+ * @param thumbnailUrl 
+ * @param mediaUrl 
+ * @param thumbnailWidth 
+ * @param thumbnailHeight 
+ * @param ratio 
  */
 
-data class TimelineResponse (
+data class TweetMedium (
 
-    @JsonNames("result")
-    val result: List<Entry>? = null
+    @JsonNames("type")
+    val type: java.math.BigDecimal? = null,
+
+    @JsonNames("thumbnail_url")
+    val thumbnailUrl: String? = null,
+
+    @JsonNames("media_url")
+    val mediaUrl: String? = null,
+
+    @JsonNames("thumbnail_width")
+    val thumbnailWidth: java.math.BigDecimal? = null,
+
+    @JsonNames("thumbnail_height")
+    val thumbnailHeight: java.math.BigDecimal? = null,
+
+    @JsonNames("ratio")
+    val ratio: java.math.BigDecimal? = null
 
 )
 

@@ -5,22 +5,24 @@
  *
  * The version of the OpenAPI document: 1.9.0
  * Contact: support@cmtt.ru
- */
-package cmtt.base.models
+ *
 
-import cmtt.base.models.entry.Entry
+ */
+package cmtt.base.models.entry
+
+import cmtt.base.models.subsite.Subsite
 import kotlinx.serialization.json.JsonNames
 
 /**
  * 
  *
- * @param result 
+ * @param author 
  */
 
-data class TimelineResponse (
+data class EntryRepost (
 
-    @JsonNames("result")
-    val result: List<Entry>? = null
+    @JsonNames("author")
+    val author: Subsite? = null
 
 )
 

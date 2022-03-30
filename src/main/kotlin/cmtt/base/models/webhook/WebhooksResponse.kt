@@ -6,9 +6,9 @@
  * The version of the OpenAPI document: 1.9.0
  * Contact: support@cmtt.ru
  */
-package cmtt.base.models
+package cmtt.base.models.webhook
 
-import cmtt.base.models.entry.Entry
+import cmtt.base.models.Watcher
 import kotlinx.serialization.json.JsonNames
 
 /**
@@ -17,10 +17,10 @@ import kotlinx.serialization.json.JsonNames
  * @param result 
  */
 
-data class TimelineResponse (
+data class WebhooksResponse (
 
     @JsonNames("result")
-    val result: List<Entry>? = null
+    val result: List<Watcher>? = null
 
 )
 

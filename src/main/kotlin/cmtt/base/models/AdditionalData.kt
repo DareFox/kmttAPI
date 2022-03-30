@@ -5,22 +5,56 @@
  *
  * The version of the OpenAPI document: 1.9.0
  * Contact: support@cmtt.ru
+ *
+
  */
 package cmtt.base.models
 
-import cmtt.base.models.entry.Entry
+
 import kotlinx.serialization.json.JsonNames
 
 /**
  * 
  *
- * @param result 
+ * @param type 
+ * @param url 
+ * @param propertySize 
+ * @param uuid 
+ * @param duration 
+ * @param hasAudio 
  */
 
-data class TimelineResponse (
+data class AdditionalData (
 
-    @JsonNames("result")
-    val result: List<Entry>? = null
+    @JsonNames("type")
+    val type: AdditionalData.Type? = null,
 
-)
+    @JsonNames("url")
+    val url: String? = null,
+
+    @JsonNames("size")
+    val propertySize: java.math.BigDecimal? = null,
+
+    @JsonNames("uuid")
+    val uuid: String? = null,
+
+    @JsonNames("duration")
+    val duration: java.math.BigDecimal? = null,
+
+    @JsonNames("hasAudio")
+    val hasAudio: Boolean? = null
+
+) {
+
+    /**
+     * 
+     *
+     * Values: gif,jpg,png
+     */
+    enum class Type(val value: String) {
+        @JsonNames("gif") gif("gif"),
+        @JsonNames("jpg") jpg("jpg"),
+        @JsonNames("png") png("png");
+    }
+}
 

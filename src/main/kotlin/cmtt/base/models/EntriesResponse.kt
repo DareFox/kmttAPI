@@ -17,7 +17,7 @@ import kotlinx.serialization.json.JsonNames
  * @param result 
  */
 
-data class TimelineResponse (
+data class EntriesResponse (
 
     @JsonNames("result")
     val result: List<Entry>? = null

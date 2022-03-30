@@ -8,19 +8,38 @@
  */
 package cmtt.base.models
 
-import cmtt.base.models.entry.Entry
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
+ * Список разраешений
  *
- * @param result 
+ * @param isNeedsAdvancedAccess 
+ * @param actions 
+ * @param dtfSubscription 
+ * @param tvSubscription 
+ * @param vcSubscription 
+ * @param hash 
  */
 
-data class TimelineResponse (
+data class AdvancedAccess (
 
-    @JsonNames("result")
-    val result: List<Entry>? = null
+    @JsonNames("is_needs_advanced_access")
+    val isNeedsAdvancedAccess: Boolean? = null,
+
+    @JsonNames("actions")
+    val actions: AdvancedAccessActions? = null,
+
+    @JsonNames("dtf_subscription")
+    val dtfSubscription: Subscription? = null,
+
+    @JsonNames("tv_subscription")
+    val tvSubscription: Subscription? = null,
+
+    @JsonNames("vc_subscription")
+    val vcSubscription: Subscription? = null,
+
+    @JsonNames("hash")
+    val hash: String? = null
 
 )
 

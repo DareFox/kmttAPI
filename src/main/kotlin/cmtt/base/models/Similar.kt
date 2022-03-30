@@ -8,19 +8,35 @@
  */
 package cmtt.base.models
 
-import cmtt.base.models.entry.Entry
+
 import kotlinx.serialization.json.JsonNames
 
 /**
  * 
  *
- * @param result 
+ * @param id 
+ * @param title 
+ * @param url 
+ * @param date 
+ * @param dateRFC 
  */
 
-data class TimelineResponse (
+data class Similar (
 
-    @JsonNames("result")
-    val result: List<Entry>? = null
+    @JsonNames("id")
+    val id: java.math.BigDecimal? = null,
+
+    @JsonNames("title")
+    val title: java.math.BigDecimal? = null,
+
+    @JsonNames("url")
+    val url: java.math.BigDecimal? = null,
+
+    @JsonNames("date")
+    val date: java.math.BigDecimal? = null,
+
+    @JsonNames("dateRFC")
+    val dateRFC: java.math.BigDecimal? = null
 
 )
 

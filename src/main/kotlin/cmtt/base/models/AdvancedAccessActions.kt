@@ -8,19 +8,23 @@
  */
 package cmtt.base.models
 
-import cmtt.base.models.entry.Entry
+
 import kotlinx.serialization.json.JsonNames
 
 /**
  * 
  *
- * @param result 
+ * @param readComments 
+ * @param writeComments 
  */
 
-data class TimelineResponse (
+data class AdvancedAccessActions (
 
-    @JsonNames("result")
-    val result: List<Entry>? = null
+    @JsonNames("read_comments")
+    val readComments: Boolean? = null,
+
+    @JsonNames("write_comments")
+    val writeComments: Boolean? = null
 
 )
 

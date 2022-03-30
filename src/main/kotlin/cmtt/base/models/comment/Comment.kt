@@ -6,21 +6,94 @@
  * The version of the OpenAPI document: 1.9.0
  * Contact: support@cmtt.ru
  */
-package cmtt.base.models
+package cmtt.base.models.comment
 
+import cmtt.base.models.attach.Attach
 import cmtt.base.models.entry.Entry
+import cmtt.base.models.*
 import kotlinx.serialization.json.JsonNames
 
 /**
  * 
  *
- * @param result 
+ * @param id 
+ * @param date 
+ * @param dateRFC 
+ * @param author 
+ * @param text текст комментария с html
+ * @param textWoMd текст комментария с markdown
+ * @param media 
+ * @param likes 
+ * @param entry 
+ * @param replyTo 
+ * @param isFavorited 
+ * @param isPinned 
+ * @param isEdited 
+ * @param level 
+ * @param sourceId С какой OS был написан комментарий:   * `0` - Other   * `1` - iOS   * `2` - Android 
+ * @param loadMore 
+ * @param attaches 
+ * @param etcControls 
  */
 
-data class TimelineResponse (
+data class Comment (
 
-    @JsonNames("result")
-    val result: List<Entry>? = null
+    @JsonNames("id")
+    val id: java.math.BigDecimal? = null,
+
+    @JsonNames("date")
+    val date: java.math.BigDecimal? = null,
+
+    @JsonNames("dateRFC")
+    val dateRFC: String? = null,
+
+    @JsonNames("author")
+    val author: Author? = null,
+
+    /* текст комментария с html */
+    @JsonNames("text")
+    val text: String? = null,
+
+    /* текст комментария с markdown */
+    @JsonNames("text_wo_md")
+    val textWoMd: String? = null,
+
+    @JsonNames("media")
+    val media: List<Medium>? = null,
+
+    @JsonNames("likes")
+    val likes: Likes? = null,
+
+    @JsonNames("entry")
+    val entry: Entry? = null,
+
+    @JsonNames("replyTo")
+    val replyTo: Int? = null,
+
+    @JsonNames("isFavorited")
+    val isFavorited: Boolean? = null,
+
+    @JsonNames("is_pinned")
+    val isPinned: Boolean? = null,
+
+    @JsonNames("isEdited")
+    val isEdited: Boolean? = null,
+
+    @JsonNames("level")
+    val level: Int? = null,
+
+    /* С какой OS был написан комментарий:   * `0` - Other   * `1` - iOS   * `2` - Android  */
+    @JsonNames("source_id")
+    val sourceId: Int? = null,
+
+    @JsonNames("load_more")
+    val loadMore: CommentsLoadMore? = null,
+
+    @JsonNames("attaches")
+    val attaches: List<Attach>? = null,
+
+    @JsonNames("etcControls")
+    val etcControls: EtcControls? = null
 
 )
 

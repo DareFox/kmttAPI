@@ -8,19 +8,23 @@
  */
 package cmtt.base.models
 
-import cmtt.base.models.entry.Entry
+
 import kotlinx.serialization.json.JsonNames
 
 /**
  * 
  *
- * @param result 
+ * @param isActive 
+ * @param activeUntil 
  */
 
-data class TimelineResponse (
+data class Subscription (
 
-    @JsonNames("result")
-    val result: List<Entry>? = null
+    @JsonNames("is_active")
+    val isActive: Boolean? = null,
+
+    @JsonNames("active_until")
+    val activeUntil: java.math.BigDecimal? = null
 
 )
 

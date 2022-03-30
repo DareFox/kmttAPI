@@ -8,19 +8,35 @@
  */
 package cmtt.base.models
 
-import cmtt.base.models.entry.Entry
+
 import kotlinx.serialization.json.JsonNames
 
 /**
  * 
  *
- * @param result 
+ * @param type 
+ * @param text 
+ * @param color 
+ * @param background 
+ * @param border 
  */
 
-data class TimelineResponse (
+data class Badge (
 
-    @JsonNames("result")
-    val result: List<Entry>? = null
+    @JsonNames("type")
+    val type: String? = null,
+
+    @JsonNames("text")
+    val text: String? = null,
+
+    @JsonNames("color")
+    val color: String? = null,
+
+    @JsonNames("background")
+    val background: String? = null,
+
+    @JsonNames("border")
+    val border: String? = null
 
 )
 

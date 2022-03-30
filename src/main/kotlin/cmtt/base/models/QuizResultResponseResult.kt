@@ -8,19 +8,35 @@
  */
 package cmtt.base.models
 
-import cmtt.base.models.entry.Entry
+
 import kotlinx.serialization.json.JsonNames
 
 /**
  * 
  *
- * @param result 
+ * @param items Ассоциативный массив ID элемента опроса -> объект с информацией
+ * @param winner Id выигравшего элемента
+ * @param userVoted Id выбранного пользователем элемента
+ * @param randomVotedUsers Ассоциативный массив ID элемента опроса -> массив со списком пользователей
  */
 
-data class TimelineResponse (
+data class QuizResultResponseResult (
 
-    @JsonNames("result")
-    val result: List<Entry>? = null
+    /* Ассоциативный массив ID элемента опроса -> объект с информацией */
+    @JsonNames("items")
+    val items: Map<String, Int>? = null,
+
+    /* Id выигравшего элемента */
+    @JsonNames("winner")
+    val winner: String? = null,
+
+    /* Id выбранного пользователем элемента */
+    @JsonNames("userVoted")
+    val userVoted: String? = null,
+
+    /* Ассоциативный массив ID элемента опроса -> массив со списком пользователей */
+    @JsonNames("randomVotedUsers")
+    val randomVotedUsers: Map<String, List<Any>>? = null
 
 )
 

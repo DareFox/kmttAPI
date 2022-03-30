@@ -8,19 +8,30 @@
  */
 package cmtt.base.models
 
-import cmtt.base.models.entry.Entry
+
 import kotlinx.serialization.json.JsonNames
 
 /**
  * 
  *
- * @param result 
+ * @param id Номер подписки
+ * @param event Название события
+ * @param url Cсылка
  */
 
-data class TimelineResponse (
+data class Watcher (
 
-    @JsonNames("result")
-    val result: List<Entry>? = null
+    /* Номер подписки */
+    @JsonNames("id")
+    val id: java.math.BigDecimal? = null,
+
+    /* Название события */
+    @JsonNames("event")
+    val event: String? = null,
+
+    /* Cсылка */
+    @JsonNames("url")
+    val url: String? = null
 
 )
 

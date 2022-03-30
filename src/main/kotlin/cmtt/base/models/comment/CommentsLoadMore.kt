@@ -6,21 +6,32 @@
  * The version of the OpenAPI document: 1.9.0
  * Contact: support@cmtt.ru
  */
-package cmtt.base.models
+package cmtt.base.models.comment
 
-import cmtt.base.models.entry.Entry
+
 import kotlinx.serialization.json.JsonNames
 
 /**
  * 
  *
- * @param result 
+ * @param ids Список id комментариев для подгрузки
+ * @param count Количество подгружаемых комментариев
+ * @param avatars Список аватарок пользователей в подгружаемых комментариях
  */
 
-data class TimelineResponse (
+data class CommentsLoadMore (
 
-    @JsonNames("result")
-    val result: List<Entry>? = null
+    /* Список id комментариев для подгрузки */
+    @JsonNames("ids")
+    val ids: List<java.math.BigDecimal>? = null,
+
+    /* Количество подгружаемых комментариев */
+    @JsonNames("count")
+    val count: java.math.BigDecimal? = null,
+
+    /* Список аватарок пользователей в подгружаемых комментариях */
+    @JsonNames("avatars")
+    val avatars: List<String>? = null
 
 )
 

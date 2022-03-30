@@ -6,21 +6,25 @@
  * The version of the OpenAPI document: 1.9.0
  * Contact: support@cmtt.ru
  */
-package cmtt.base.models
+package cmtt.base.models.comment
 
-import cmtt.base.models.entry.Entry
+import cmtt.base.models.entry.EntryComplaintErrorError
 import kotlinx.serialization.json.JsonNames
 
 /**
  * 
  *
- * @param result 
+ * @param message 
+ * @param error 
  */
 
-data class TimelineResponse (
+data class CommentComplaintError (
 
-    @JsonNames("result")
-    val result: List<Entry>? = null
+    @JsonNames("message")
+    val message: String? = null,
+
+    @JsonNames("error")
+    val error: EntryComplaintErrorError? = null
 
 )
 

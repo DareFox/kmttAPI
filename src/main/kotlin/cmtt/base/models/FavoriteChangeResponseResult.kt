@@ -8,19 +8,23 @@
  */
 package cmtt.base.models
 
-import cmtt.base.models.entry.Entry
+
 import kotlinx.serialization.json.JsonNames
 
 /**
  * 
  *
  * @param result 
+ * @param count 
  */
 
-data class TimelineResponse (
+data class FavoriteChangeResponseResult (
 
     @JsonNames("result")
-    val result: List<Entry>? = null
+    val result: Boolean? = null,
+
+    @JsonNames("count")
+    val count: Int? = null
 
 )
 
