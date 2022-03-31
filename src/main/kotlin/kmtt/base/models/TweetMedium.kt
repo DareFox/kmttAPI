@@ -22,10 +22,11 @@ import kotlinx.serialization.json.JsonNames
  * @param ratio 
  */
 
+@kotlinx.serialization.Serializable
 data class TweetMedium (
 
     @JsonNames("type")
-    val type: java.math.BigDecimal? = null,
+    val type: Long? = null,
 
     @JsonNames("thumbnail_url")
     val thumbnailUrl: String? = null,
@@ -34,13 +35,13 @@ data class TweetMedium (
     val mediaUrl: String? = null,
 
     @JsonNames("thumbnail_width")
-    val thumbnailWidth: java.math.BigDecimal? = null,
+    val thumbnailWidth: Long? = null,
 
     @JsonNames("thumbnail_height")
-    val thumbnailHeight: java.math.BigDecimal? = null,
+    val thumbnailHeight: Long? = null,
 
     @JsonNames("ratio")
-    val ratio: java.math.BigDecimal? = null
+    val ratio: Long? = null
 
 )
 

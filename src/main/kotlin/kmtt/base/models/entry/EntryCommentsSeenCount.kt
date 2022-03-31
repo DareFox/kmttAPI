@@ -18,13 +18,14 @@ import kotlinx.serialization.json.JsonNames
  * @param date 
  */
 
+@kotlinx.serialization.Serializable
 data class EntryCommentsSeenCount (
 
     @JsonNames("count")
-    val count: java.math.BigDecimal? = null,
+    val count: Long? = null,
 
     @JsonNames("date")
-    val date: java.math.BigDecimal? = null
+    val date: Long? = null
 
 )
 

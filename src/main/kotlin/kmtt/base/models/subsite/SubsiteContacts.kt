@@ -20,6 +20,8 @@ import kotlinx.serialization.json.JsonNames
  * @param contacts 
  */
 
+@kotlinx.serialization.Serializable
+
 data class SubsiteContacts (
 
     @JsonNames("socials")

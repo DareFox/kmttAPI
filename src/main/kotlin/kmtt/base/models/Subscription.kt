@@ -18,13 +18,14 @@ import kotlinx.serialization.json.JsonNames
  * @param activeUntil 
  */
 
+@kotlinx.serialization.Serializable
 data class Subscription (
 
     @JsonNames("is_active")
     val isActive: Boolean? = null,
 
     @JsonNames("active_until")
-    val activeUntil: java.math.BigDecimal? = null
+    val activeUntil: Long? = null
 
 )
 

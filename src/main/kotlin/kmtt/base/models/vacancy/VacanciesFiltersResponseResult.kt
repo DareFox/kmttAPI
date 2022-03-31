@@ -20,6 +20,7 @@ import kotlinx.serialization.json.JsonNames
  * @param specializations 
  */
 
+@kotlinx.serialization.Serializable
 data class VacanciesFiltersResponseResult (
 
     @JsonNames("area")

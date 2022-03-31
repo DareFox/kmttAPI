@@ -59,10 +59,11 @@ import kotlinx.serialization.json.JsonNames
  * @param coAuthor 
  */
 
+@kotlinx.serialization.Serializable
 data class Entry (
 
     @JsonNames("id")
-    val id: java.math.BigDecimal? = null,
+    val id: Long? = null,
 
     /* Заголовок статьи */
     @JsonNames("title")
@@ -77,7 +78,7 @@ data class Entry (
 
     /* Дата создания статьи */
     @JsonNames("date")
-    val date: java.math.BigDecimal? = null,
+    val date: Long? = null,
 
     /* Дата создания статьи */
     @JsonNames("dateRFC")
@@ -85,7 +86,7 @@ data class Entry (
 
     /* Дата последнего изменения статьи */
     @JsonNames("lastModificationDate")
-    val lastModificationDate: java.math.BigDecimal? = null,
+    val lastModificationDate: Long? = null,
 
     @JsonNames("author")
     val author: Author? = null,
@@ -109,7 +110,7 @@ data class Entry (
 
     /* Число просмотров */
     @JsonNames("hitsCount")
-    val hitsCount: java.math.BigDecimal? = null,
+    val hitsCount: Long? = null,
 
     @JsonNames("likes")
     val likes: Likes? = null,
@@ -171,7 +172,7 @@ data class Entry (
     val canEdit: Boolean? = null,
 
     @JsonNames("date_favorite")
-    val dateFavorite: java.math.BigDecimal? = null,
+    val dateFavorite: Long? = null,
 
     @JsonNames("isRepost")
     val isRepost: Boolean? = null,

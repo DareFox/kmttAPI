@@ -22,6 +22,8 @@ import kotlinx.serialization.json.JsonNames
  * @param userHash хэш пользователя, для сравнения с авторизованным
  */
 
+@kotlinx.serialization.Serializable
+
 data class Websocket (
 
     /* тип события */
@@ -30,14 +32,14 @@ data class Websocket (
 
     /* id статьи */
     @JsonNames("content_id")
-    val contentId: java.math.BigDecimal? = null,
+    val contentId: Long? = null,
 
     @JsonNames("count")
     val count: Int? = null,
 
     /* id контента */
     @JsonNames("id")
-    val id: java.math.BigDecimal? = null,
+    val id: Long? = null,
 
     @JsonNames("state")
     val state: Int? = null,

@@ -21,6 +21,7 @@ import kotlinx.serialization.json.JsonNames
  * @param hash 
  */
 
+@kotlinx.serialization.Serializable
 data class AdvancedAccess (
 
     @JsonNames("is_needs_advanced_access")

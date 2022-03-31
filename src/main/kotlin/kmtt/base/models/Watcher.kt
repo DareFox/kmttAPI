@@ -19,11 +19,12 @@ import kotlinx.serialization.json.JsonNames
  * @param url Cсылка
  */
 
+@kotlinx.serialization.Serializable
 data class Watcher (
 
     /* Номер подписки */
     @JsonNames("id")
-    val id: java.math.BigDecimal? = null,
+    val id: Long? = null,
 
     /* Название события */
     @JsonNames("event")

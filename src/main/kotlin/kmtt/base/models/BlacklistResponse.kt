@@ -16,6 +16,8 @@ import kotlinx.serialization.json.JsonNames
  * @param result 
  */
 
+@kotlinx.serialization.Serializable
+
 data class BlacklistResponse (
 
     @JsonNames("result")

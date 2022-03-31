@@ -27,10 +27,11 @@ import kotlinx.serialization.json.JsonNames
  * @param interested 
  */
 
+@kotlinx.serialization.Serializable
 data class Event (
 
     @JsonNames("id")
-    val id: java.math.BigDecimal? = null,
+    val id: Long? = null,
 
     @JsonNames("title")
     val title: String? = null,
@@ -51,10 +52,10 @@ data class Event (
     val price: String? = null,
 
     @JsonNames("date")
-    val date: java.math.BigDecimal? = null,
+    val date: Long? = null,
 
     @JsonNames("favoritesCount")
-    val favoritesCount: java.math.BigDecimal? = null,
+    val favoritesCount: Long? = null,
 
     @JsonNames("isFavorited")
     val isFavorited: Boolean? = null,
@@ -63,7 +64,7 @@ data class Event (
     val company: Company? = null,
 
     @JsonNames("interested")
-    val interested: java.math.BigDecimal? = null
+    val interested: Long? = null
 
 )
 

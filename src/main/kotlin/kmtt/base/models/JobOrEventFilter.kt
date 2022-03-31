@@ -18,10 +18,11 @@ import kotlinx.serialization.json.JsonNames
  * @param title 
  */
 
+@kotlinx.serialization.Serializable
 data class JobOrEventFilter (
 
     @JsonNames("id")
-    val id: java.math.BigDecimal? = null,
+    val id: Long? = null,
 
     @JsonNames("title")
     val title: String? = null

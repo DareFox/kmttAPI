@@ -18,6 +18,7 @@ import kotlinx.serialization.json.JsonNames
  * @param url 
  */
 
+@kotlinx.serialization.Serializable
 data class SubsiteContactsSite (
 
     @JsonNames("title")

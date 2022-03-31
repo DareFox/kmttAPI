@@ -19,6 +19,8 @@ import kotlinx.serialization.json.JsonNames
  * @param eth 
  */
 
+@kotlinx.serialization.Serializable
+
 data class Rates (
 
     @JsonNames("usd")

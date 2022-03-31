@@ -17,6 +17,8 @@ import kotlinx.serialization.json.JsonNames
  * @param result 
  */
 
+@kotlinx.serialization.Serializable
+
 data class UserResponse (
 
     @JsonNames("result")

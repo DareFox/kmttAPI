@@ -20,6 +20,7 @@ import kotlinx.serialization.json.JsonNames
  * @param isHidden 
  */
 
+@kotlinx.serialization.Serializable
 data class Likes (
 
     @JsonNames("count")

@@ -19,16 +19,18 @@ import kotlinx.serialization.json.JsonNames
  * @param favorites 
  */
 
+@kotlinx.serialization.Serializable
+
 data class Counters (
 
     @JsonNames("entries")
-    val propertyEntries: java.math.BigDecimal? = null,
+    val propertyEntries: Long? = null,
 
     @JsonNames("comments")
-    val comments: java.math.BigDecimal? = null,
+    val comments: Long? = null,
 
     @JsonNames("favorites")
-    val favorites: java.math.BigDecimal? = null
+    val favorites: Long? = null
 
 )
 

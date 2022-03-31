@@ -19,19 +19,21 @@ import kotlinx.serialization.json.JsonNames
  * @param avatars Список аватарок пользователей в подгружаемых комментариях
  */
 
+@kotlinx.serialization.Serializable
+
 data class CommentsLoadMore (
 
     /* Список id комментариев для подгрузки */
     @JsonNames("ids")
-    val ids: List<java.math.BigDecimal>? = null,
+    val ids: List<Int>,
 
     /* Количество подгружаемых комментариев */
     @JsonNames("count")
-    val count: java.math.BigDecimal? = null,
+    val count: Int,
 
     /* Список аватарок пользователей в подгружаемых комментариях */
     @JsonNames("avatars")
-    val avatars: List<String>? = null
+    val avatars: List<String> = listOf()
 
 )
 

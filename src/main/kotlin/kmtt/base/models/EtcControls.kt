@@ -23,6 +23,7 @@ import kotlinx.serialization.json.JsonNames
  * @param removeThread 
  */
 
+@kotlinx.serialization.Serializable
 data class EtcControls (
 
     @JsonNames("edit_entry")

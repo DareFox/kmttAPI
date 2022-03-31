@@ -21,22 +21,24 @@ import kotlinx.serialization.json.JsonNames
  * @param dateRFC 
  */
 
+@kotlinx.serialization.Serializable
+
 data class Similar (
 
     @JsonNames("id")
-    val id: java.math.BigDecimal? = null,
+    val id: Long? = null,
 
     @JsonNames("title")
-    val title: java.math.BigDecimal? = null,
+    val title: Long? = null,
 
     @JsonNames("url")
-    val url: java.math.BigDecimal? = null,
+    val url: Long? = null,
 
     @JsonNames("date")
-    val date: java.math.BigDecimal? = null,
+    val date: Long? = null,
 
     @JsonNames("dateRFC")
-    val dateRFC: java.math.BigDecimal? = null
+    val dateRFC: Long? = null
 
 )
 

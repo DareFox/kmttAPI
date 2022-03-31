@@ -8,6 +8,13 @@
  */
 package kmtt.base.models
 
+import kotlinx.serialization.KSerializer
+import kotlinx.serialization.Serializer
+import kotlinx.serialization.descriptors.PrimitiveKind
+import kotlinx.serialization.descriptors.PrimitiveSerialDescriptor
+import kotlinx.serialization.descriptors.SerialDescriptor
+import kotlinx.serialization.encoding.Decoder
+import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.json.JsonNames
 
 /**
@@ -21,11 +28,13 @@ import kotlinx.serialization.json.JsonNames
  * @param propertySize 
  */
 
+@kotlinx.serialization.Serializable
+
 data class Medium (
 
     /* Тип медиафайла:   * `1` - TYPE_IMAGE   * `2` - TYPE_VIDEO  */
     @JsonNames("type")
-    val type: Medium.Type? = null,
+    val type: Medium.MediaType? = null,
 
     @JsonNames("imageUrl")
     val imageUrl: String? = null,
@@ -49,9 +58,39 @@ data class Medium (
      *
      * Values: _1,_2
      */
-    enum class Type(val value: Int) {
-        @JsonNames("1") _1(1),
-        @JsonNames("2") _2(2);
+    @kotlinx.serialization.Serializable(with = MediaTypeSerializer::class)
+    enum class MediaType(val value: Int) {
+        IMAGE(1),
+        VIDEO(2);
     }
 }
 
+@Serializer(forClass = Medium.MediaType::class)
+object MediaTypeSerializer : KSerializer<Medium.MediaType> {
+    val typeMap = mapOf(1 to Medium.MediaType.IMAGE, 2 to Medium.MediaType.VIDEO)
+
+    override fun deserialize(decoder: Decoder): Medium.MediaType {
+        val value = decoder.decodeInt()
+
+        require(typeMap.containsKey(value)) {
+            "$value is not in typeMap as key and not supported."
+        }
+
+        return typeMap[value]!!
+    }
+
+    override val descriptor: SerialDescriptor = PrimitiveSerialDescriptor("type", PrimitiveKind.INT)
+
+    override fun serialize(encoder: Encoder, value: Medium.MediaType) {
+        val entry = typeMap.entries.firstOrNull {
+            it.value == value
+        }
+
+        requireNotNull(entry) {
+            "$value isn't in typeMap"
+        }
+
+        encoder.encodeInt(entry.key)
+    }
+
+}

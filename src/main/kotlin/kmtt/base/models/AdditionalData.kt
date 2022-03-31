@@ -24,6 +24,7 @@ import kotlinx.serialization.json.JsonNames
  * @param hasAudio 
  */
 
+@kotlinx.serialization.Serializable
 data class AdditionalData (
 
     @JsonNames("type")
@@ -33,13 +34,13 @@ data class AdditionalData (
     val url: String? = null,
 
     @JsonNames("size")
-    val propertySize: java.math.BigDecimal? = null,
+    val propertySize: Long? = null,
 
     @JsonNames("uuid")
     val uuid: String? = null,
 
     @JsonNames("duration")
-    val duration: java.math.BigDecimal? = null,
+    val duration: Long? = null,
 
     @JsonNames("hasAudio")
     val hasAudio: Boolean? = null

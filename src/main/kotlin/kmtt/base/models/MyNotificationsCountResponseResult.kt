@@ -17,7 +17,7 @@ import kotlinx.serialization.json.JsonNames
  * @param count 
  */
 
-data class MyNotificationsCountResponseResult (
+@kotlinx.serialization.Serializable data class MyNotificationsCountResponseResult (
 
     @JsonNames("count")
     val count: Long? = null

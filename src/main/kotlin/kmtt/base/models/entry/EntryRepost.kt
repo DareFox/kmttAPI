@@ -19,6 +19,7 @@ import kotlinx.serialization.json.JsonNames
  * @param author 
  */
 
+@kotlinx.serialization.Serializable
 data class EntryRepost (
 
     @JsonNames("author")

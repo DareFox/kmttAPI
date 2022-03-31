@@ -29,6 +29,8 @@ import kotlinx.serialization.json.JsonNames
  * @param image 
  */
 
+@kotlinx.serialization.Serializable
+
 data class Attach (
 
     @JsonNames("id")
@@ -47,13 +49,13 @@ data class Attach (
     val color: String? = null,
 
     @JsonNames("width")
-    val width: java.math.BigDecimal? = null,
+    val width: Long? = null,
 
     @JsonNames("height")
-    val height: java.math.BigDecimal? = null,
+    val height: Long? = null,
 
     @JsonNames("size")
-    val propertySize: java.math.BigDecimal? = null,
+    val propertySize: Long? = null,
 
     @JsonNames("name")
     val name: String? = null,

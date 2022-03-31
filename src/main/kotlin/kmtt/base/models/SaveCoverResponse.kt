@@ -17,6 +17,7 @@ import kotlinx.serialization.json.JsonNames
  * @param success 
  */
 
+@kotlinx.serialization.Serializable
 data class SaveCoverResponse (
 
     @JsonNames("success")

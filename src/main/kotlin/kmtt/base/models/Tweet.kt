@@ -23,6 +23,7 @@ import kotlinx.serialization.json.JsonNames
  * @param createdAt 
  */
 
+@kotlinx.serialization.Serializable
 data class Tweet (
 
     @JsonNames("id")
@@ -35,10 +36,10 @@ data class Tweet (
     val user: TweetUser? = null,
 
     @JsonNames("retweet_count")
-    val retweetCount: java.math.BigDecimal? = null,
+    val retweetCount: Long? = null,
 
     @JsonNames("favorite_count")
-    val favoriteCount: java.math.BigDecimal? = null,
+    val favoriteCount: Long? = null,
 
     @JsonNames("has_media")
     val hasMedia: Boolean? = null,
@@ -47,7 +48,7 @@ data class Tweet (
     val media: List<TweetMedium>? = null,
 
     @JsonNames("created_at")
-    val createdAt: java.math.BigDecimal? = null
+    val createdAt: Long? = null
 
 )
 

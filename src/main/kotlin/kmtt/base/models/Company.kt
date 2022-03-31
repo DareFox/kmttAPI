@@ -21,10 +21,11 @@ import kotlinx.serialization.json.JsonNames
  * @param isVerified 
  */
 
+@kotlinx.serialization.Serializable
 data class Company (
 
     @JsonNames("id")
-    val id: java.math.BigDecimal? = null,
+    val id: Long? = null,
 
     @JsonNames("name")
     val name: String? = null,

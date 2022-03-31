@@ -17,6 +17,7 @@ import kotlinx.serialization.json.JsonNames
  * @param src 
  */
 
+@kotlinx.serialization.Serializable
 data class SaveAvatarResponseResult (
 
     @JsonNames("src")

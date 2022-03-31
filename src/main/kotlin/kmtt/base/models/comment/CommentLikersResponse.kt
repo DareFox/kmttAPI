@@ -9,6 +9,7 @@
 package kmtt.base.models.comment
 
 
+import kmtt.base.models.Liker
 import kotlinx.serialization.json.JsonNames
 
 /**
@@ -17,11 +18,13 @@ import kotlinx.serialization.json.JsonNames
  * @param result Hashmap Id пользователя - объект Liker
  */
 
+@kotlinx.serialization.Serializable
 data class CommentLikersResponse (
 
     /* Hashmap Id пользователя - объект Liker */
     @JsonNames("result")
-    val result: Any? = null
+    // TODO: Any was here
+    val result: Map<Long, Liker>? = null
 
 )
 

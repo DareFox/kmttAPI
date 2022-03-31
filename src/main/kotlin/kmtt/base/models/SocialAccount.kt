@@ -20,10 +20,12 @@ import kotlinx.serialization.json.JsonNames
  * @param url 
  */
 
+@kotlinx.serialization.Serializable
+
 data class SocialAccount (
 
     @JsonNames("id")
-    val id: java.math.BigDecimal? = null,
+    val id: Long? = null,
 
     @JsonNames("type")
     val type: Int? = null,

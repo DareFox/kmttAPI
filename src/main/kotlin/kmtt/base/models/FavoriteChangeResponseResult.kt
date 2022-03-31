@@ -18,6 +18,8 @@ import kotlinx.serialization.json.JsonNames
  * @param count 
  */
 
+@kotlinx.serialization.Serializable
+
 data class FavoriteChangeResponseResult (
 
     @JsonNames("result")

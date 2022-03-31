@@ -21,6 +21,7 @@ import kotlinx.serialization.json.JsonNames
  * @param y 
  */
 
+@kotlinx.serialization.Serializable
 data class SubsiteCover (
 
     @JsonNames("cover_url")

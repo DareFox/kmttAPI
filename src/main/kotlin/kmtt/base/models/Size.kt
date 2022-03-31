@@ -19,16 +19,18 @@ import kotlinx.serialization.json.JsonNames
  * @param ratio 
  */
 
+@kotlinx.serialization.Serializable
+
 data class Size (
 
     @JsonNames("width")
-    val width: java.math.BigDecimal? = null,
+    val width: Long? = null,
 
     @JsonNames("height")
-    val height: java.math.BigDecimal? = null,
+    val height: Long? = null,
 
     @JsonNames("ratio")
-    val ratio: java.math.BigDecimal? = null
+    val ratio: Double? = null
 
 )
 

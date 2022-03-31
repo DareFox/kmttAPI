@@ -18,6 +18,7 @@ import kotlinx.serialization.json.JsonNames
  * @param lastId ID последнего элемента для подгрузки
  */
 
+@kotlinx.serialization.Serializable
 data class SubsitesVacanciesResponseResult (
 
     @JsonNames("items")
@@ -25,7 +26,7 @@ data class SubsitesVacanciesResponseResult (
 
     /* ID последнего элемента для подгрузки */
     @JsonNames("last_id")
-    val lastId: java.math.BigDecimal? = null
+    val lastId: Long? = null
 
 )
 

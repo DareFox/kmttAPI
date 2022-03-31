@@ -19,13 +19,14 @@ import kotlinx.serialization.json.JsonNames
  * @param sym 
  */
 
+@kotlinx.serialization.Serializable
 data class Rate (
 
     @JsonNames("rate")
     val rate: String? = null,
 
     @JsonNames("change")
-    val change: java.math.BigDecimal? = null,
+    val change: Long? = null,
 
     @JsonNames("sym")
     val sym: String? = null

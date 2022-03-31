@@ -25,19 +25,20 @@ import kotlinx.serialization.json.JsonNames
  * @param statusesCount 
  */
 
+@kotlinx.serialization.Serializable
 data class TweetUser (
 
     @JsonNames("created_at")
-    val createdAt: java.math.BigDecimal? = null,
+    val createdAt: Long? = null,
 
     @JsonNames("followers_count")
-    val followersCount: java.math.BigDecimal? = null,
+    val followersCount: Long? = null,
 
     @JsonNames("friends_count")
-    val friendsCount: java.math.BigDecimal? = null,
+    val friendsCount: Long? = null,
 
     @JsonNames("id")
-    val id: java.math.BigDecimal? = null,
+    val id: Long? = null,
 
     @JsonNames("name")
     val name: String? = null,
@@ -52,7 +53,7 @@ data class TweetUser (
     val screenName: String? = null,
 
     @JsonNames("statuses_count")
-    val statusesCount: java.math.BigDecimal? = null
+    val statusesCount: Long? = null
 
 )
 

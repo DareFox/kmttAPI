@@ -21,6 +21,8 @@ import kotlinx.serialization.json.JsonNames
  * @param border 
  */
 
+@kotlinx.serialization.Serializable
+
 data class Badge (
 
     @JsonNames("type")

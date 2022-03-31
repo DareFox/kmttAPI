@@ -25,13 +25,14 @@ import kotlinx.serialization.json.JsonNames
  * @param socialAccounts 
  */
 
+@kotlinx.serialization.Serializable
 data class Author (
 
     @JsonNames("id")
-    val id: java.math.BigDecimal? = null,
+    val id: Long? = null,
 
     @JsonNames("created")
-    val created: java.math.BigDecimal? = null,
+    val created: Long? = null,
 
     @JsonNames("first_name")
     val firstName: String? = null,

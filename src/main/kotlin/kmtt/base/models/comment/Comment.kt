@@ -36,13 +36,14 @@ import kotlinx.serialization.json.JsonNames
  * @param etcControls 
  */
 
+@kotlinx.serialization.Serializable
 data class Comment (
 
     @JsonNames("id")
-    val id: java.math.BigDecimal? = null,
+    val id: Long? = null,
 
     @JsonNames("date")
-    val date: java.math.BigDecimal? = null,
+    val date: Long? = null,
 
     @JsonNames("dateRFC")
     val dateRFC: String? = null,

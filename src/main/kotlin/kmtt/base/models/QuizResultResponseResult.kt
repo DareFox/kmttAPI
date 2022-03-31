@@ -9,6 +9,7 @@
 package kmtt.base.models
 
 
+import kmtt.base.models.subsite.Subsite
 import kotlinx.serialization.json.JsonNames
 
 /**
@@ -19,6 +20,8 @@ import kotlinx.serialization.json.JsonNames
  * @param userVoted Id выбранного пользователем элемента
  * @param randomVotedUsers Ассоциативный массив ID элемента опроса -> массив со списком пользователей
  */
+
+@kotlinx.serialization.Serializable
 
 data class QuizResultResponseResult (
 
@@ -35,8 +38,9 @@ data class QuizResultResponseResult (
     val userVoted: String? = null,
 
     /* Ассоциативный массив ID элемента опроса -> массив со списком пользователей */
+    // TODO Any was here
     @JsonNames("randomVotedUsers")
-    val randomVotedUsers: Map<String, List<Any>>? = null
+    val randomVotedUsers: Map<String, List<Subsite>>? = null
 
 )
 

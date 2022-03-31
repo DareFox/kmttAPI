@@ -16,10 +16,12 @@ import kotlinx.serialization.json.JsonNames
  * @param result 
  */
 
+@kotlinx.serialization.Serializable
+
 data class CommentsThreadLimitResponse (
 
     @JsonNames("result")
-    val result: CommentsThreadLimitResponseResult? = null
+    val result: CommentsLevelLimited? = null
 
 )
 

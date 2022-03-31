@@ -9,6 +9,7 @@
 package kmtt.base.models.entry
 
 
+import kotlinx.serialization.Contextual
 import kotlinx.serialization.json.JsonNames
 
 /**
@@ -20,6 +21,8 @@ import kotlinx.serialization.json.JsonNames
  * @param anchor 
  */
 
+@kotlinx.serialization.Serializable
+
 data class EntryBlock (
 
     /* Тип блока */
@@ -28,6 +31,8 @@ data class EntryBlock (
 
     /* информация о блоке */
     @JsonNames("data")
+    @Contextual
+    // TODO: Fix Any
     val `data`: Any? = null,
 
     @JsonNames("cover")

@@ -21,6 +21,8 @@ import kotlinx.serialization.json.JsonNames
  * @param sizeSimple 
  */
 
+@kotlinx.serialization.Serializable
+
 data class Cover (
 
     @JsonNames("type")

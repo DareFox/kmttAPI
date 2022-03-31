@@ -18,6 +18,8 @@ import kotlinx.serialization.json.JsonNames
  * @param error 
  */
 
+@kotlinx.serialization.Serializable
+
 data class CommentComplaintError (
 
     @JsonNames("message")

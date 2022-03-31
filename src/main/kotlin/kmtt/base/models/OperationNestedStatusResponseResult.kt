@@ -17,6 +17,7 @@ import kotlinx.serialization.json.JsonNames
  * @param result 
  */
 
+@kotlinx.serialization.Serializable
 data class OperationNestedStatusResponseResult (
 
     @JsonNames("result")

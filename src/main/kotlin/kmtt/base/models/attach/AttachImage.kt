@@ -18,6 +18,7 @@ import kotlinx.serialization.json.JsonNames
  * @param `data` 
  */
 
+@kotlinx.serialization.Serializable
 data class AttachImage (
 
     @JsonNames("type")

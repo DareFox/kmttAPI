@@ -17,14 +17,16 @@ import kotlinx.serialization.json.JsonNames
  * @param `data` 
  */
 
+@kotlinx.serialization.Serializable
 data class LocateResponseResult (
 
     /* Тип контента */
     @JsonNames("type")
     val type: LocateResponseResult.Type? = null,
 
+    // TODO: ANY type was here
     @JsonNames("data")
-    val `data`: OneOfLessThanEntryCommaSubsiteGreaterThan? = null
+    val `data`: Int? = null
 
 ) {
 

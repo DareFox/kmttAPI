@@ -17,6 +17,8 @@ import kotlinx.serialization.json.JsonNames
  * @param lastId ID последнего элемента для подгрузки
  */
 
+@kotlinx.serialization.Serializable
+
 data class EventsResponseResult (
 
     @JsonNames("items")
@@ -24,7 +26,7 @@ data class EventsResponseResult (
 
     /* ID последнего элемента для подгрузки */
     @JsonNames("last_id")
-    val lastId: java.math.BigDecimal? = null
+    val lastId: Long? = null
 
 )
 

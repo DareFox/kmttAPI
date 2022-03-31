@@ -17,6 +17,7 @@ import kotlinx.serialization.json.JsonNames
  * @param success Удачное удаление
  */
 
+@kotlinx.serialization.Serializable
 data class WebhookDeleteResponse (
 
     /* Удачное удаление */

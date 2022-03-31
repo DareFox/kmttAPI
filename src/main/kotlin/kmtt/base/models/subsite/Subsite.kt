@@ -41,16 +41,18 @@ import kotlinx.serialization.json.JsonNames
  * @param contacts 
  */
 
+@kotlinx.serialization.Serializable
+
 data class Subsite (
 
     @JsonNames("id")
-    val id: java.math.BigDecimal? = null,
+    val id: Long? = null,
 
     @JsonNames("url")
     val url: String? = null,
 
     @JsonNames("type")
-    val type: java.math.BigDecimal? = null,
+    val type: Long? = null,
 
     @JsonNames("name")
     val name: String? = null,
@@ -87,13 +89,13 @@ data class Subsite (
     val vacanciesCount: Int? = null,
 
     @JsonNames("created")
-    val created: java.math.BigDecimal? = null,
+    val created: Long? = null,
 
     @JsonNames("createdRFC")
     val createdRFC: String? = null,
 
     @JsonNames("karma")
-    val karma: java.math.BigDecimal? = null,
+    val karma: Long? = null,
 
     /* Список прикрепленных аккаунтов */
     @JsonNames("social_accounts")

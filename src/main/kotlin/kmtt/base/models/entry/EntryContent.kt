@@ -18,6 +18,7 @@ import kotlinx.serialization.json.JsonNames
  * @param version 
  */
 
+@kotlinx.serialization.Serializable
 data class EntryContent (
 
     @JsonNames("html")

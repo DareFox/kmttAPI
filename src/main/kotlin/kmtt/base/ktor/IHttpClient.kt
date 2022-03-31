@@ -29,6 +29,5 @@ interface IHttpClient : CoroutineScope, Closeable {
 suspend inline fun <reified T> IHttpClient.request(crossinline block: HttpRequestBuilder.() -> Unit): T {
     return rateLimiter.executeSuspendFunction {
         client.request(block)
-
     }
 }

@@ -25,17 +25,18 @@ import kotlinx.serialization.json.JsonNames
  * @param icon Название иконки, которая подставляется вместо аватарки.
  */
 
+@kotlinx.serialization.Serializable
 data class Notification (
 
     @JsonNames("id")
-    val id: java.math.BigDecimal? = null,
+    val id: Long? = null,
 
     /* Тип уведомления:   * `2` - TYPE_LIKE   * `4` - TYPE_REPLY   * `8` - TYPE_BANNED   * `16` - TYPE_UNPUBLISH   * `32` - TYPE_COMMENT   * `64` - TYPE_SYSTEM   * `128` - TYPE_VACANCY  */
     @JsonNames("type")
     val type: Notification.Type? = null,
 
     @JsonNames("date")
-    val date: java.math.BigDecimal? = null,
+    val date: Long? = null,
 
     @JsonNames("dateRFC")
     val dateRFC: String? = null,
@@ -63,14 +64,14 @@ data class Notification (
      *
      * Values: _2,_4,_8,_16,_32,_64,_128
      */
-    enum class Type(val value: java.math.BigDecimal) {
-        @JsonNames(""2"") _2("2"),
-        @JsonNames(""4"") _4("4"),
-        @JsonNames(""8"") _8("8"),
-        @JsonNames(""16"") _16("16"),
-        @JsonNames(""32"") _32("32"),
-        @JsonNames(""64"") _64("64"),
-        @JsonNames(""128"") _128("128");
+    enum class Type(val value: Int) {
+        @JsonNames("2") _2(2),
+        @JsonNames("4") _4(4),
+        @JsonNames("8") _8(8),
+        @JsonNames("1") _16(16),
+        @JsonNames("3") _32(32),
+        @JsonNames("6") _64(64),
+        @JsonNames("18") _128(128);
     }
     /**
      * Название иконки, которая подставляется вместо аватарки.

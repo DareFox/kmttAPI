@@ -17,13 +17,15 @@ import kotlinx.serialization.json.JsonNames
  * @param rootLoadMore 
  */
 
-data class CommentsThreadLimitResponseResult (
+@kotlinx.serialization.Serializable
+
+data class CommentsLevelLimited (
 
     @JsonNames("items")
-    val items: List<Comment>? = null,
+    val items: List<Comment> = listOf(),
 
     @JsonNames("root_load_more")
-    val rootLoadMore: CommentsLoadMore? = null
+    val rootLoadMore: CommentsLoadMore
 
 )
 

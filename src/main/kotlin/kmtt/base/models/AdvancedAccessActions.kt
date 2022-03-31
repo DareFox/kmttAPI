@@ -18,6 +18,7 @@ import kotlinx.serialization.json.JsonNames
  * @param writeComments 
  */
 
+@kotlinx.serialization.Serializable
 data class AdvancedAccessActions (
 
     @JsonNames("read_comments")

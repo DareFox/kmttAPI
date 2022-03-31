@@ -31,10 +31,11 @@ import kotlinx.serialization.json.JsonNames
  * @param company 
  */
 
+@kotlinx.serialization.Serializable
 data class Vacancy (
 
     @JsonNames("id")
-    val id: java.math.BigDecimal? = null,
+    val id: Long? = null,
 
     @JsonNames("title")
     val title: String? = null,
@@ -49,7 +50,7 @@ data class Vacancy (
     val salaryText: String? = null,
 
     @JsonNames("area")
-    val area: java.math.BigDecimal? = null,
+    val area: Long? = null,
 
     @JsonNames("area_text")
     val areaText: String? = null,
@@ -61,16 +62,16 @@ data class Vacancy (
     val scheduleText: String? = null,
 
     @JsonNames("entry_id")
-    val entryId: java.math.BigDecimal? = null,
+    val entryId: Long? = null,
 
     @JsonNames("city_id")
-    val cityId: java.math.BigDecimal? = null,
+    val cityId: Long? = null,
 
     @JsonNames("city_name")
     val cityName: String? = null,
 
     @JsonNames("favoritesCount")
-    val favoritesCount: java.math.BigDecimal? = null,
+    val favoritesCount: Long? = null,
 
     @JsonNames("isFavorited")
     val isFavorited: Boolean? = null,
