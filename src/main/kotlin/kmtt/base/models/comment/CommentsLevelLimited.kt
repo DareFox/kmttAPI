@@ -25,7 +25,7 @@ data class CommentsLevelLimited (
     val items: List<Comment> = listOf(),
 
     @JsonNames("root_load_more")
-    val rootLoadMore: CommentsLoadMore
+    val rootLoadMore: CommentsLoadMore?
 
 )
 
