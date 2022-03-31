@@ -60,7 +60,7 @@ data class Comment (
     val textWoMd: String? = null,
 
     @JsonNames("media")
-    val media: List<Medium>? = null,
+    val media: List<Media>? = null,
 
     @JsonNames("likes")
     val likes: Likes? = null,

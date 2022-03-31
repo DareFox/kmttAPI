@@ -30,11 +30,11 @@ import kotlinx.serialization.json.JsonNames
 
 @kotlinx.serialization.Serializable
 
-data class Medium (
+data class Media (
 
     /* Тип медиафайла:   * `1` - TYPE_IMAGE   * `2` - TYPE_VIDEO  */
     @JsonNames("type")
-    val type: Medium.MediaType? = null,
+    val type: Media.Type? = null,
 
     @JsonNames("imageUrl")
     val imageUrl: String? = null,
@@ -54,43 +54,35 @@ data class Medium (
 ) {
 
     /**
-     * Тип медиафайла:   * `1` - TYPE_IMAGE   * `2` - TYPE_VIDEO 
-     *
-     * Values: _1,_2
+     * Тип медиафайла
      */
     @kotlinx.serialization.Serializable(with = MediaTypeSerializer::class)
-    enum class MediaType(val value: Int) {
+    enum class Type(val value: Int) {
         IMAGE(1),
         VIDEO(2);
     }
 }
 
-@Serializer(forClass = Medium.MediaType::class)
-object MediaTypeSerializer : KSerializer<Medium.MediaType> {
-    val typeMap = mapOf(1 to Medium.MediaType.IMAGE, 2 to Medium.MediaType.VIDEO)
-
-    override fun deserialize(decoder: Decoder): Medium.MediaType {
+@Serializer(forClass = Media.Type::class)
+object MediaTypeSerializer : KSerializer<Media.Type> {
+    override fun deserialize(decoder: Decoder): Media.Type {
         val value = decoder.decodeInt()
 
-        require(typeMap.containsKey(value)) {
-            "$value is not in typeMap as key and not supported."
+        val type = Media.Type.values().firstOrNull {
+            it.value == value
         }
 
-        return typeMap[value]!!
+        requireNotNull(type) {
+            "Media type $type is not supported"
+        }
+
+        return type
     }
 
     override val descriptor: SerialDescriptor = PrimitiveSerialDescriptor("type", PrimitiveKind.INT)
 
-    override fun serialize(encoder: Encoder, value: Medium.MediaType) {
-        val entry = typeMap.entries.firstOrNull {
-            it.value == value
-        }
-
-        requireNotNull(entry) {
-            "$value isn't in typeMap"
-        }
-
-        encoder.encodeInt(entry.key)
+    override fun serialize(encoder: Encoder, value: Media.Type) {
+        encoder.encodeInt(value.value)
     }
 
 }
