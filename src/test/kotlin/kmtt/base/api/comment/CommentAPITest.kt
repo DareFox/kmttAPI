@@ -1,14 +1,14 @@
 package kmtt.base.api.comment
 
-import io.ktor.client.features.*
 import kmtt.base.models.enums.SortingType
+import kmtt.base.models.enums.Vote
 import kmtt.common.Shared
 import kmtt.util.assertDoesNotThrow
 import org.junit.jupiter.api.Test
 
 
 internal class CommentAPITest {
-    private val api = CommentAPI(Shared.httpClient, Shared.baseUrl, Shared.token)
+    private val api = CommentAPI(Shared.httpClient, Shared.website, Shared.token)
 
     @Test
     fun getEntryComments() {
