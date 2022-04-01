@@ -5,19 +5,21 @@ import io.ktor.http.*
 import kmtt.base.ktor.IHttpClient
 import kmtt.base.ktor.request
 import kmtt.base.models.enums.SocialAccountType
+import kmtt.base.models.enums.Website
 import kmtt.base.models.generic.SuccessResponse
 import kmtt.base.models.subsite.Subsite
 import kmtt.constants.Content
+import kmtt.util.apiURL
 import kmtt.util.toInt
 
-class AuthAPI(private val httpClient: IHttpClient, private val baseUrl: String) {
+class AuthAPI(private val httpClient: IHttpClient, private val site: Website) {
     suspend fun postAuthLogin(login: String, password: String): List<Subsite> {
         val endpointURL = "/auth/login"
         val data = mapOf("login" to login, "password" to password)
 
         val response = httpClient.request<SuccessResponse<List<Subsite>>> {
             contentType(Content.JSON)
-            url(baseUrl + endpointURL)
+            url(site.apiURL() + endpointURL)
             method = HttpMethod.Post
             body = data
         }
@@ -25,7 +27,12 @@ class AuthAPI(private val httpClient: IHttpClient, private val baseUrl: String) 
         return response.result
     }
 
-    suspend fun postAuthSocial(email: String, token: String, social: SocialAccountType, toLink: Boolean = false): List<Subsite> {
+    suspend fun postAuthSocial(
+        email: String,
+        token: String,
+        social: SocialAccountType,
+        toLink: Boolean = false,
+    ): List<Subsite> {
         val endpointURL = "/auth/login/${social.typeValue}"
         val data = mapOf(
             "token" to token,
@@ -35,7 +42,7 @@ class AuthAPI(private val httpClient: IHttpClient, private val baseUrl: String) 
 
         val response = httpClient.request<SuccessResponse<List<Subsite>>> {
             contentType(Content.JSON)
-            url(baseUrl + endpointURL)
+            url(site.apiURL() + endpointURL)
             method = HttpMethod.Post
             body = data
         }
@@ -49,7 +56,7 @@ class AuthAPI(private val httpClient: IHttpClient, private val baseUrl: String) 
 
         val response = httpClient.request<SuccessResponse<List<Subsite>>> {
             contentType(Content.JSON)
-            url(baseUrl + endpointURL)
+            url(site.apiURL() + endpointURL)
             method = HttpMethod.Post
             body = data
         }
