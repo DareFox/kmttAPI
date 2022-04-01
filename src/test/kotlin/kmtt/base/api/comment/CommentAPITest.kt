@@ -26,7 +26,7 @@ internal class CommentAPITest {
         Shared.comments.forEach { comment ->
             SortingType.values().forEach { type ->
                 assertDoesNotThrow {
-                    api.getLevelComments(comment.commentID, type)
+                    api.getLevelComments(comment.entryID, type)
                 }
             }
         }
@@ -45,7 +45,10 @@ internal class CommentAPITest {
     fun getCommentVotes() {
         Shared.comments.forEach {
             assertDoesNotThrow {
-                api.getCommentVotes(it.entryID)
+                api.getCommentVotes(it.commentID)
+            }
+        }
+    }
             }
         }
     }
