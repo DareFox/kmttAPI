@@ -4,10 +4,16 @@ import io.github.resilience4j.kotlin.ratelimiter.executeSuspendFunction
 import io.github.resilience4j.ratelimiter.RateLimiter
 import io.ktor.client.*
 import io.ktor.client.engine.*
+import io.ktor.client.features.*
 import io.ktor.client.request.*
 import io.ktor.client.statement.*
 import io.ktor.util.*
+import kmtt.base.models.generic.ErrorResponse
+import kmtt.exception.OsnovaRequestException
+import kmtt.util.jsonParser
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.serialization.decodeFromString
+import kotlinx.serialization.json.decodeFromStream
 import java.io.Closeable
 
 interface IHttpClient : CoroutineScope, Closeable {
@@ -27,7 +33,23 @@ interface IHttpClient : CoroutineScope, Closeable {
 }
 
 suspend inline fun <reified T> IHttpClient.request(crossinline block: HttpRequestBuilder.() -> Unit): T {
-    return rateLimiter.executeSuspendFunction {
-        client.request(block)
+    try {
+        return rateLimiter.executeSuspendFunction {
+            client.request(block)
+        }
+    } catch (ex: ClientRequestException) {
+        lateinit var parsed: ErrorResponse
+        var isParsed = false
+
+        try {
+            parsed = jsonParser.decodeFromString<ErrorResponse>(String(ex.response.readBytes()))
+            isParsed = true
+        } catch (_: Exception) {}
+
+        if (isParsed) {
+            throw OsnovaRequestException(ex.response, parsed)
+        } else {
+            throw ex
+        }
     }
 }
