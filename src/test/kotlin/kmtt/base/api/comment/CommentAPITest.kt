@@ -1,7 +1,6 @@
 package kmtt.base.api.comment
 
 import kmtt.base.models.enums.SortingType
-import kmtt.base.models.enums.Vote
 import kmtt.common.Shared
 import kmtt.util.assertDoesNotThrow
 import org.junit.jupiter.api.Test
@@ -49,7 +48,14 @@ internal class CommentAPITest {
             }
         }
     }
-            }
-        }
-    }
+
+    // DOESN'T WORK WITH OFFICIAL API
+//    @Test
+//    fun postLike() {
+//        Shared.comments.forEach {
+//            assertDoesNotThrow {
+//                api.postLike(it.commentID, OsnovaContentType.COMMENT, Vote.PLUS)
+//            }
+//        }
+//    }
 }
