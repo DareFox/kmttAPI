@@ -12,7 +12,7 @@ import java.time.Duration
 abstract class AbstractOsnova(token: String) : Closeable {
     abstract val serverURL: String
 
-    private val rateLimitConfig = RateLimiterConfig
+    protected val rateLimitConfig = RateLimiterConfig
         .custom()
         .limitRefreshPeriod(Duration.ofSeconds(1))
         .limitForPeriod(3)
@@ -20,7 +20,7 @@ abstract class AbstractOsnova(token: String) : Closeable {
         .build()
 
 
-    private val client: IHttpClient = HttpClientAdapter(HttpClient {
+    protected val client: IHttpClient = HttpClientAdapter(HttpClient {
         install(JsonFeature) {
             serializer = KotlinxSerializer(kotlinx.serialization.json.Json {
                 ignoreUnknownKeys = true
