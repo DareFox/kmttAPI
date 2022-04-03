@@ -1,7 +1,7 @@
 package kmtt.constants
 
-import io.ktor.http.ContentType
+import io.ktor.http.*
 
-object Content {
+internal object Content {
     val JSON = ContentType.parse("application/json")
 }
