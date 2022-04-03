@@ -19,8 +19,13 @@ import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.decodeFromJsonElement
 
 class PublicCommentAPI(private val httpClient: IHttpClient, private val site: Website) : IPublicCommentAPI {
+
+    // Some public requests have restrictions without authentication.
+    // For example:
+    // User hid his account from anonymous users, and you can't get data about this user without authentication
     internal var token: String? = null
 
+    // This authentication API is *internal* because it only used by authenticated API for delegation
     internal constructor(httpClient: IHttpClient, site: Website, token: String) : this(httpClient, site) {
         this.token = token
     }
