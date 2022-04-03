@@ -11,6 +11,7 @@ package kmtt.base.models
 
 import kotlinx.serialization.Contextual
 import kotlinx.serialization.json.JsonNames
+import kotlinx.serialization.json.JsonObject
 
 /**
  *
@@ -22,8 +23,8 @@ import kotlinx.serialization.json.JsonNames
 data class UpdatePushSettingsResponse(
 
     @JsonNames("result")
-    @Contextual // TODO fix Any
-    val result: Any? = null,
+    // TODO fix Any
+    val result: JsonObject? = null,
 
     )
 

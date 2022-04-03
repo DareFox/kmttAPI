@@ -11,6 +11,7 @@ package kmtt.base.models.comment
 
 import kotlinx.serialization.Contextual
 import kotlinx.serialization.json.JsonNames
+import kotlinx.serialization.json.JsonObject
 
 /**
  *
@@ -22,8 +23,8 @@ import kotlinx.serialization.json.JsonNames
 data class CommentEditResponse(
 
     @JsonNames("result")
-    @Contextual // TODO: Any fix
-    val result: Any? = null,
+    // TODO: Any fix
+    val result: JsonObject? = null,
 
     )
 

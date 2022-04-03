@@ -26,7 +26,7 @@ data class LocateResponseResult(
 
     // TODO: ANY type was here
     @JsonNames("data")
-    val `data`: Int? = null,
+    val data: Int? = null,
 
     ) {
 

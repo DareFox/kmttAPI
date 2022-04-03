@@ -11,6 +11,7 @@ package kmtt.base.models.entry
 
 import kotlinx.serialization.Contextual
 import kotlinx.serialization.json.JsonNames
+import kotlinx.serialization.json.JsonObject
 
 /**
  *
@@ -29,7 +30,7 @@ data class EntryComplaintErrorError(
     @JsonNames("info")
     @Contextual
     // TODO: FIx any
-    val info: Any? = null,
+    val info: JsonObject? = null,
 
     )
 
