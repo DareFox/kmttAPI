@@ -11,16 +11,16 @@ package kmtt.base.models
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param result 
+ *
+ * @param result
  */
 
 @kotlinx.serialization.Serializable
-data class MyNotificationsResponse (
+data class MyNotificationsResponse(
 
     @JsonNames("result")
-    val result: List<Notification>? = null
+    val result: List<Notification>? = null,
 
-)
+    )
 

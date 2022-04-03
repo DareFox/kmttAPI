@@ -12,17 +12,17 @@ package kmtt.base.models.webhook
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
+ *
  *
  * @param success Удачное удаление
  */
 
 @kotlinx.serialization.Serializable
-data class WebhookDeleteResponse (
+data class WebhookDeleteResponse(
 
     /* Удачное удаление */
     @JsonNames("success")
-    val success: Boolean? = null
+    val success: Boolean? = null,
 
-)
+    )
 

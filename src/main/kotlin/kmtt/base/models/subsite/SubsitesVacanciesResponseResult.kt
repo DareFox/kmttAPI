@@ -12,21 +12,21 @@ import kmtt.base.models.vacancy.Vacancy
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param items 
+ *
+ * @param items
  * @param lastId ID последнего элемента для подгрузки
  */
 
 @kotlinx.serialization.Serializable
-data class SubsitesVacanciesResponseResult (
+data class SubsitesVacanciesResponseResult(
 
     @JsonNames("items")
     val items: List<Vacancy>? = null,
 
     /* ID последнего элемента для подгрузки */
     @JsonNames("last_id")
-    val lastId: Long? = null
+    val lastId: Long? = null,
 
-)
+    )
 

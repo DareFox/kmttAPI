@@ -12,16 +12,16 @@ package kmtt.base.models
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param count 
- * @param summ 
- * @param isLiked 
- * @param isHidden 
+ *
+ * @param count
+ * @param summ
+ * @param isLiked
+ * @param isHidden
  */
 
 @kotlinx.serialization.Serializable
-data class Likes (
+data class Likes(
 
     @JsonNames("count")
     val count: Int? = null,
@@ -33,7 +33,7 @@ data class Likes (
     val isLiked: Int? = null,
 
     @JsonNames("is_hidden")
-    val isHidden: Boolean? = null
+    val isHidden: Boolean? = null,
 
-)
+    )
 

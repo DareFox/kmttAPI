@@ -13,17 +13,17 @@ import kotlinx.serialization.Contextual
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
+ *
  *
  * @param type Тип блока
  * @param `data` информация о блоке
- * @param cover 
- * @param anchor 
+ * @param cover
+ * @param anchor
  */
 
 @kotlinx.serialization.Serializable
 
-data class EntryBlock (
+data class EntryBlock(
 
     /* Тип блока */
     @JsonNames("type")
@@ -39,7 +39,7 @@ data class EntryBlock (
     val cover: Boolean? = null,
 
     @JsonNames("anchor")
-    val anchor: String? = null
+    val anchor: String? = null,
 
-)
+    )
 

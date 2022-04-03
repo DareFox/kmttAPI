@@ -9,21 +9,20 @@
 package kmtt.base.models.attach
 
 
-import kotlinx.serialization.Contextual
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param result 
+ *
+ * @param result
  */
 
 @kotlinx.serialization.Serializable
-data class AttachWithTypeResponse (
+data class AttachWithTypeResponse(
 
     @JsonNames("result")
     // TODO List any was here
-    val result: List<Attach>? = null
+    val result: List<Attach>? = null,
 
-)
+    )
 

@@ -12,27 +12,27 @@ import kmtt.base.models.Company
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param id 
- * @param title 
- * @param salaryTo 
- * @param salaryFrom 
- * @param salaryText 
- * @param area 
- * @param areaText 
- * @param schedule 
- * @param scheduleText 
- * @param entryId 
- * @param cityId 
- * @param cityName 
- * @param favoritesCount 
- * @param isFavorited 
- * @param company 
+ *
+ * @param id
+ * @param title
+ * @param salaryTo
+ * @param salaryFrom
+ * @param salaryText
+ * @param area
+ * @param areaText
+ * @param schedule
+ * @param scheduleText
+ * @param entryId
+ * @param cityId
+ * @param cityName
+ * @param favoritesCount
+ * @param isFavorited
+ * @param company
  */
 
 @kotlinx.serialization.Serializable
-data class Vacancy (
+data class Vacancy(
 
     @JsonNames("id")
     val id: Long? = null,
@@ -77,7 +77,7 @@ data class Vacancy (
     val isFavorited: Boolean? = null,
 
     @JsonNames("company")
-    val company: Company? = null
+    val company: Company? = null,
 
-)
+    )
 

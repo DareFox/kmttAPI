@@ -11,17 +11,17 @@ package kmtt.base.models
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param result 
+ *
+ * @param result
  */
 
 @kotlinx.serialization.Serializable
 
-data class BlacklistResponse (
+data class BlacklistResponse(
 
     @JsonNames("result")
-    val result: BlacklistResponseResult? = null
+    val result: BlacklistResponseResult? = null,
 
-)
+    )
 

@@ -11,17 +11,17 @@ package kmtt.base.models
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param usd 
- * @param eur 
- * @param btc 
- * @param eth 
+ *
+ * @param usd
+ * @param eur
+ * @param btc
+ * @param eth
  */
 
 @kotlinx.serialization.Serializable
 
-data class Rates (
+data class Rates(
 
     @JsonNames("usd")
     val usd: Rate? = null,
@@ -33,7 +33,7 @@ data class Rates (
     val btc: Rate? = null,
 
     @JsonNames("eth")
-    val eth: Rate? = null
+    val eth: Rate? = null,
 
-)
+    )
 

@@ -12,16 +12,16 @@ package kmtt.base.models
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param width 
- * @param height 
- * @param ratio 
+ *
+ * @param width
+ * @param height
+ * @param ratio
  */
 
 @kotlinx.serialization.Serializable
 
-data class Size (
+data class Size(
 
     @JsonNames("width")
     val width: Long? = null,
@@ -30,7 +30,7 @@ data class Size (
     val height: Long? = null,
 
     @JsonNames("ratio")
-    val ratio: Double? = null
+    val ratio: Double? = null,
 
-)
+    )
 

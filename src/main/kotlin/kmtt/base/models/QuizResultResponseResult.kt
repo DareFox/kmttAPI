@@ -13,7 +13,7 @@ import kmtt.base.models.subsite.Subsite
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
+ *
  *
  * @param items Ассоциативный массив ID элемента опроса -> объект с информацией
  * @param winner Id выигравшего элемента
@@ -23,7 +23,7 @@ import kotlinx.serialization.json.JsonNames
 
 @kotlinx.serialization.Serializable
 
-data class QuizResultResponseResult (
+data class QuizResultResponseResult(
 
     /* Ассоциативный массив ID элемента опроса -> объект с информацией */
     @JsonNames("items")
@@ -40,7 +40,7 @@ data class QuizResultResponseResult (
     /* Ассоциативный массив ID элемента опроса -> массив со списком пользователей */
     // TODO Any was here
     @JsonNames("randomVotedUsers")
-    val randomVotedUsers: Map<String, List<Subsite>>? = null
+    val randomVotedUsers: Map<String, List<Subsite>>? = null,
 
-)
+    )
 

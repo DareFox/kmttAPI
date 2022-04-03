@@ -12,16 +12,16 @@ import kmtt.base.models.JobOrEventFilter
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param area 
- * @param cities 
- * @param schedule 
- * @param specializations 
+ *
+ * @param area
+ * @param cities
+ * @param schedule
+ * @param specializations
  */
 
 @kotlinx.serialization.Serializable
-data class VacanciesFiltersResponseResult (
+data class VacanciesFiltersResponseResult(
 
     @JsonNames("area")
     val area: List<JobOrEventFilter>? = null,
@@ -33,7 +33,7 @@ data class VacanciesFiltersResponseResult (
     val schedule: List<JobOrEventFilter>? = null,
 
     @JsonNames("specializations")
-    val specializations: List<JobOrEventFilter>? = null
+    val specializations: List<JobOrEventFilter>? = null,
 
-)
+    )
 

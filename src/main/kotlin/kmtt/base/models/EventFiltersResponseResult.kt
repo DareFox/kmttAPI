@@ -11,21 +11,21 @@ package kmtt.base.models
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param cities 
- * @param specializations 
+ *
+ * @param cities
+ * @param specializations
  */
 
 @kotlinx.serialization.Serializable
 
-data class EventFiltersResponseResult (
+data class EventFiltersResponseResult(
 
     @JsonNames("cities")
     val cities: List<JobOrEventFilter>? = null,
 
     @JsonNames("specializations")
-    val specializations: List<JobOrEventFilter>? = null
+    val specializations: List<JobOrEventFilter>? = null,
 
-)
+    )
 

@@ -12,20 +12,20 @@ package kmtt.base.models.entry
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param html 
- * @param version 
+ *
+ * @param html
+ * @param version
  */
 
 @kotlinx.serialization.Serializable
-data class EntryContent (
+data class EntryContent(
 
     @JsonNames("html")
     val html: String? = null,
 
     @JsonNames("version")
-    val version: String? = null
+    val version: String? = null,
 
-)
+    )
 

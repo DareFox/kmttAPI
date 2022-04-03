@@ -8,59 +8,59 @@
  */
 package kmtt.base.models.entry
 
-import kmtt.base.models.subsite.Subsite
 import kmtt.base.models.*
 import kmtt.base.models.comment.Comment
+import kmtt.base.models.subsite.Subsite
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param id 
+ *
+ * @param id
  * @param title Заголовок статьи
  * @param webviewUrl Ссылка, которую нужно открыть вместо открытия статьи
- * @param entryContent 
+ * @param entryContent
  * @param date Дата создания статьи
  * @param dateRFC Дата создания статьи
  * @param lastModificationDate Дата последнего изменения статьи
- * @param author 
- * @param type Тип контента:   * `TYPE_ENTRY` - 1   * `TYPE_VACANCY` - 2   * `TYPE_STATICPAGE` - 3   * `TYPE_EVENT` - 4   * `TYPE_REPOST` - 5 
+ * @param author
+ * @param type Тип контента:   * `TYPE_ENTRY` - 1   * `TYPE_VACANCY` - 2   * `TYPE_STATICPAGE` - 3   * `TYPE_EVENT` - 4   * `TYPE_REPOST` - 5
  * @param intro Подзаголовок статьи
- * @param cover 
- * @param introInFeed 
- * @param similar 
+ * @param cover
+ * @param introInFeed
+ * @param similar
  * @param hitsCount Число просмотров
- * @param likes 
+ * @param likes
  * @param commentsPreview Список аватарок комментирующих для заглушки
- * @param commentsCount 
- * @param favoritesCount 
- * @param isFavorited 
- * @param isEnabledLikes 
- * @param isEnabledComments 
+ * @param commentsCount
+ * @param favoritesCount
+ * @param isFavorited
+ * @param isEnabledLikes
+ * @param isEnabledComments
  * @param isEditorial Показывает, что это пост редакции
  * @param isPinned Показывает, закреплен ли пост
  * @param audioUrl Ссылка на mp3 файл с озвучкой статьи
- * @param badges 
- * @param commentatorsAvatars 
- * @param subsite 
+ * @param badges
+ * @param commentatorsAvatars
+ * @param subsite
  * @param hotness Значение хотнесса
  * @param subscribedToTreads Показывает, подписан ли пользователь на новые комментарии
  * @param blocks Список блоков для нативной статьи. Для каждого типа блока формат объекта data разный
  * @param canEdit Показывает, может ли пользователь редактировать материал
- * @param dateFavorite 
- * @param isRepost 
- * @param isPromoted 
- * @param repost 
- * @param commentsSeenCount 
- * @param etcControls 
- * @param isShowThanks 
- * @param isStillUpdating 
- * @param isFilledByEditors 
- * @param coAuthor 
+ * @param dateFavorite
+ * @param isRepost
+ * @param isPromoted
+ * @param repost
+ * @param commentsSeenCount
+ * @param etcControls
+ * @param isShowThanks
+ * @param isStillUpdating
+ * @param isFilledByEditors
+ * @param coAuthor
  */
 
 @kotlinx.serialization.Serializable
-data class Entry (
+data class Entry(
 
     @JsonNames("id")
     val id: Long? = null,
@@ -199,7 +199,7 @@ data class Entry (
     val isFilledByEditors: Boolean? = null,
 
     @JsonNames("co_author")
-    val coAuthor: Subsite? = null
+    val coAuthor: Subsite? = null,
 
-)
+    )
 

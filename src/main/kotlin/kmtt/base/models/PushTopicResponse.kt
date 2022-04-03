@@ -12,17 +12,17 @@ package kmtt.base.models
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param result 
+ *
+ * @param result
  */
 
 @kotlinx.serialization.Serializable
 
-data class PushTopicResponse (
+data class PushTopicResponse(
 
     @JsonNames("result")
-    val result: String? = null
+    val result: String? = null,
 
-)
+    )
 

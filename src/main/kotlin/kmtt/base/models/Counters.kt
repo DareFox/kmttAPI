@@ -12,16 +12,16 @@ package kmtt.base.models
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param propertyEntries 
- * @param comments 
- * @param favorites 
+ *
+ * @param propertyEntries
+ * @param comments
+ * @param favorites
  */
 
 @kotlinx.serialization.Serializable
 
-data class Counters (
+data class Counters(
 
     @JsonNames("entries")
     val propertyEntries: Long? = null,
@@ -30,7 +30,7 @@ data class Counters (
     val comments: Long? = null,
 
     @JsonNames("favorites")
-    val favorites: Long? = null
+    val favorites: Long? = null,
 
-)
+    )
 

@@ -12,17 +12,17 @@ package kmtt.base.models
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param id 
- * @param type 
- * @param username 
- * @param url 
+ *
+ * @param id
+ * @param type
+ * @param username
+ * @param url
  */
 
 @kotlinx.serialization.Serializable
 
-data class SocialAccount (
+data class SocialAccount(
 
     @JsonNames("id")
     val id: Long? = null,
@@ -34,7 +34,7 @@ data class SocialAccount (
     val username: String? = null,
 
     @JsonNames("url")
-    val url: String? = null
+    val url: String? = null,
 
-)
+    )
 

@@ -11,16 +11,16 @@ package kmtt.base.models
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param result 
+ *
+ * @param result
  */
 
 @kotlinx.serialization.Serializable
-data class TweetsResponse (
+data class TweetsResponse(
 
     @JsonNames("result")
-    val result: List<Tweet>? = null
+    val result: List<Tweet>? = null,
 
-)
+    )
 

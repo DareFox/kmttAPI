@@ -13,15 +13,15 @@ import kotlinx.serialization.Contextual
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param code 
- * @param info 
+ *
+ * @param code
+ * @param info
  */
 
 @kotlinx.serialization.Serializable
 
-data class EntryComplaintErrorError (
+data class EntryComplaintErrorError(
 
     @JsonNames("code")
     val code: Int? = null,
@@ -29,7 +29,7 @@ data class EntryComplaintErrorError (
     @JsonNames("info")
     @Contextual
     // TODO: FIx any
-    val info: Any? = null
+    val info: Any? = null,
 
-)
+    )
 

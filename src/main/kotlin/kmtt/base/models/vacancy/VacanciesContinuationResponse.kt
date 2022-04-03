@@ -12,16 +12,16 @@ import kmtt.base.models.subsite.SubsitesVacanciesResponseResult
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param result 
+ *
+ * @param result
  */
 
 @kotlinx.serialization.Serializable
-data class VacanciesContinuationResponse (
+data class VacanciesContinuationResponse(
 
     @JsonNames("result")
-    val result: SubsitesVacanciesResponseResult? = null
+    val result: SubsitesVacanciesResponseResult? = null,
 
-)
+    )
 

@@ -13,7 +13,6 @@ import kmtt.exception.OsnovaRequestException
 import kmtt.util.jsonParser
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.serialization.decodeFromString
-import kotlinx.serialization.json.decodeFromStream
 import java.io.Closeable
 
 interface IHttpClient : CoroutineScope, Closeable {
@@ -44,7 +43,8 @@ suspend inline fun <reified T> IHttpClient.request(crossinline block: HttpReques
         try {
             parsed = jsonParser.decodeFromString<ErrorResponse>(String(ex.response.readBytes()))
             isParsed = true
-        } catch (_: Exception) {}
+        } catch (_: Exception) {
+        }
 
         if (isParsed) {
             throw OsnovaRequestException(ex.response, parsed)

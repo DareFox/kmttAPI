@@ -12,20 +12,20 @@ package kmtt.base.models
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param id 
- * @param title 
+ *
+ * @param id
+ * @param title
  */
 
 @kotlinx.serialization.Serializable
-data class JobOrEventFilter (
+data class JobOrEventFilter(
 
     @JsonNames("id")
     val id: Long? = null,
 
     @JsonNames("title")
-    val title: String? = null
+    val title: String? = null,
 
-)
+    )
 

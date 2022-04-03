@@ -12,21 +12,21 @@ import kmtt.base.models.entry.EntryComplaintErrorError
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param message 
- * @param error 
+ *
+ * @param message
+ * @param error
  */
 
 @kotlinx.serialization.Serializable
 
-data class CommentComplaintError (
+data class CommentComplaintError(
 
     @JsonNames("message")
     val message: String? = null,
 
     @JsonNames("error")
-    val error: EntryComplaintErrorError? = null
+    val error: EntryComplaintErrorError? = null,
 
-)
+    )
 

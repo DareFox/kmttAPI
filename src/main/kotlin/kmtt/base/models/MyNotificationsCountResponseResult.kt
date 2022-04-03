@@ -12,15 +12,16 @@ package kmtt.base.models
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param count 
+ *
+ * @param count
  */
 
-@kotlinx.serialization.Serializable data class MyNotificationsCountResponseResult (
+@kotlinx.serialization.Serializable
+data class MyNotificationsCountResponseResult(
 
     @JsonNames("count")
-    val count: Long? = null
+    val count: Long? = null,
 
-)
+    )
 

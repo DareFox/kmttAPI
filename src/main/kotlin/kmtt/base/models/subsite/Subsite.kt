@@ -14,36 +14,36 @@ import kmtt.base.models.SocialAccount
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param id 
- * @param url 
- * @param type 
- * @param name 
- * @param description 
+ *
+ * @param id
+ * @param url
+ * @param type
+ * @param name
+ * @param description
  * @param avatarUrl Аватарка профиля
- * @param cover 
- * @param isSubscribed 
- * @param isVerified 
- * @param isUnsubscribable 
- * @param subscribersCount 
- * @param commentsCount 
- * @param entriesCount 
- * @param vacanciesCount 
- * @param created 
- * @param createdRFC 
- * @param karma 
+ * @param cover
+ * @param isSubscribed
+ * @param isVerified
+ * @param isUnsubscribable
+ * @param subscribersCount
+ * @param commentsCount
+ * @param entriesCount
+ * @param vacanciesCount
+ * @param created
+ * @param createdRFC
+ * @param karma
  * @param socialAccounts Список прикрепленных аккаунтов
  * @param pushTopic Личный топик пользователя в Firebase Messaging
- * @param advancedAccess 
- * @param counters 
+ * @param advancedAccess
+ * @param counters
  * @param userHash Хеш ID пользователя. Используется для сравнения данных, где ID захеширован
- * @param contacts 
+ * @param contacts
  */
 
 @kotlinx.serialization.Serializable
 
-data class Subsite (
+data class Subsite(
 
     @JsonNames("id")
     val id: Long? = null,
@@ -116,7 +116,7 @@ data class Subsite (
     val userHash: String? = null,
 
     @JsonNames("contacts")
-    val contacts: SubsiteContacts? = null
+    val contacts: SubsiteContacts? = null,
 
-)
+    )
 

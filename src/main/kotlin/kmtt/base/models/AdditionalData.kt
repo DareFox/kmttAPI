@@ -14,18 +14,18 @@ package kmtt.base.models
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param type 
- * @param url 
- * @param propertySize 
- * @param uuid 
- * @param duration 
- * @param hasAudio 
+ *
+ * @param type
+ * @param url
+ * @param propertySize
+ * @param uuid
+ * @param duration
+ * @param hasAudio
  */
 
 @kotlinx.serialization.Serializable
-data class AdditionalData (
+data class AdditionalData(
 
     @JsonNames("type")
     val type: AdditionalData.Type? = null,
@@ -43,19 +43,22 @@ data class AdditionalData (
     val duration: Long? = null,
 
     @JsonNames("hasAudio")
-    val hasAudio: Boolean? = null
+    val hasAudio: Boolean? = null,
 
-) {
+    ) {
 
     /**
-     * 
+     *
      *
      * Values: gif,jpg,png
      */
     enum class Type(val value: String) {
-        @JsonNames("gif") gif("gif"),
-        @JsonNames("jpg") jpg("jpg"),
-        @JsonNames("png") png("png");
+        @JsonNames("gif")
+        gif("gif"),
+        @JsonNames("jpg")
+        jpg("jpg"),
+        @JsonNames("png")
+        png("png");
     }
 }
 

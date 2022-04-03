@@ -11,16 +11,16 @@ package kmtt.base.models.vacancy
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param result 
+ *
+ * @param result
  */
 
 @kotlinx.serialization.Serializable
-data class VacanciesResponse (
+data class VacanciesResponse(
 
     @JsonNames("result")
-    val result: List<Vacancy>? = null
+    val result: List<Vacancy>? = null,
 
-)
+    )
 

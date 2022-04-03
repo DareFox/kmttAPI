@@ -11,17 +11,17 @@ package kmtt.base.models.comment
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param result 
+ *
+ * @param result
  */
 
 @kotlinx.serialization.Serializable
 
-data class CommentsThreadLimitResponse (
+data class CommentsThreadLimitResponse(
 
     @JsonNames("result")
-    val result: CommentsLevelLimited? = null
+    val result: CommentsLevelLimited? = null,
 
-)
+    )
 

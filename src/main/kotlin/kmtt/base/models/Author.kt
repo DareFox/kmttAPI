@@ -11,22 +11,22 @@ package kmtt.base.models
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param id 
- * @param created 
- * @param firstName 
- * @param lastName 
- * @param name 
- * @param gender 
- * @param url 
- * @param avatarUrl 
- * @param karma 
- * @param socialAccounts 
+ *
+ * @param id
+ * @param created
+ * @param firstName
+ * @param lastName
+ * @param name
+ * @param gender
+ * @param url
+ * @param avatarUrl
+ * @param karma
+ * @param socialAccounts
  */
 
 @kotlinx.serialization.Serializable
-data class Author (
+data class Author(
 
     @JsonNames("id")
     val id: Long? = null,
@@ -56,7 +56,7 @@ data class Author (
     val karma: Int? = null,
 
     @JsonNames("social_accounts")
-    val socialAccounts: List<SocialAccount>? = null
+    val socialAccounts: List<SocialAccount>? = null,
 
-)
+    )
 

@@ -14,16 +14,16 @@ import kmtt.base.models.subsite.Subsite
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param author 
+ *
+ * @param author
  */
 
 @kotlinx.serialization.Serializable
-data class EntryRepost (
+data class EntryRepost(
 
     @JsonNames("author")
-    val author: Subsite? = null
+    val author: Subsite? = null,
 
-)
+    )
 

@@ -14,15 +14,15 @@ import kotlinx.serialization.json.JsonNames
 /**
  * Обложка профиля
  *
- * @param coverUrl 
- * @param height 
- * @param width 
- * @param type 
- * @param y 
+ * @param coverUrl
+ * @param height
+ * @param width
+ * @param type
+ * @param y
  */
 
 @kotlinx.serialization.Serializable
-data class SubsiteCover (
+data class SubsiteCover(
 
     @JsonNames("cover_url")
     val coverUrl: String? = null,
@@ -37,7 +37,7 @@ data class SubsiteCover (
     val type: String? = null,
 
     @JsonNames("y")
-    val y: String? = null
+    val y: String? = null,
 
-)
+    )
 

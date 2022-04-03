@@ -12,17 +12,17 @@ import kmtt.base.models.entry.Entry
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param result 
+ *
+ * @param result
  */
 
 @kotlinx.serialization.Serializable
 
-data class TagSearchResponse (
+data class TagSearchResponse(
 
     @JsonNames("result")
-    val result: List<Entry>? = null
+    val result: List<Entry>? = null,
 
-)
+    )
 

@@ -11,20 +11,20 @@ package kmtt.base.models
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param id 
- * @param text 
- * @param user 
- * @param retweetCount 
- * @param favoriteCount 
- * @param hasMedia 
- * @param media 
- * @param createdAt 
+ *
+ * @param id
+ * @param text
+ * @param user
+ * @param retweetCount
+ * @param favoriteCount
+ * @param hasMedia
+ * @param media
+ * @param createdAt
  */
 
 @kotlinx.serialization.Serializable
-data class Tweet (
+data class Tweet(
 
     @JsonNames("id")
     val id: String? = null,
@@ -48,7 +48,7 @@ data class Tweet (
     val media: List<TweetMedium>? = null,
 
     @JsonNames("created_at")
-    val createdAt: Long? = null
+    val createdAt: Long? = null,
 
-)
+    )
 

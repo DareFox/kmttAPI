@@ -12,16 +12,16 @@ package kmtt.base.models
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param keywords 
+ *
+ * @param keywords
  */
 
 @kotlinx.serialization.Serializable
-data class IgnoredKeywordsResponseResult (
+data class IgnoredKeywordsResponseResult(
 
     @JsonNames("keywords")
-    val keywords: List<String>? = null
+    val keywords: List<String>? = null,
 
-)
+    )
 

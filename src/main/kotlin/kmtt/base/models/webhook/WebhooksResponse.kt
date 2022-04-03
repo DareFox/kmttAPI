@@ -12,16 +12,16 @@ import kmtt.base.models.Watcher
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param result 
+ *
+ * @param result
  */
 
 @kotlinx.serialization.Serializable
-data class WebhooksResponse (
+data class WebhooksResponse(
 
     @JsonNames("result")
-    val result: List<Watcher>? = null
+    val result: List<Watcher>? = null,
 
-)
+    )
 

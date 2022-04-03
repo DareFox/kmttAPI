@@ -12,16 +12,16 @@ import kmtt.base.models.subsite.Subsite
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param result 
+ *
+ * @param result
  */
 
 @kotlinx.serialization.Serializable
-data class AuthLoginResponse (
+data class AuthLoginResponse(
 
     @JsonNames("result")
-    val result: List<Subsite> = listOf()
+    val result: List<Subsite> = listOf(),
 
-)
+    )
 

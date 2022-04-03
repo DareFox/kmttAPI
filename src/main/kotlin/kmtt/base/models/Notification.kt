@@ -12,21 +12,21 @@ import kmtt.base.models.subsite.Subsite
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param id 
- * @param type Тип уведомления:   * `2` - TYPE_LIKE   * `4` - TYPE_REPLY   * `8` - TYPE_BANNED   * `16` - TYPE_UNPUBLISH   * `32` - TYPE_COMMENT   * `64` - TYPE_SYSTEM   * `128` - TYPE_VACANCY 
- * @param date 
- * @param dateRFC 
- * @param users 
- * @param text 
- * @param commentText 
- * @param url 
+ *
+ * @param id
+ * @param type Тип уведомления:   * `2` - TYPE_LIKE   * `4` - TYPE_REPLY   * `8` - TYPE_BANNED   * `16` - TYPE_UNPUBLISH   * `32` - TYPE_COMMENT   * `64` - TYPE_SYSTEM   * `128` - TYPE_VACANCY
+ * @param date
+ * @param dateRFC
+ * @param users
+ * @param text
+ * @param commentText
+ * @param url
  * @param icon Название иконки, которая подставляется вместо аватарки.
  */
 
 @kotlinx.serialization.Serializable
-data class Notification (
+data class Notification(
 
     @JsonNames("id")
     val id: Long? = null,
@@ -55,38 +55,54 @@ data class Notification (
 
     /* Название иконки, которая подставляется вместо аватарки. */
     @JsonNames("icon")
-    val icon: Notification.Icon? = null
+    val icon: Notification.Icon? = null,
 
-) {
+    ) {
 
     /**
-     * Тип уведомления:   * `2` - TYPE_LIKE   * `4` - TYPE_REPLY   * `8` - TYPE_BANNED   * `16` - TYPE_UNPUBLISH   * `32` - TYPE_COMMENT   * `64` - TYPE_SYSTEM   * `128` - TYPE_VACANCY 
+     * Тип уведомления:   * `2` - TYPE_LIKE   * `4` - TYPE_REPLY   * `8` - TYPE_BANNED   * `16` - TYPE_UNPUBLISH   * `32` - TYPE_COMMENT   * `64` - TYPE_SYSTEM   * `128` - TYPE_VACANCY
      *
      * Values: _2,_4,_8,_16,_32,_64,_128
      */
     enum class Type(val value: Int) {
-        @JsonNames("2") _2(2),
-        @JsonNames("4") _4(4),
-        @JsonNames("8") _8(8),
-        @JsonNames("1") _16(16),
-        @JsonNames("3") _32(32),
-        @JsonNames("6") _64(64),
-        @JsonNames("18") _128(128);
+        @JsonNames("2")
+        _2(2),
+        @JsonNames("4")
+        _4(4),
+        @JsonNames("8")
+        _8(8),
+        @JsonNames("1")
+        _16(16),
+        @JsonNames("3")
+        _32(32),
+        @JsonNames("6")
+        _64(64),
+        @JsonNames("18")
+        _128(128);
     }
+
     /**
      * Название иконки, которая подставляется вместо аватарки.
      *
      * Values: commentsAdded,commentsReplyTo,likeUp,likeDown,uiChronograph,iconMinusUnpublishMinusEntry,pencil,uiArchive
      */
     enum class Icon(val value: String) {
-        @JsonNames("comments_added") commentsAdded("comments_added"),
-        @JsonNames("comments_reply_to") commentsReplyTo("comments_reply_to"),
-        @JsonNames("like_up") likeUp("like_up"),
-        @JsonNames("like_down") likeDown("like_down"),
-        @JsonNames("ui_chronograph") uiChronograph("ui_chronograph"),
-        @JsonNames("icon-unpublish-entry") iconMinusUnpublishMinusEntry("icon-unpublish-entry"),
-        @JsonNames("pencil") pencil("pencil"),
-        @JsonNames("ui_archive") uiArchive("ui_archive");
+        @JsonNames("comments_added")
+        commentsAdded("comments_added"),
+        @JsonNames("comments_reply_to")
+        commentsReplyTo("comments_reply_to"),
+        @JsonNames("like_up")
+        likeUp("like_up"),
+        @JsonNames("like_down")
+        likeDown("like_down"),
+        @JsonNames("ui_chronograph")
+        uiChronograph("ui_chronograph"),
+        @JsonNames("icon-unpublish-entry")
+        iconMinusUnpublishMinusEntry("icon-unpublish-entry"),
+        @JsonNames("pencil")
+        pencil("pencil"),
+        @JsonNames("ui_archive")
+        uiArchive("ui_archive");
     }
 }
 

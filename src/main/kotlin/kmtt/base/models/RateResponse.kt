@@ -11,16 +11,16 @@ package kmtt.base.models
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param result 
+ *
+ * @param result
  */
 
 @kotlinx.serialization.Serializable
-data class RateResponse (
+data class RateResponse(
 
     @JsonNames("result")
-    val result: Likes? = null
+    val result: Likes? = null,
 
-)
+    )
 

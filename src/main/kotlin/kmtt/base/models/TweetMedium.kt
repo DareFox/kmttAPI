@@ -12,18 +12,18 @@ package kmtt.base.models
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param type 
- * @param thumbnailUrl 
- * @param mediaUrl 
- * @param thumbnailWidth 
- * @param thumbnailHeight 
- * @param ratio 
+ *
+ * @param type
+ * @param thumbnailUrl
+ * @param mediaUrl
+ * @param thumbnailWidth
+ * @param thumbnailHeight
+ * @param ratio
  */
 
 @kotlinx.serialization.Serializable
-data class TweetMedium (
+data class TweetMedium(
 
     @JsonNames("type")
     val type: Long? = null,
@@ -41,7 +41,7 @@ data class TweetMedium (
     val thumbnailHeight: Long? = null,
 
     @JsonNames("ratio")
-    val ratio: Long? = null
+    val ratio: Long? = null,
 
-)
+    )
 

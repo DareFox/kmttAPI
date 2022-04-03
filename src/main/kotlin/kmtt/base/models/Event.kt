@@ -11,24 +11,24 @@ package kmtt.base.models
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param id 
- * @param title 
- * @param archived 
- * @param entryId 
- * @param cityId 
- * @param cityName 
- * @param price 
- * @param date 
- * @param favoritesCount 
- * @param isFavorited 
- * @param company 
- * @param interested 
+ *
+ * @param id
+ * @param title
+ * @param archived
+ * @param entryId
+ * @param cityId
+ * @param cityName
+ * @param price
+ * @param date
+ * @param favoritesCount
+ * @param isFavorited
+ * @param company
+ * @param interested
  */
 
 @kotlinx.serialization.Serializable
-data class Event (
+data class Event(
 
     @JsonNames("id")
     val id: Long? = null,
@@ -64,7 +64,7 @@ data class Event (
     val company: Company? = null,
 
     @JsonNames("interested")
-    val interested: Long? = null
+    val interested: Long? = null,
 
-)
+    )
 

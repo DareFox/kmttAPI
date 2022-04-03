@@ -18,19 +18,19 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param type Тип медиафайла:   * `1` - TYPE_IMAGE   * `2` - TYPE_VIDEO 
- * @param imageUrl 
- * @param iframeUrl 
- * @param service 
- * @param additionalData 
- * @param propertySize 
+ *
+ * @param type Тип медиафайла:   * `1` - TYPE_IMAGE   * `2` - TYPE_VIDEO
+ * @param imageUrl
+ * @param iframeUrl
+ * @param service
+ * @param additionalData
+ * @param propertySize
  */
 
 @kotlinx.serialization.Serializable
 
-data class Media (
+data class Media(
 
     /* Тип медиафайла:   * `1` - TYPE_IMAGE   * `2` - TYPE_VIDEO  */
     @JsonNames("type")
@@ -49,9 +49,9 @@ data class Media (
     val additionalData: AdditionalData? = null,
 
     @JsonNames("size")
-    val propertySize: Size? = null
+    val propertySize: Size? = null,
 
-) {
+    ) {
 
     /**
      * Тип медиафайла

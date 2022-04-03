@@ -1,11 +1,11 @@
 package kmtt.base
 
-import kmtt.base.ktor.HttpClientAdapter
-import kmtt.base.ktor.IHttpClient
 import io.github.resilience4j.ratelimiter.RateLimiterConfig
 import io.ktor.client.*
 import io.ktor.client.features.json.*
 import io.ktor.client.features.json.serializer.*
+import kmtt.base.ktor.HttpClientAdapter
+import kmtt.base.ktor.IHttpClient
 import java.io.Closeable
 import java.time.Duration
 
@@ -20,7 +20,7 @@ abstract class AbstractOsnova(token: String) : Closeable {
         .build()
 
 
-    private val client: IHttpClient = HttpClientAdapter(HttpClient() {
+    private val client: IHttpClient = HttpClientAdapter(HttpClient {
         install(JsonFeature) {
             serializer = KotlinxSerializer(kotlinx.serialization.json.Json {
                 ignoreUnknownKeys = true

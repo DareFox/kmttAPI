@@ -12,18 +12,18 @@ package kmtt.base.models
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param type 
- * @param text 
- * @param color 
- * @param background 
- * @param border 
+ *
+ * @param type
+ * @param text
+ * @param color
+ * @param background
+ * @param border
  */
 
 @kotlinx.serialization.Serializable
 
-data class Badge (
+data class Badge(
 
     @JsonNames("type")
     val type: String? = null,
@@ -38,7 +38,7 @@ data class Badge (
     val background: String? = null,
 
     @JsonNames("border")
-    val border: String? = null
+    val border: String? = null,
 
-)
+    )
 

@@ -12,21 +12,21 @@ package kmtt.base.models
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param createdAt 
- * @param followersCount 
- * @param friendsCount 
- * @param id 
- * @param name 
- * @param profileImageUrl 
- * @param profileImageUrlBigger 
- * @param screenName 
- * @param statusesCount 
+ *
+ * @param createdAt
+ * @param followersCount
+ * @param friendsCount
+ * @param id
+ * @param name
+ * @param profileImageUrl
+ * @param profileImageUrlBigger
+ * @param screenName
+ * @param statusesCount
  */
 
 @kotlinx.serialization.Serializable
-data class TweetUser (
+data class TweetUser(
 
     @JsonNames("created_at")
     val createdAt: Long? = null,
@@ -53,7 +53,7 @@ data class TweetUser (
     val screenName: String? = null,
 
     @JsonNames("statuses_count")
-    val statusesCount: Long? = null
+    val statusesCount: Long? = null,
 
-)
+    )
 

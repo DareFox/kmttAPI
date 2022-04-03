@@ -12,15 +12,15 @@ package kmtt.base.models
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param rate 
- * @param change 
- * @param sym 
+ *
+ * @param rate
+ * @param change
+ * @param sym
  */
 
 @kotlinx.serialization.Serializable
-data class Rate (
+data class Rate(
 
     @JsonNames("rate")
     val rate: String? = null,
@@ -29,7 +29,7 @@ data class Rate (
     val change: Long? = null,
 
     @JsonNames("sym")
-    val sym: String? = null
+    val sym: String? = null,
 
-)
+    )
 

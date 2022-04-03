@@ -12,19 +12,19 @@ package kmtt.base.models
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param editEntry 
- * @param pinContent 
- * @param unpublishEntry 
- * @param banSubsite 
- * @param pinComment 
- * @param remove 
- * @param removeThread 
+ *
+ * @param editEntry
+ * @param pinContent
+ * @param unpublishEntry
+ * @param banSubsite
+ * @param pinComment
+ * @param remove
+ * @param removeThread
  */
 
 @kotlinx.serialization.Serializable
-data class EtcControls (
+data class EtcControls(
 
     @JsonNames("edit_entry")
     val editEntry: Boolean? = null,
@@ -45,7 +45,7 @@ data class EtcControls (
     val remove: Boolean? = null,
 
     @JsonNames("remove_thread")
-    val removeThread: Boolean? = null
+    val removeThread: Boolean? = null,
 
-)
+    )
 

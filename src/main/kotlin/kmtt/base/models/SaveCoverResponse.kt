@@ -12,16 +12,16 @@ package kmtt.base.models
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param success 
+ *
+ * @param success
  */
 
 @kotlinx.serialization.Serializable
-data class SaveCoverResponse (
+data class SaveCoverResponse(
 
     @JsonNames("success")
-    val success: Boolean? = null
+    val success: Boolean? = null,
 
-)
+    )
 

@@ -12,7 +12,7 @@ package kmtt.base.models
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
+ *
  *
  * @param id Номер подписки
  * @param event Название события
@@ -20,7 +20,7 @@ import kotlinx.serialization.json.JsonNames
  */
 
 @kotlinx.serialization.Serializable
-data class Watcher (
+data class Watcher(
 
     /* Номер подписки */
     @JsonNames("id")
@@ -32,7 +32,7 @@ data class Watcher (
 
     /* Cсылка */
     @JsonNames("url")
-    val url: String? = null
+    val url: String? = null,
 
-)
+    )
 

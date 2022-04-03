@@ -8,36 +8,39 @@
  */
 package kmtt.base.models.comment
 
+import kmtt.base.models.Author
+import kmtt.base.models.EtcControls
+import kmtt.base.models.Likes
+import kmtt.base.models.Media
 import kmtt.base.models.attach.Attach
 import kmtt.base.models.entry.Entry
-import kmtt.base.models.*
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param id 
- * @param date 
- * @param dateRFC 
- * @param author 
+ *
+ * @param id
+ * @param date
+ * @param dateRFC
+ * @param author
  * @param text текст комментария с html
  * @param textWoMd текст комментария с markdown
- * @param media 
- * @param likes 
- * @param entry 
- * @param replyTo 
- * @param isFavorited 
- * @param isPinned 
- * @param isEdited 
- * @param level 
- * @param sourceId С какой OS был написан комментарий:   * `0` - Other   * `1` - iOS   * `2` - Android 
- * @param loadMore 
- * @param attaches 
- * @param etcControls 
+ * @param media
+ * @param likes
+ * @param entry
+ * @param replyTo
+ * @param isFavorited
+ * @param isPinned
+ * @param isEdited
+ * @param level
+ * @param sourceId С какой OS был написан комментарий:   * `0` - Other   * `1` - iOS   * `2` - Android
+ * @param loadMore
+ * @param attaches
+ * @param etcControls
  */
 
 @kotlinx.serialization.Serializable
-data class Comment (
+data class Comment(
 
     @JsonNames("id")
     val id: Long? = null,
@@ -94,7 +97,7 @@ data class Comment (
     val attaches: List<Attach>? = null,
 
     @JsonNames("etcControls")
-    val etcControls: EtcControls? = null
+    val etcControls: EtcControls? = null,
 
-)
+    )
 

@@ -11,16 +11,16 @@ package kmtt.base.models
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param result 
+ *
+ * @param result
  */
 
 @kotlinx.serialization.Serializable
-data class SetIngoreKeywordsResponse (
+data class SetIngoreKeywordsResponse(
 
     @JsonNames("result")
-    val result: BlacklistResponseResult? = null
+    val result: BlacklistResponseResult? = null,
 
-)
+    )
 

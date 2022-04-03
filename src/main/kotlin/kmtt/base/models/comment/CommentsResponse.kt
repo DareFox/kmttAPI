@@ -11,16 +11,16 @@ package kmtt.base.models.comment
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param result 
+ *
+ * @param result
  */
 
 @kotlinx.serialization.Serializable
-data class CommentsResponse (
+data class CommentsResponse(
 
     @JsonNames("result")
-    val result: List<Comment>? = null
+    val result: List<Comment>? = null,
 
-)
+    )
 

@@ -12,20 +12,20 @@ package kmtt.base.models
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param readComments 
- * @param writeComments 
+ *
+ * @param readComments
+ * @param writeComments
  */
 
 @kotlinx.serialization.Serializable
-data class AdvancedAccessActions (
+data class AdvancedAccessActions(
 
     @JsonNames("read_comments")
     val readComments: Boolean? = null,
 
     @JsonNames("write_comments")
-    val writeComments: Boolean? = null
+    val writeComments: Boolean? = null,
 
-)
+    )
 

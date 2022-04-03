@@ -12,20 +12,20 @@ package kmtt.base.models.subsite
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param title 
- * @param url 
+ *
+ * @param title
+ * @param url
  */
 
 @kotlinx.serialization.Serializable
-data class SubsiteContactsSite (
+data class SubsiteContactsSite(
 
     @JsonNames("title")
     val title: String? = null,
 
     @JsonNames("url")
-    val url: String? = null
+    val url: String? = null,
 
-)
+    )
 

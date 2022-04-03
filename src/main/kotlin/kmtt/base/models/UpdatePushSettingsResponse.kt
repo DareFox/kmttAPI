@@ -13,17 +13,17 @@ import kotlinx.serialization.Contextual
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param result 
+ *
+ * @param result
  */
 
 @kotlinx.serialization.Serializable
-data class UpdatePushSettingsResponse (
+data class UpdatePushSettingsResponse(
 
     @JsonNames("result")
     @Contextual // TODO fix Any
-    val result: Any? = null
+    val result: Any? = null,
 
-)
+    )
 

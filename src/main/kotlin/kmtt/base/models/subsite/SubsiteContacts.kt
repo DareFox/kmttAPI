@@ -12,17 +12,17 @@ import kmtt.base.models.SocialAccount
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param socials 
- * @param site 
- * @param email 
- * @param contacts 
+ *
+ * @param socials
+ * @param site
+ * @param email
+ * @param contacts
  */
 
 @kotlinx.serialization.Serializable
 
-data class SubsiteContacts (
+data class SubsiteContacts(
 
     @JsonNames("socials")
     val socials: List<SocialAccount>? = null,
@@ -34,7 +34,7 @@ data class SubsiteContacts (
     val email: String? = null,
 
     @JsonNames("contacts")
-    val contacts: String? = null
+    val contacts: String? = null,
 
-)
+    )
 

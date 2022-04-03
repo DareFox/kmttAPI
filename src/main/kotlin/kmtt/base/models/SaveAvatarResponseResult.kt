@@ -12,16 +12,16 @@ package kmtt.base.models
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param src 
+ *
+ * @param src
  */
 
 @kotlinx.serialization.Serializable
-data class SaveAvatarResponseResult (
+data class SaveAvatarResponseResult(
 
     @JsonNames("src")
-    val src: String? = null
+    val src: String? = null,
 
-)
+    )
 

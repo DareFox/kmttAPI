@@ -12,19 +12,19 @@ package kmtt.base.models
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
+ *
  *
  * @param type тип события
  * @param contentId id статьи
- * @param count 
+ * @param count
  * @param id id контента
- * @param state 
+ * @param state
  * @param userHash хэш пользователя, для сравнения с авторизованным
  */
 
 @kotlinx.serialization.Serializable
 
-data class Websocket (
+data class Websocket(
 
     /* тип события */
     @JsonNames("type")
@@ -46,9 +46,9 @@ data class Websocket (
 
     /* хэш пользователя, для сравнения с авторизованным */
     @JsonNames("user_hash")
-    val userHash: String? = null
+    val userHash: String? = null,
 
-) {
+    ) {
 
     /**
      * тип события
@@ -56,8 +56,10 @@ data class Websocket (
      * Values: commentVoted,contentVoted
      */
     enum class Type(val value: String) {
-        @JsonNames("comment voted") commentVoted("comment voted"),
-        @JsonNames("content voted") contentVoted("content voted");
+        @JsonNames("comment voted")
+        commentVoted("comment voted"),
+        @JsonNames("content voted")
+        contentVoted("content voted");
     }
 }
 

@@ -12,18 +12,18 @@ package kmtt.base.models
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param id 
- * @param title 
- * @param url 
- * @param date 
- * @param dateRFC 
+ *
+ * @param id
+ * @param title
+ * @param url
+ * @param date
+ * @param dateRFC
  */
 
 @kotlinx.serialization.Serializable
 
-data class Similar (
+data class Similar(
 
     @JsonNames("id")
     val id: Long? = null,
@@ -38,7 +38,7 @@ data class Similar (
     val date: Long? = null,
 
     @JsonNames("dateRFC")
-    val dateRFC: Long? = null
+    val dateRFC: Long? = null,
 
-)
+    )
 

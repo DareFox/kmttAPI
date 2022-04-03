@@ -11,17 +11,17 @@ package kmtt.base.models.entry
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param result 
+ *
+ * @param result
  */
 
 @kotlinx.serialization.Serializable
 
-data class EntryResponse (
+data class EntryResponse(
 
     @JsonNames("result")
-    val result: Entry? = null
+    val result: Entry? = null,
 
-)
+    )
 

@@ -11,17 +11,17 @@ package kmtt.base.models
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param result 
+ *
+ * @param result
  */
 
 @kotlinx.serialization.Serializable
 
-data class QuizResultResponse (
+data class QuizResultResponse(
 
     @JsonNames("result")
-    val result: QuizResultResponseResult? = null
+    val result: QuizResultResponseResult? = null,
 
-)
+    )
 

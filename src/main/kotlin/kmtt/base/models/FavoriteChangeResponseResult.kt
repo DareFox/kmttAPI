@@ -12,21 +12,21 @@ package kmtt.base.models
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param result 
- * @param count 
+ *
+ * @param result
+ * @param count
  */
 
 @kotlinx.serialization.Serializable
 
-data class FavoriteChangeResponseResult (
+data class FavoriteChangeResponseResult(
 
     @JsonNames("result")
     val result: Boolean? = null,
 
     @JsonNames("count")
-    val count: Int? = null
+    val count: Int? = null,
 
-)
+    )
 

@@ -28,7 +28,7 @@ object Shared {
             .timeoutDuration(Duration.ofHours(100))
             .build()
 
-        httpClient = HttpClientAdapter(HttpClient() {
+        httpClient = HttpClientAdapter(HttpClient {
             install(JsonFeature) {
                 serializer = KotlinxSerializer(kotlinx.serialization.json.Json {
                     ignoreUnknownKeys = true

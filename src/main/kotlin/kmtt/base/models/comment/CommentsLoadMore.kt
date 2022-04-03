@@ -12,7 +12,7 @@ package kmtt.base.models.comment
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
+ *
  *
  * @param ids Список id комментариев для подгрузки
  * @param count Количество подгружаемых комментариев
@@ -21,7 +21,7 @@ import kotlinx.serialization.json.JsonNames
 
 @kotlinx.serialization.Serializable
 
-data class CommentsLoadMore (
+data class CommentsLoadMore(
 
     /* Список id комментариев для подгрузки */
     @JsonNames("ids")
@@ -33,7 +33,7 @@ data class CommentsLoadMore (
 
     /* Список аватарок пользователей в подгружаемых комментариях */
     @JsonNames("avatars")
-    val avatars: List<String> = listOf()
+    val avatars: List<String> = listOf(),
 
-)
+    )
 

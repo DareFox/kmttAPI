@@ -11,22 +11,22 @@ package kmtt.base.models
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param items 
+ *
+ * @param items
  * @param lastId ID последнего элемента для подгрузки
  */
 
 @kotlinx.serialization.Serializable
 
-data class EventsResponseResult (
+data class EventsResponseResult(
 
     @JsonNames("items")
     val items: List<Event>? = null,
 
     /* ID последнего элемента для подгрузки */
     @JsonNames("last_id")
-    val lastId: Long? = null
+    val lastId: Long? = null,
 
-)
+    )
 

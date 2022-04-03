@@ -12,20 +12,20 @@ package kmtt.base.models.attach
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param type 
- * @param `data` 
+ *
+ * @param type
+ * @param `data`
  */
 
 @kotlinx.serialization.Serializable
-data class AttachImage (
+data class AttachImage(
 
     @JsonNames("type")
     val type: String? = null,
 
     @JsonNames("data")
-    val `data`: AttachImage? = null
+    val `data`: AttachImage? = null,
 
-)
+    )
 

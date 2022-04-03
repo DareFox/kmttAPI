@@ -12,20 +12,20 @@ package kmtt.base.models
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param isActive 
- * @param activeUntil 
+ *
+ * @param isActive
+ * @param activeUntil
  */
 
 @kotlinx.serialization.Serializable
-data class Subscription (
+data class Subscription(
 
     @JsonNames("is_active")
     val isActive: Boolean? = null,
 
     @JsonNames("active_until")
-    val activeUntil: Long? = null
+    val activeUntil: Long? = null,
 
-)
+    )
 

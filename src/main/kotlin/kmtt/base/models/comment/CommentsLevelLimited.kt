@@ -11,21 +11,21 @@ package kmtt.base.models.comment
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param items 
- * @param rootLoadMore 
+ *
+ * @param items
+ * @param rootLoadMore
  */
 
 @kotlinx.serialization.Serializable
 
-data class CommentsLevelLimited (
+data class CommentsLevelLimited(
 
     @JsonNames("items")
     val items: List<Comment> = listOf(),
 
     @JsonNames("root_load_more")
-    val rootLoadMore: CommentsLoadMore?
+    val rootLoadMore: CommentsLoadMore?,
 
-)
+    )
 

@@ -11,17 +11,17 @@ package kmtt.base.models
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param result 
+ *
+ * @param result
  */
 
 @kotlinx.serialization.Serializable
 
-data class LocateResponse (
+data class LocateResponse(
 
     @JsonNames("result")
-    val result: LocateResponseResult? = null
+    val result: LocateResponseResult? = null,
 
-)
+    )
 

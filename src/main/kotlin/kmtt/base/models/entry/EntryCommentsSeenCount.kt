@@ -12,20 +12,20 @@ package kmtt.base.models.entry
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param count 
- * @param date 
+ *
+ * @param count
+ * @param date
  */
 
 @kotlinx.serialization.Serializable
-data class EntryCommentsSeenCount (
+data class EntryCommentsSeenCount(
 
     @JsonNames("count")
     val count: Long? = null,
 
     @JsonNames("date")
-    val date: Long? = null
+    val date: Long? = null,
 
-)
+    )
 

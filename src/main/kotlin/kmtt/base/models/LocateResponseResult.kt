@@ -11,14 +11,14 @@ package kmtt.base.models
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
+ *
  *
  * @param type Тип контента
- * @param `data` 
+ * @param `data`
  */
 
 @kotlinx.serialization.Serializable
-data class LocateResponseResult (
+data class LocateResponseResult(
 
     /* Тип контента */
     @JsonNames("type")
@@ -26,9 +26,9 @@ data class LocateResponseResult (
 
     // TODO: ANY type was here
     @JsonNames("data")
-    val `data`: Int? = null
+    val `data`: Int? = null,
 
-) {
+    ) {
 
     /**
      * Тип контента
@@ -36,9 +36,12 @@ data class LocateResponseResult (
      * Values: user,entry,section
      */
     enum class Type(val value: String) {
-        @JsonNames("user") user("user"),
-        @JsonNames("entry") entry("entry"),
-        @JsonNames("section") section("section");
+        @JsonNames("user")
+        user("user"),
+        @JsonNames("entry")
+        entry("entry"),
+        @JsonNames("section")
+        section("section");
     }
 }
 

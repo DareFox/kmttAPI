@@ -12,17 +12,17 @@ package kmtt.base.models
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param id 
- * @param name 
- * @param logo 
- * @param url 
- * @param isVerified 
+ *
+ * @param id
+ * @param name
+ * @param logo
+ * @param url
+ * @param isVerified
  */
 
 @kotlinx.serialization.Serializable
-data class Company (
+data class Company(
 
     @JsonNames("id")
     val id: Long? = null,
@@ -37,7 +37,7 @@ data class Company (
     val url: String? = null,
 
     @JsonNames("is_verified")
-    val isVerified: Boolean? = null
+    val isVerified: Boolean? = null,
 
-)
+    )
 

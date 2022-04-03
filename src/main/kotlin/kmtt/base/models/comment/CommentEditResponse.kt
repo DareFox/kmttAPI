@@ -13,17 +13,17 @@ import kotlinx.serialization.Contextual
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param result 
+ *
+ * @param result
  */
 
 @kotlinx.serialization.Serializable
-data class CommentEditResponse (
+data class CommentEditResponse(
 
     @JsonNames("result")
     @Contextual // TODO: Any fix
-    val result: Any? = null
+    val result: Any? = null,
 
-)
+    )
 

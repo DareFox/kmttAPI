@@ -11,19 +11,19 @@ package kmtt.base.models
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param type 
- * @param additionalData 
- * @param thumbnailUrl 
- * @param url 
- * @param propertySize 
- * @param sizeSimple 
+ *
+ * @param type
+ * @param additionalData
+ * @param thumbnailUrl
+ * @param url
+ * @param propertySize
+ * @param sizeSimple
  */
 
 @kotlinx.serialization.Serializable
 
-data class Cover (
+data class Cover(
 
     @JsonNames("type")
     val type: Int? = null,
@@ -41,7 +41,7 @@ data class Cover (
     val propertySize: Size? = null,
 
     @JsonNames("sizeSimple")
-    val sizeSimple: String? = null
+    val sizeSimple: String? = null,
 
-)
+    )
 

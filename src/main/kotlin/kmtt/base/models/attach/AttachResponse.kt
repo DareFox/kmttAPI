@@ -11,16 +11,16 @@ package kmtt.base.models.attach
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param result 
+ *
+ * @param result
  */
 
 @kotlinx.serialization.Serializable
-data class AttachResponse (
+data class AttachResponse(
 
     @JsonNames("result")
-    val result: Attach? = null
+    val result: Attach? = null,
 
-)
+    )
 

@@ -13,16 +13,16 @@ import kotlinx.serialization.json.JsonNames
 /**
  * Список разраешений
  *
- * @param isNeedsAdvancedAccess 
- * @param actions 
- * @param dtfSubscription 
- * @param tvSubscription 
- * @param vcSubscription 
- * @param hash 
+ * @param isNeedsAdvancedAccess
+ * @param actions
+ * @param dtfSubscription
+ * @param tvSubscription
+ * @param vcSubscription
+ * @param hash
  */
 
 @kotlinx.serialization.Serializable
-data class AdvancedAccess (
+data class AdvancedAccess(
 
     @JsonNames("is_needs_advanced_access")
     val isNeedsAdvancedAccess: Boolean? = null,
@@ -40,7 +40,7 @@ data class AdvancedAccess (
     val vcSubscription: Subscription? = null,
 
     @JsonNames("hash")
-    val hash: String? = null
+    val hash: String? = null,
 
-)
+    )
 

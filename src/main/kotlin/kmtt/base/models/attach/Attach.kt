@@ -11,27 +11,27 @@ package kmtt.base.models.attach
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param id 
- * @param uuid 
- * @param additionalData 
- * @param type 
- * @param color 
- * @param width 
- * @param height 
- * @param propertySize 
- * @param name 
- * @param origin 
- * @param title 
- * @param description 
- * @param url 
- * @param image 
+ *
+ * @param id
+ * @param uuid
+ * @param additionalData
+ * @param type
+ * @param color
+ * @param width
+ * @param height
+ * @param propertySize
+ * @param name
+ * @param origin
+ * @param title
+ * @param description
+ * @param url
+ * @param image
  */
 
 @kotlinx.serialization.Serializable
 
-data class Attach (
+data class Attach(
 
     @JsonNames("id")
     val id: String? = null,
@@ -73,7 +73,7 @@ data class Attach (
     val url: String? = null,
 
     @JsonNames("image")
-    val image: AttachImage? = null
+    val image: AttachImage? = null,
 
-)
+    )
 

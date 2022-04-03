@@ -11,16 +11,16 @@ package kmtt.base.models.subsite
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param result 
+ *
+ * @param result
  */
 
 @kotlinx.serialization.Serializable
-data class SubsitesResponse (
+data class SubsitesResponse(
 
     @JsonNames("result")
-    val result: List<Subsite>? = null
+    val result: List<Subsite>? = null,
 
-)
+    )
 

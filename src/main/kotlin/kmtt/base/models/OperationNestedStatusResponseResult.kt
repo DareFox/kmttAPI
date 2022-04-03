@@ -12,16 +12,16 @@ package kmtt.base.models
 import kotlinx.serialization.json.JsonNames
 
 /**
- * 
  *
- * @param result 
+ *
+ * @param result
  */
 
 @kotlinx.serialization.Serializable
-data class OperationNestedStatusResponseResult (
+data class OperationNestedStatusResponseResult(
 
     @JsonNames("result")
-    val result: Boolean? = null
+    val result: Boolean? = null,
 
-)
+    )
 
