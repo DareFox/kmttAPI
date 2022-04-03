@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test
 
 
 internal class CommentAPITest {
-    private val api = CommentAPI(Shared.httpClient, Shared.website, Shared.token)
+    private val api = AuthCommentAPI(Shared.httpClient, Shared.website, Shared.token)
 
     @Test
     fun getEntryComments() {

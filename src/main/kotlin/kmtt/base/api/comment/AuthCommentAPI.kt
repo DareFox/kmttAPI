@@ -5,80 +5,22 @@ import io.ktor.http.*
 import kmtt.base.ktor.IHttpClient
 import kmtt.base.ktor.request
 import kmtt.base.models.Liker
-import kmtt.base.models.Likes
-import kmtt.base.models.attach.Attach
 import kmtt.base.models.comment.Comment
 import kmtt.base.models.comment.CommentsLevelLimited
-import kmtt.base.models.enums.*
+import kmtt.base.models.enums.SortingType
+import kmtt.base.models.enums.Website
 import kmtt.base.models.generic.SuccessArrayResponse
 import kmtt.base.models.generic.SuccessResponse
-import kmtt.base.models.subsite.Subsite
 import kmtt.constants.Content
+import kmtt.util.addTokenIfNotNull
 import kmtt.util.apiURL
 import kmtt.util.defaultResponse
 import kmtt.util.jsonParser
-import kmtt.util.toInt
-import kotlinx.serialization.Serializer
-import kotlinx.serialization.encodeToString
-import kotlinx.serialization.json.*
+import kotlinx.serialization.json.JsonObject
+import kotlinx.serialization.json.decodeFromJsonElement
 
-class CommentAPI(private val httpClient: IHttpClient, private val site: Website, private val token: String) {
-
-    /**
-     * Получить комментарии к записи
-     */
-    suspend fun getEntryComments(entryID: Long, sorting: SortingType): List<Comment> {
-        val endpointURL = "/entry/$entryID/comments/${sorting.typeValue}"
-
-        val response = httpClient.request<SuccessResponse<List<Comment>>> {
-            url(site.apiURL() + endpointURL)
-            method = HttpMethod.Get
-        }
-
-        return response.result
-    }
-
-    /**
-     * Получить комментарии к записи с ограничением по веткам
-     */
-    suspend fun getLevelComments(entryID: Long, sorting: SortingType): CommentsLevelLimited {
-        val endpointURL = "/entry/$entryID/comments/levels/${sorting.typeValue}"
-
-        val response = httpClient.request<SuccessResponse<CommentsLevelLimited>> {
-            url(site.apiURL() + endpointURL)
-            method = HttpMethod.Get
-        }
-
-        return response.result
-    }
-
-    /**
-     * Получить комментарии к записи с ограничением по веткам
-     */
-    suspend fun getThreadComments(entryID: Long, commentID: Long): List<Comment> {
-        val endpointURL = "/entry/$entryID/comments/thread/${commentID}"
-
-        val response = httpClient.request<SuccessArrayResponse<List<Comment>>> {
-            url(site.apiURL() + endpointURL)
-            method = HttpMethod.Get
-        }
-
-        return response.result.items
-    }
-
-    /**
-     * Получить список лайкнувших комментарий
-     */
-    suspend fun getCommentVotes(commentID: Long): Map<String, Liker> {
-        val endpointURL = "/comment/likers/$commentID"
-
-        val response = httpClient.request<JsonObject> {
-            url(site.apiURL() + endpointURL)
-            method = HttpMethod.Get
-        }.defaultResponse(mapOf<String, Liker>())
-
-        return jsonParser.decodeFromJsonElement<SuccessResponse<Map<String, Liker>>>(response).result
-    }
+class AuthCommentAPI(private val httpClient: IHttpClient, private val site: Website, override var token: String) :
+    IAuthCommentAPI, IPublicCommentAPI by PublicCommentAPI(httpClient, site, token) {
 
     // Not working in API 1.9
     // API 2.1 doesn't support
@@ -171,15 +113,16 @@ class CommentAPI(private val httpClient: IHttpClient, private val site: Website,
     /**
      * Отправить количество увиденных комментариев
      */
-    suspend fun postSeenComments(entryID: Long, count: Long) {
+    override suspend fun postSeenComments(entryID: Long, count: Long) {
         val endpointURL = "/comment/saveCommentsSeenCount"
         val data = mapOf(
             "content_id" to entryID,
             "count" to count,
         )
 
-        httpClient.request<Unit> {
+        httpClient.request<JsonObject> {
             contentType(Content.JSON)
+            addTokenIfNotNull(token)
             url(site.apiURL() + endpointURL)
             method = HttpMethod.Post
             body = data
