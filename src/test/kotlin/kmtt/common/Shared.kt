@@ -16,8 +16,8 @@ object Shared {
     val token: String = System.getenv("TEST_DTF_TOKEN")
 
     val comments: List<EntryComment> = listOf(
-        EntryComment(1123335, 16158631),
-        EntryComment(1110947, 15994992)
+        EntryComment(1123335, 16158631, Website.DTF),
+        EntryComment(1110947, 15994992, Website.DTF)
     )
 
     init {
