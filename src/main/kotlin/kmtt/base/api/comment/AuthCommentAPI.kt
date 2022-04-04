@@ -5,21 +5,22 @@ import io.ktor.http.*
 import kmtt.base.ktor.IHttpClient
 import kmtt.base.ktor.request
 import kmtt.base.models.Liker
+import kmtt.base.models.attach.Attach
 import kmtt.base.models.comment.Comment
 import kmtt.base.models.comment.CommentsLevelLimited
 import kmtt.base.models.enums.SortingType
 import kmtt.base.models.enums.Website
 import kmtt.base.models.generic.SuccessArrayResponse
 import kmtt.base.models.generic.SuccessResponse
+import kmtt.base.models.subsite.Subsite
 import kmtt.constants.Content
 import kmtt.util.addTokenIfNotNull
 import kmtt.util.apiURL
 import kmtt.util.defaultResponse
 import kmtt.util.jsonParser
-import kotlinx.serialization.json.JsonObject
-import kotlinx.serialization.json.decodeFromJsonElement
+import kotlinx.serialization.json.*
 
-class AuthCommentAPI(private val httpClient: IHttpClient, private val site: Website, override var token: String) :
+class AuthCommentAPI(private val httpClient: IHttpClient, private val site: Website, override val token: String) :
     IAuthCommentAPI, IPublicCommentAPI by PublicCommentAPI(httpClient, site, token) {
 
     // Not working in API 1.9
@@ -73,6 +74,7 @@ class AuthCommentAPI(private val httpClient: IHttpClient, private val site: Webs
 //        val response = httpClient.request<SuccessResponse<List<Subsite>>> {
 //            contentType(Content.JSON)
 //            url(site.apiURL() + endpointURL)
+//            addTokenIfNotNull(token)
 //            method = HttpMethod.Post
 //            body = data
 //        }
