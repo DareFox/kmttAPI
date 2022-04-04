@@ -15,7 +15,10 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.serialization.decodeFromString
 import java.io.Closeable
 
-interface IHttpClient : CoroutineScope, Closeable {
+/**
+ * Extracted interface of [Ktor client][HttpClient]. Can be used for implementing extended versions of client
+ */
+internal interface IHttpClient : CoroutineScope, Closeable {
     val client: HttpClient
     val rateLimiter: RateLimiter
 
@@ -31,7 +34,10 @@ interface IHttpClient : CoroutineScope, Closeable {
     override fun toString(): String
 }
 
-suspend inline fun <reified T> IHttpClient.request(crossinline block: HttpRequestBuilder.() -> Unit): T {
+/**
+ * Builder for creating http requests
+ */
+internal suspend inline fun <reified T> IHttpClient.request(crossinline block: HttpRequestBuilder.() -> Unit): T {
     try {
         return rateLimiter.executeSuspendFunction {
             client.request(block)

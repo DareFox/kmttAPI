@@ -18,7 +18,7 @@ import kmtt.util.jsonParser
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.decodeFromJsonElement
 
-class PublicCommentAPI(private val httpClient: IHttpClient, private val site: Website) : IPublicCommentAPI {
+internal class PublicCommentAPI(private val httpClient: IHttpClient, private val site: Website) : IPublicCommentAPI {
 
     // Some public requests have restrictions without authentication.
     // For example:

@@ -11,7 +11,7 @@ import io.ktor.util.*
 import java.util.*
 import kotlin.coroutines.CoroutineContext
 
-class HttpClientAdapter(override val client: HttpClient, rateLimitConfig: RateLimiterConfig): IHttpClient{
+internal class HttpClientAdapter(override val client: HttpClient, rateLimitConfig: RateLimiterConfig) : IHttpClient {
     private val rateLimitID = UUID.randomUUID().toString()
     private val rateLimiterRegistry = RateLimiterRegistry.of(rateLimitConfig)
     override val rateLimiter: RateLimiter = rateLimiterRegistry.rateLimiter(rateLimitID)

@@ -20,7 +20,7 @@ import kmtt.util.defaultResponse
 import kmtt.util.jsonParser
 import kotlinx.serialization.json.*
 
-class AuthCommentAPI(private val httpClient: IHttpClient, private val site: Website, override val token: String) :
+internal class AuthCommentAPI(private val httpClient: IHttpClient, private val site: Website, override val token: String) :
     IAuthCommentAPI, IPublicCommentAPI by PublicCommentAPI(httpClient, site, token) {
 
     // Not working in API 1.9

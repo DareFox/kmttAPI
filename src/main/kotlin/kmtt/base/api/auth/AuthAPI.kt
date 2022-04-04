@@ -12,7 +12,7 @@ import kmtt.constants.Content
 import kmtt.util.apiURL
 import kmtt.util.toInt
 
-class AuthAPI(private val httpClient: IHttpClient, private val site: Website) : IAuthAPI {
+internal class AuthAPI(private val httpClient: IHttpClient, private val site: Website) : IAuthAPI {
     override suspend fun postAuthLogin(login: String, password: String): List<Subsite> {
         val endpointURL = "/auth/login"
         val data = mapOf("login" to login, "password" to password)

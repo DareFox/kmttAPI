@@ -12,7 +12,7 @@ import kmtt.constants.Content
 import kmtt.util.addTokenIfNotNull
 import kmtt.util.apiURL
 
-class PublicEntryAPI(private val httpClient: IHttpClient, private val site: Website): IPublicEntryAPI {
+internal class PublicEntryAPI(private val httpClient: IHttpClient, private val site: Website): IPublicEntryAPI {
 
     // Some public requests have restrictions without authentication.
     // For example:
