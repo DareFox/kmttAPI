@@ -7,6 +7,9 @@ import kmtt.models.entry.Entry
 import kmtt.models.enums.OsnovaContentType
 import kmtt.models.enums.Vote
 
+/**
+ * Public API for getting [entries][Entry] information
+ */
 interface IPublicEntryAPI {
 
     /** Получить запись по ID **/
@@ -30,6 +33,11 @@ interface IPublicEntryAPI {
 //    suspend fun getAttachEmbedData(embedURL: String): Attach
 }
 
+/**
+ * Authenticated API for getting and manipulating [entries][Entry] information.
+ *
+ * Also provides access to [public API][IPublicEntryAPI]
+ */
 interface IAuthEntryAPI: IPublicEntryAPI, Authable {
     // Not working with current API
 
