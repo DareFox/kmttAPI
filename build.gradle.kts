@@ -1,4 +1,5 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import java.util.Properties
 
 plugins {
     id("java-library")
@@ -29,7 +30,20 @@ dependencies {
     implementation(kotlin("reflect"))
 }
 
+
 tasks.test {
+    doFirst {
+        val localEnv = rootProject.file("local.properties")
+        val prop = Properties()
+
+
+        if (localEnv.exists()) {
+            prop.load(localEnv.inputStream())
+        }
+
+        val token = prop["test.dtf.token"]
+        environment("TEST_DTF_TOKEN", token ?: System.getenv("TEST_DTF_TOKEN"))
+    }
     useJUnitPlatform()
 }
 
