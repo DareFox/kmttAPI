@@ -8,7 +8,7 @@ import io.ktor.client.features.*
 import io.ktor.client.request.*
 import io.ktor.client.statement.*
 import io.ktor.util.*
-import kmtt.base.models.generic.ErrorResponse
+import kmtt.models.generic.ErrorResponse
 import kmtt.exception.OsnovaRequestException
 import kmtt.util.jsonParser
 import kotlinx.coroutines.CoroutineScope

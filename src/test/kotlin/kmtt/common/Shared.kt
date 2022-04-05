@@ -6,7 +6,7 @@ import io.ktor.client.features.json.*
 import io.ktor.client.features.json.serializer.*
 import kmtt.base.ktor.HttpClientAdapter
 import kmtt.base.ktor.IHttpClient
-import kmtt.base.models.enums.Website
+import kmtt.models.enums.Website
 import kmtt.models.EntryComment
 import java.time.Duration
 

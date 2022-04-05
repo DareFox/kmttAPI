@@ -1,11 +1,11 @@
 package kmtt.base.api.entry
 
 import kmtt.base.api.common.Authable
-import kmtt.base.models.Likes
-import kmtt.base.models.attach.Attach
-import kmtt.base.models.entry.Entry
-import kmtt.base.models.enums.OsnovaContentType
-import kmtt.base.models.enums.Vote
+import kmtt.models.Likes
+import kmtt.models.attach.Attach
+import kmtt.models.entry.Entry
+import kmtt.models.enums.OsnovaContentType
+import kmtt.models.enums.Vote
 
 interface IPublicEntryAPI {
 

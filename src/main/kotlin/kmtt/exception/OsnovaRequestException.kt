@@ -1,7 +1,7 @@
 package kmtt.exception
 
 import io.ktor.client.statement.*
-import kmtt.base.models.generic.ErrorResponse
+import kmtt.models.generic.ErrorResponse
 
 class OsnovaRequestException(val httpResponse: HttpResponse, val parsed: ErrorResponse) : Exception(
     """Client request(${httpResponse.call.request.url}) is invalid.

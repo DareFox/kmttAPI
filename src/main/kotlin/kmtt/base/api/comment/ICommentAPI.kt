@@ -1,10 +1,10 @@
 package kmtt.base.api.comment
 
 import kmtt.base.api.common.Authable
-import kmtt.base.models.Liker
-import kmtt.base.models.comment.Comment
-import kmtt.base.models.comment.CommentsLevelLimited
-import kmtt.base.models.enums.SortingType
+import kmtt.models.Liker
+import kmtt.models.comment.Comment
+import kmtt.models.comment.CommentsLevelLimited
+import kmtt.models.enums.SortingType
 
 interface IPublicCommentAPI {
     /**

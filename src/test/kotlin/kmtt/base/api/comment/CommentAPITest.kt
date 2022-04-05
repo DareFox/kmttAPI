@@ -1,6 +1,6 @@
 package kmtt.base.api.comment
 
-import kmtt.base.models.enums.SortingType
+import kmtt.models.enums.SortingType
 import kmtt.common.Shared
 import kmtt.util.assertDoesNotThrow
 import org.junit.jupiter.api.Test

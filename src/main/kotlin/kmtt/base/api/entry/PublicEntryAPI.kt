@@ -4,10 +4,10 @@ import io.ktor.client.request.*
 import io.ktor.http.*
 import kmtt.base.ktor.IHttpClient
 import kmtt.base.ktor.request
-import kmtt.base.models.attach.Attach
-import kmtt.base.models.entry.Entry
-import kmtt.base.models.enums.Website
-import kmtt.base.models.generic.SuccessResponse
+import kmtt.models.attach.Attach
+import kmtt.models.entry.Entry
+import kmtt.models.enums.Website
+import kmtt.models.generic.SuccessResponse
 import kmtt.constants.Content
 import kmtt.util.addTokenIfNotNull
 import kmtt.util.apiURL

@@ -1,7 +1,7 @@
 package kmtt.base.api.auth
 
-import kmtt.base.models.enums.SocialAccountType
-import kmtt.base.models.subsite.Subsite
+import kmtt.models.enums.SocialAccountType
+import kmtt.models.subsite.Subsite
 
 interface IAuthAPI {
     suspend fun postAuthLogin(login: String, password: String): List<Subsite>

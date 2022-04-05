@@ -4,10 +4,10 @@ import io.ktor.client.request.*
 import io.ktor.http.*
 import kmtt.base.ktor.IHttpClient
 import kmtt.base.ktor.request
-import kmtt.base.models.enums.SocialAccountType
-import kmtt.base.models.enums.Website
-import kmtt.base.models.generic.SuccessResponse
-import kmtt.base.models.subsite.Subsite
+import kmtt.models.enums.SocialAccountType
+import kmtt.models.enums.Website
+import kmtt.models.generic.SuccessResponse
+import kmtt.models.subsite.Subsite
 import kmtt.constants.Content
 import kmtt.util.apiURL
 import kmtt.util.toInt
