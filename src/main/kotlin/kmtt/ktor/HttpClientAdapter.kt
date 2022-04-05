@@ -1,4 +1,4 @@
-package kmtt.base.ktor
+package kmtt.ktor
 
 import io.github.resilience4j.ratelimiter.RateLimiter
 import io.github.resilience4j.ratelimiter.RateLimiterConfig
