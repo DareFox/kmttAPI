@@ -335,3 +335,8 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/java,linux,macos,windows,android,intellij,androidstudio
+
+# Start of custom .gitignore
+
+# Without wrapper jitpack.io uses old gradle version, even though gradle-wrapper.properties exists
+!gradle/wrapper/gradle-wrapper.jar
