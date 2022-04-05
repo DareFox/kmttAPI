@@ -52,6 +52,7 @@ data class AdditionalData(
      *
      * Values: gif,jpg,png
      */
+    @kotlinx.serialization.Serializable
     enum class Type(val value: String) {
         @JsonNames("gif")
         gif("gif"),
