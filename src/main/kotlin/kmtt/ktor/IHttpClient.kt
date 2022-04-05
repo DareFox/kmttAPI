@@ -18,7 +18,7 @@ import java.io.Closeable
 /**
  * Extracted interface of [Ktor client][HttpClient]. Can be used for implementing extended versions of client
  */
-internal interface IHttpClient : CoroutineScope, Closeable {
+interface IHttpClient : CoroutineScope, Closeable {
     val client: HttpClient
     val rateLimiter: RateLimiter
 
@@ -37,7 +37,7 @@ internal interface IHttpClient : CoroutineScope, Closeable {
 /**
  * Builder for creating http requests
  */
-internal suspend inline fun <reified T> IHttpClient.request(crossinline block: HttpRequestBuilder.() -> Unit): T {
+suspend inline fun <reified T> IHttpClient.request(crossinline block: HttpRequestBuilder.() -> Unit): T {
     try {
         return rateLimiter.executeSuspendFunction {
             client.request(block)

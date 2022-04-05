@@ -12,7 +12,7 @@ import java.time.Duration
 /**
  * Abstract class that provides [IHttpClient] implementation with rate limit
  */
-internal abstract class AbstractKmtt(
+abstract class AbstractKmtt(
     limitForPeriod: Int = 3,
     limitRefreshPeriod: Duration = Duration.ofSeconds(1),
     timeoutDuration: Duration = Duration.ofHours(100)
