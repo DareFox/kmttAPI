@@ -29,7 +29,7 @@ data class Cover(
     val type: Int? = null,
 
     @JsonNames("additionalData")
-    val additionalData: _root_ide_package_.kmtt.models.AdditionalData? = null,
+    val additionalData: AdditionalData? = null,
 
     @JsonNames("thumbnailUrl")
     val thumbnailUrl: String? = null,

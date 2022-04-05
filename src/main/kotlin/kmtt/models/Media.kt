@@ -46,7 +46,7 @@ data class Media(
     val service: String? = null,
 
     @JsonNames("additionalData")
-    val additionalData: _root_ide_package_.kmtt.models.AdditionalData? = null,
+    val additionalData: AdditionalData? = null,
 
     @JsonNames("size")
     val propertySize: Size? = null,
