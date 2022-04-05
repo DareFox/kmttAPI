@@ -15,6 +15,7 @@ import kotlinx.serialization.descriptors.PrimitiveSerialDescriptor
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
+import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.JsonNames
 
 /**
@@ -28,6 +29,7 @@ import kotlinx.serialization.json.JsonNames
  * @param propertySize
  */
 
+@OptIn(ExperimentalSerializationApi::class)
 @kotlinx.serialization.Serializable
 
 data class Media(
@@ -56,13 +58,15 @@ data class Media(
     /**
      * Тип медиафайла
      */
-    @kotlinx.serialization.Serializable(with = MediaTypeSerializer::class)
+    @OptIn(ExperimentalSerializationApi::class)
+@kotlinx.serialization.Serializable(with = MediaTypeSerializer::class)
     enum class Type(val value: Int) {
         IMAGE(1),
         VIDEO(2);
     }
 }
 
+@OptIn(ExperimentalSerializationApi::class)
 @Serializer(forClass = Media.Type::class)
 object MediaTypeSerializer : KSerializer<Media.Type> {
     override fun deserialize(decoder: Decoder): Media.Type {

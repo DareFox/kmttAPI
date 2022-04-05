@@ -9,6 +9,7 @@
 package kmtt.models.vacancy
 
 import kmtt.models.JobOrEventFilter
+import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.JsonNames
 
 /**
@@ -20,6 +21,7 @@ import kotlinx.serialization.json.JsonNames
  * @param specializations
  */
 
+@OptIn(ExperimentalSerializationApi::class)
 @kotlinx.serialization.Serializable
 data class VacanciesFiltersResponseResult(
 

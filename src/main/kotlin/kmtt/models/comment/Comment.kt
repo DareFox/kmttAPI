@@ -14,6 +14,7 @@ import kmtt.models.Likes
 import kmtt.models.Media
 import kmtt.models.attach.Attach
 import kmtt.models.entry.Entry
+import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.JsonNames
 
 /**
@@ -39,6 +40,7 @@ import kotlinx.serialization.json.JsonNames
  * @param etcControls
  */
 
+@OptIn(ExperimentalSerializationApi::class)
 @kotlinx.serialization.Serializable
 data class Comment(
 

@@ -9,6 +9,7 @@
 package kmtt.models.comment
 
 import kmtt.models.entry.EntryComplaintErrorError
+import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.JsonNames
 
 /**
@@ -18,6 +19,7 @@ import kotlinx.serialization.json.JsonNames
  * @param error
  */
 
+@OptIn(ExperimentalSerializationApi::class)
 @kotlinx.serialization.Serializable
 
 data class CommentComplaintError(

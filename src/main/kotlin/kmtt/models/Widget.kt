@@ -107,11 +107,13 @@
 //    val donate: JsonObject? = null
 //)
 //
+//@OptIn(ExperimentalSerializationApi::class)
 //@kotlinx.serialization.Serializable
 //data class CommentEditor (
 //    val enabled: Boolean
 //)
 //
+//@OptIn(ExperimentalSerializationApi::class)
 //@kotlinx.serialization.Serializable
 //data class ItemBlock (
 //    val type: BlockType,
@@ -148,6 +150,7 @@
 //}
 //
 //
+//@OptIn(ExperimentalSerializationApi::class)
 //@kotlinx.serialization.Serializable
 //data class PurpleData (
 //    val text: String? = null,

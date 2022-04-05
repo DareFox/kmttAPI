@@ -8,6 +8,7 @@
  */
 package kmtt.models.attach
 
+import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.JsonNames
 
 /**
@@ -29,6 +30,7 @@ import kotlinx.serialization.json.JsonNames
  * @param image
  */
 
+@OptIn(ExperimentalSerializationApi::class)
 @kotlinx.serialization.Serializable
 
 data class Attach(

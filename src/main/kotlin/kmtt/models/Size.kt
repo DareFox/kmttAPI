@@ -9,6 +9,7 @@
 package kmtt.models
 
 
+import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.JsonNames
 
 /**
@@ -19,6 +20,7 @@ import kotlinx.serialization.json.JsonNames
  * @param ratio
  */
 
+@OptIn(ExperimentalSerializationApi::class)
 @kotlinx.serialization.Serializable
 
 data class Size(

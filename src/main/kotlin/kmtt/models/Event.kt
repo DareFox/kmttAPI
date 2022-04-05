@@ -8,6 +8,7 @@
  */
 package kmtt.models
 
+import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.JsonNames
 
 /**
@@ -27,6 +28,7 @@ import kotlinx.serialization.json.JsonNames
  * @param interested
  */
 
+@OptIn(ExperimentalSerializationApi::class)
 @kotlinx.serialization.Serializable
 data class Event(
 

@@ -10,6 +10,7 @@ package kmtt.models.comment
 
 
 import kmtt.models.Liker
+import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.JsonNames
 
 /**
@@ -18,6 +19,7 @@ import kotlinx.serialization.json.JsonNames
  * @param result Hashmap Id пользователя - объект Liker
  */
 
+@OptIn(ExperimentalSerializationApi::class)
 @kotlinx.serialization.Serializable
 data class CommentLikersResponse(
 

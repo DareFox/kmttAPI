@@ -10,6 +10,7 @@ package kmtt.models
 
 
 import kmtt.models.subsite.Subsite
+import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.JsonNames
 
 /**
@@ -21,6 +22,7 @@ import kotlinx.serialization.json.JsonNames
  * @param randomVotedUsers Ассоциативный массив ID элемента опроса -> массив со списком пользователей
  */
 
+@OptIn(ExperimentalSerializationApi::class)
 @kotlinx.serialization.Serializable
 
 data class QuizResultResponseResult(

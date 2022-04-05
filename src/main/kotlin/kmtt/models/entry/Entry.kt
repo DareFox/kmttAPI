@@ -11,6 +11,7 @@ package kmtt.models.entry
 import kmtt.models.*
 import kmtt.models.comment.Comment
 import kmtt.models.subsite.Subsite
+import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.JsonNames
 
 /**
@@ -59,6 +60,7 @@ import kotlinx.serialization.json.JsonNames
  * @param coAuthor
  */
 
+@OptIn(ExperimentalSerializationApi::class)
 @kotlinx.serialization.Serializable
 data class Entry(
 

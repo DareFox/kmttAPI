@@ -11,6 +11,7 @@
 package kmtt.models
 
 
+import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.JsonNames
 
 /**
@@ -24,6 +25,7 @@ import kotlinx.serialization.json.JsonNames
  * @param hasAudio
  */
 
+@OptIn(ExperimentalSerializationApi::class)
 @kotlinx.serialization.Serializable
 data class AdditionalData(
 
@@ -52,7 +54,8 @@ data class AdditionalData(
      *
      * Values: gif,jpg,png
      */
-    @kotlinx.serialization.Serializable
+    @OptIn(ExperimentalSerializationApi::class)
+@kotlinx.serialization.Serializable
     enum class Type(val value: String) {
         @JsonNames("gif")
         gif("gif"),

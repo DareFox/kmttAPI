@@ -11,6 +11,7 @@ package kmtt.models.subsite
 import kmtt.models.AdvancedAccess
 import kmtt.models.Counters
 import kmtt.models.SocialAccount
+import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.JsonNames
 
 /**
@@ -41,6 +42,7 @@ import kotlinx.serialization.json.JsonNames
  * @param contacts
  */
 
+@OptIn(ExperimentalSerializationApi::class)
 @kotlinx.serialization.Serializable
 
 data class Subsite(

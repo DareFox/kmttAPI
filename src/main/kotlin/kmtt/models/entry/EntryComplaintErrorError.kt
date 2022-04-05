@@ -10,6 +10,7 @@ package kmtt.models.entry
 
 
 import kotlinx.serialization.Contextual
+import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.JsonNames
 import kotlinx.serialization.json.JsonObject
 
@@ -20,6 +21,7 @@ import kotlinx.serialization.json.JsonObject
  * @param info
  */
 
+@OptIn(ExperimentalSerializationApi::class)
 @kotlinx.serialization.Serializable
 
 data class EntryComplaintErrorError(

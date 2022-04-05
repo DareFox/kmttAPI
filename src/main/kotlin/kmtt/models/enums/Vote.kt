@@ -1,5 +1,6 @@
 package kmtt.models.enums
 
+import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.Serializer
 import kotlinx.serialization.descriptors.PrimitiveKind
@@ -14,6 +15,7 @@ enum class Vote(val value: Int) {
     NEUTRAL(0)
 }
 
+@OptIn(ExperimentalSerializationApi::class)
 @Serializer(forClass = Vote::class)
 object VoteSerializer : KSerializer<Vote> {
     override fun deserialize(decoder: Decoder): Vote {

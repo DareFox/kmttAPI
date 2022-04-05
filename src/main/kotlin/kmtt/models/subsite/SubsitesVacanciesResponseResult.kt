@@ -9,6 +9,7 @@
 package kmtt.models.subsite
 
 import kmtt.models.vacancy.Vacancy
+import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.JsonNames
 
 /**
@@ -18,6 +19,7 @@ import kotlinx.serialization.json.JsonNames
  * @param lastId ID последнего элемента для подгрузки
  */
 
+@OptIn(ExperimentalSerializationApi::class)
 @kotlinx.serialization.Serializable
 data class SubsitesVacanciesResponseResult(
 

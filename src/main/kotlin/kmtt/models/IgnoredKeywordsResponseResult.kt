@@ -9,6 +9,7 @@
 package kmtt.models
 
 
+import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.JsonNames
 
 /**
@@ -17,6 +18,7 @@ import kotlinx.serialization.json.JsonNames
  * @param keywords
  */
 
+@OptIn(ExperimentalSerializationApi::class)
 @kotlinx.serialization.Serializable
 data class IgnoredKeywordsResponseResult(
 
