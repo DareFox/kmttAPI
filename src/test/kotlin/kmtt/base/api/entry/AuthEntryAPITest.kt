@@ -1,5 +1,6 @@
 package kmtt.base.api.entry
 
+import kmtt.api.entry.AuthEntryAPI
 import kmtt.common.Shared
 import org.junit.jupiter.api.Test
 import kmtt.util.assertDoesNotThrow

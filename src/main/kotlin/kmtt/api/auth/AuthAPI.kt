@@ -1,9 +1,9 @@
-package kmtt.base.api.auth
+package kmtt.api.auth
 
 import io.ktor.client.request.*
 import io.ktor.http.*
-import kmtt.base.ktor.IHttpClient
-import kmtt.base.ktor.request
+import kmtt.ktor.IHttpClient
+import kmtt.ktor.request
 import kmtt.models.enums.SocialAccountType
 import kmtt.models.enums.Website
 import kmtt.models.generic.SuccessResponse

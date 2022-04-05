@@ -1,6 +1,6 @@
-package kmtt.base.api.comment
+package kmtt.api.comment
 
-import kmtt.base.api.common.Authable
+import kmtt.api.common.Authable
 import kmtt.models.Liker
 import kmtt.models.comment.Comment
 import kmtt.models.comment.CommentsLevelLimited

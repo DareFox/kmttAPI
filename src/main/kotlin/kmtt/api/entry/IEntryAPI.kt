@@ -1,6 +1,6 @@
-package kmtt.base.api.entry
+package kmtt.api.entry
 
-import kmtt.base.api.common.Authable
+import kmtt.api.common.Authable
 import kmtt.models.Likes
 import kmtt.models.attach.Attach
 import kmtt.models.entry.Entry

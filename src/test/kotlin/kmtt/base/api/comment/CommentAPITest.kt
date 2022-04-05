@@ -1,5 +1,6 @@
 package kmtt.base.api.comment
 
+import kmtt.api.comment.AuthCommentAPI
 import kmtt.models.enums.SortingType
 import kmtt.common.Shared
 import kmtt.util.assertDoesNotThrow

@@ -1,9 +1,9 @@
-package kmtt.base.api.comment
+package kmtt.api.comment
 
 import io.ktor.client.request.*
 import io.ktor.http.*
-import kmtt.base.ktor.IHttpClient
-import kmtt.base.ktor.request
+import kmtt.ktor.IHttpClient
+import kmtt.ktor.request
 import kmtt.models.Liker
 import kmtt.models.attach.Attach
 import kmtt.models.comment.Comment

@@ -1,4 +1,4 @@
-package kmtt.base.api.auth
+package kmtt.api.auth
 
 import kmtt.models.enums.SocialAccountType
 import kmtt.models.subsite.Subsite
