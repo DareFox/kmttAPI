@@ -62,12 +62,12 @@ tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "1.8"
 }
 
-tasks.jar {
+tasks.create("fatJar", Jar::class) {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     val dependencies = configurations
         .runtimeClasspath
         .get()
-        .map { zipTree(it) }
+        .map(::zipTree)
     from(dependencies)
-    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    with(tasks.jar.get())
 }
-
