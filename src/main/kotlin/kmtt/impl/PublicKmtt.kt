@@ -6,7 +6,7 @@ import kmtt.api.entry.IPublicEntryAPI
 import kmtt.api.entry.PublicEntryAPI
 import kmtt.models.enums.Website
 
-class PublicKmtt(val website: Website): AbstractKmtt(), IPublicKmtt {
+internal class PublicKmtt(val website: Website): AbstractKmtt(), IPublicKmtt {
     override val entry: IPublicEntryAPI = PublicEntryAPI(client, website)
     override val comments: IPublicCommentAPI = PublicCommentAPI(client, website)
 }

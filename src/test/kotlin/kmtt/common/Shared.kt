@@ -10,7 +10,7 @@ import kmtt.models.enums.Website
 import kmtt.models.EntryComment
 import java.time.Duration
 
-object Shared {
+internal object Shared {
     val httpClient: IHttpClient
     val website: Website = Website.DTF
     val token: String = System.getenv("TEST_DTF_TOKEN")
