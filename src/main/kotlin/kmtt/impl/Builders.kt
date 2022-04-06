@@ -26,7 +26,7 @@ fun authKmtt(
         client = authClients[website to token]!!
     } else {
         client = AuthKmtt(website, token)
-        publicClients[website] = client
+        authClients[website to token] = client
     }
 
     return client
