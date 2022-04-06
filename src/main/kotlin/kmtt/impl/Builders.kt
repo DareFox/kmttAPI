@@ -1,13 +1,14 @@
 package kmtt.impl
 
 import kmtt.models.enums.Website
+import java.util.concurrent.ConcurrentHashMap
 
 /**
  * Create object of [authenticated API][IAuthKmtt]
  */
 fun authKmtt(website: Website, token: String): IAuthKmtt = AuthKmtt(website, token)
 
-internal val publicClients = mutableMapOf<Website, IPublicKmtt>()
+internal val publicClients: MutableMap<Website, IPublicKmtt> = ConcurrentHashMap<Website, IPublicKmtt>()
 
 /**
  * Create object of [public API][IPublicKmtt]
