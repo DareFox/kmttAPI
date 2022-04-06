@@ -40,6 +40,7 @@ interface IHttpClient : CoroutineScope, Closeable {
 suspend inline fun <reified T> IHttpClient.request(crossinline block: HttpRequestBuilder.() -> Unit): T {
     try {
         return rateLimiter.executeSuspendFunction {
+            println("suspend function in rate limit - executed")
             client.request(block)
         }
     } catch (ex: ClientRequestException) {
