@@ -5,17 +5,42 @@ import java.util.concurrent.ConcurrentHashMap
 
 /**
  * Create object of [authenticated API][IAuthKmtt]
+ *
+ * @param preventClientDuplication
+ *
+ * Duplication of API objects can lead to rate-limit error.
+ * By this parameter you can, instead of creating new objects, get already created objects.
+ *
+ * Default: **true**
  */
-fun authKmtt(website: Website, token: String): IAuthKmtt = AuthKmtt(website, token)
+@Synchronized
+fun authKmtt(
+    website: Website,
+    token: String,
+    preventClientDuplication: Boolean = true,
+): IAuthKmtt {
+    val client: IAuthKmtt
 
-internal val publicClients: MutableMap<Website, IPublicKmtt> = ConcurrentHashMap<Website, IPublicKmtt>()
+    // TODO: Remove code duplication and delegate builder cache functionality
+    if (preventClientDuplication && authClients.containsKey(website to token)) {
+        client = authClients[website to token]!!
+    } else {
+        client = AuthKmtt(website, token)
+        publicClients[website] = client
+    }
+
+    return client
+}
+
+internal val authClients: MutableMap<Pair<Website, String>, IAuthKmtt> = ConcurrentHashMap()
+
 
 /**
  * Create object of [public API][IPublicKmtt]
  *
  * @param preventClientDuplication
  *
- * Duplication of Public API objects can lead to rate-limit error.
+ * Duplication of API objects can lead to rate-limit error.
  * By this parameter you can, instead of creating new objects, get already created objects.
  *
  * Default: **true**
@@ -27,6 +52,7 @@ fun publicKmtt(
 ): IPublicKmtt {
     val client: IPublicKmtt
 
+    // TODO: Remove code duplication and delegate builder cache functionality
     if (preventClientDuplication && publicClients.containsKey(website)) {
         client = publicClients[website]!!
     } else {
@@ -36,3 +62,5 @@ fun publicKmtt(
 
     return client
 }
+
+internal val publicClients: MutableMap<Website, IPublicKmtt> = ConcurrentHashMap<Website, IPublicKmtt>()
