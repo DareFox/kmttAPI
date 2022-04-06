@@ -20,6 +20,7 @@ internal val publicClients: MutableMap<Website, IPublicKmtt> = ConcurrentHashMap
  *
  * Default: **true**
  */
+@Synchronized
 fun publicKmtt(
     website: Website,
     preventClientDuplication: Boolean = true,
