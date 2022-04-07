@@ -20,7 +20,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      - name: Debug 
+      - name: Debug
         run: git branch -a
 
       - name: Set branch
@@ -45,7 +45,7 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Build kmttAPI
-        run: ./gradlew build
+        run: ./gradle build -x test
 
       - name: Generate Dokka documentation
         run: ./gradlew dokkaHtml
