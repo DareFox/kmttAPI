@@ -89,6 +89,9 @@ tasks.create("fatJar", Jar::class) {
 // Generate documentation by Dokka
 tasks.dokkaHtml.configure {
     val docs = projectDir.resolve("docs")
+
+    // DO NOT INCLUDE THIS FOLDER IN 'docs' FOLDER!!!
+    // COPYING FILES CODE WILL FALL IN ENDLESS RECURSION!!!
     val otherVersionDir = projectDir.resolve("otherVersions")
 
     outputDirectory.set(docs)

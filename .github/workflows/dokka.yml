@@ -1,0 +1,64 @@
+name: Generate Dokka documentation
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on release
+  release:
+    types: [published]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  dokka-generation:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    name: Generate Dokka documentation
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      - name: Debug 
+        run: git branch -a
+
+      - name: Set branch
+        run: |
+          git fetch --all
+          git checkout main
+
+      - name: Setup Java
+        uses: actions/setup-java@v2
+        with:
+          distribution: temurin
+          java-version: 11
+
+      # Setup Gradle for building project and documentation
+      - name: Gradle Build Action
+        uses: gradle/gradle-build-action@v2.1.5
+        with:
+          # Gradle version to use
+          gradle-version: wrapper
+
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+
+      - name: Build kmttAPI
+        run: ./gradlew build
+
+      - name: Generate Dokka documentation
+        run: ./gradlew dokkaHtml
+
+      - name: Pull Remote Changes
+        run: git pull
+
+      - name: Commit documentation changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          # Optional. Commit message for the created commit.
+          # Defaults to "Apply automatic changes"
+          commit_message: "CI: Push generated Dokka documentation"
+
+      - name: Push changes
+        run: git push
