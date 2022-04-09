@@ -45,7 +45,7 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Build kmttAPI
-        run: ./gradle build -x test
+        run: ./gradlew build -x test
 
       - name: Generate Dokka documentation
         run: ./gradlew dokkaHtml
