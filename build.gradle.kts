@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import java.util.Properties
 
 group = "me.darefox"
-version = "0.2.0"
+version = "0.2.1"
 
 
 plugins {
