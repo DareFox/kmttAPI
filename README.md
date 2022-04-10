@@ -14,7 +14,7 @@ And add **kmttAPI** to dependencies
 ```kotlin
 dependencies {
     // other dependencies...
-    implementation("com.github.DareFox:kmttAPI:0.2.0")
+    implementation("com.github.DareFox:kmttAPI:0.2.1")
 }
 ```
 
