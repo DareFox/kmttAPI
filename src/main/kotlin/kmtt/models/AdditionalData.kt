@@ -58,11 +58,13 @@ data class AdditionalData(
 @kotlinx.serialization.Serializable
     enum class Type(val value: String) {
         @JsonNames("gif")
-        gif("gif"),
-        @JsonNames("jpg")
-        jpg("jpg"),
+        GIF("gif"),
+        @JsonNames("jpg", "jpeg")
+        JPG("jpg"),
         @JsonNames("png")
-        png("png");
+        PNG("png"),
+        @JsonNames("webp")
+        WEBP("webp")
     }
 }
 
