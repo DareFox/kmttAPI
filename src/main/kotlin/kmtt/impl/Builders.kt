@@ -21,12 +21,15 @@ fun authKmtt(
 ): IAuthKmtt {
     val client: IAuthKmtt
 
-    // TODO: Remove code duplication and delegate builder cache functionality
-    if (preventClientDuplication && authClients.containsKey(website to token)) {
-        client = authClients[website to token]!!
+    if (preventClientDuplication) {
+        // Use double-check lock (https://en.wikipedia.org/wiki/Double-checked_locking#Usage_in_Java)
+        client = authClients[website to token] ?: synchronized(publicClients) {
+            authClients[website to token] ?: AuthKmtt(website, token).also {
+                authClients[website to token] = it
+            }
+        }
     } else {
         client = AuthKmtt(website, token)
-        authClients[website to token] = client
     }
 
     return client
@@ -45,19 +48,21 @@ internal val authClients: MutableMap<Pair<Website, String>, IAuthKmtt> = Concurr
  *
  * Default: **true**
  */
-@Synchronized
 fun publicKmtt(
     website: Website,
     preventClientDuplication: Boolean = true,
 ): IPublicKmtt {
     val client: IPublicKmtt
 
-    // TODO: Remove code duplication and delegate builder cache functionality
-    if (preventClientDuplication && publicClients.containsKey(website)) {
-        client = publicClients[website]!!
+    if (preventClientDuplication) {
+        // Use double-check lock (https://en.wikipedia.org/wiki/Double-checked_locking#Usage_in_Java)
+        client = publicClients[website] ?: synchronized(publicClients) {
+            publicClients[website] ?: PublicKmtt(website).also {
+                publicClients[website] = it
+            }
+        }
     } else {
         client = PublicKmtt(website)
-        publicClients[website] = client
     }
 
     return client
