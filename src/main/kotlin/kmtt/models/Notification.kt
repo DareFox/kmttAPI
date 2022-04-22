@@ -56,7 +56,7 @@ data class Notification(
 
     /* Название иконки, которая подставляется вместо аватарки. */
     @JsonNames("icon")
-    val icon: Notification.Icon? = null,
+    val icon: Icon? = null,
 
     ) {
 
@@ -87,6 +87,14 @@ data class Notification(
 
     @kotlinx.serialization.Serializable
     enum class Icon() {
+        @JsonNames("")
+        AVATAR(),
+        @JsonNames("rouble")
+        DONATION(),
+        @JsonNames("comment")
+        COMMENT(),
+        @JsonNames("mini_check")
+        CHECKMARK(),
         @JsonNames("comments_added")
         COMMENTS_ADDED(),
         @JsonNames("comments_reply_to")
@@ -102,7 +110,9 @@ data class Notification(
         @JsonNames("pencil")
         PENCIL(),
         @JsonNames("ui_archive")
-        UI_ARCHIVE();
+        UI_ARCHIVE(),
+        @JsonNames("reply")
+        REPLY()
     }
 }
 

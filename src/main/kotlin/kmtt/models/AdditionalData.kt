@@ -50,9 +50,7 @@ data class AdditionalData(
     ) {
 
     /**
-     *
-     *
-     * Values: gif,jpg,png
+     * Type of media file
      */
     @OptIn(ExperimentalSerializationApi::class)
     @kotlinx.serialization.Serializable
