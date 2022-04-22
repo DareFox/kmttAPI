@@ -91,6 +91,8 @@ data class Notification(
         AVATAR(),
         @JsonNames("rouble")
         DONATION(),
+        @JsonNames("mention")
+        MENTION(),
         @JsonNames("comment")
         COMMENT(),
         @JsonNames("mini_check")
