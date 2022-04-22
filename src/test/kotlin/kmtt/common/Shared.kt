@@ -9,6 +9,7 @@ import kmtt.ktor.IHttpClient
 import kmtt.models.enums.Website
 import kmtt.models.EntryComment
 import java.time.Duration
+import kotlin.properties.Delegates
 
 internal object Shared {
     val httpClient: IHttpClient
@@ -18,6 +19,14 @@ internal object Shared {
     val comments: List<EntryComment> = listOf(
         EntryComment(1123335, 16158631, Website.DTF),
         EntryComment(1110947, 15994992, Website.DTF)
+    )
+
+    val publicProfileID = listOf(
+        3351
+    )
+
+    val privateProfileID = listOf(
+        68409
     )
 
     init {
