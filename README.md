@@ -19,3 +19,5 @@ dependencies {
 ```
 
 > This snippets are for Gradle Kotlin DSL. To see code for your builder, visit [Jetpack.io repo](https://jitpack.io/#DareFox/kmttAPI "Jetpack.io repo")
+
+## Link to [Documentation](https://darefox.github.io/kmttAPI/)
