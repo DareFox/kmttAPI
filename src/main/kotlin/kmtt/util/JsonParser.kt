@@ -2,6 +2,6 @@ package kmtt.util
 
 import kotlinx.serialization.json.Json
 
-val jsonParser = Json {
+internal val jsonParser = Json {
     ignoreUnknownKeys = true
 }
