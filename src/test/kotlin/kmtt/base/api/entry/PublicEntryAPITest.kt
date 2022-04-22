@@ -1,12 +1,13 @@
 package kmtt.base.api.entry
 
 import kmtt.api.entry.AuthEntryAPI
+import kmtt.api.entry.PublicEntryAPI
 import kmtt.common.Shared
 import org.junit.jupiter.api.Test
 import kmtt.util.assertDoesNotThrow
 
-internal class AuthEntryAPITest {
-    private val api = AuthEntryAPI(Shared.httpClient, Shared.website, Shared.token)
+internal class PublicEntryAPITest {
+    private val api = PublicEntryAPI(Shared.httpClient, Shared.website)
 
     @Test
     fun getEntryByID() {

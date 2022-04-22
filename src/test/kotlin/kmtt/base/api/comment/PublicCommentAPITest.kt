@@ -1,14 +1,15 @@
 package kmtt.base.api.comment
 
 import kmtt.api.comment.AuthCommentAPI
+import kmtt.api.comment.PublicCommentAPI
 import kmtt.models.enums.SortingType
 import kmtt.common.Shared
 import kmtt.util.assertDoesNotThrow
 import org.junit.jupiter.api.Test
 
 
-internal class CommentAPITest {
-    private val api = AuthCommentAPI(Shared.httpClient, Shared.website, Shared.token)
+internal class PublicCommentAPITest {
+    private val api = PublicCommentAPI(Shared.httpClient, Shared.website)
 
     @Test
     fun getEntryComments() {
