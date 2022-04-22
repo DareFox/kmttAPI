@@ -54,9 +54,24 @@ internal class AuthUserAPITest {
     }
 
     @Test
+    fun getAllMyComments() {
+        assertDoesNotThrow {
+            api.getAllMyComments()
+        }
+    }
+
+
+    @Test
     fun getMyEntries() {
         assertDoesNotThrow {
             api.getMyEntries(50, 0)
+        }
+    }
+
+    @Test
+    fun getAllMyEntries() {
+        assertDoesNotThrow {
+            api.getAllMyEntries()
         }
     }
 
@@ -68,9 +83,23 @@ internal class AuthUserAPITest {
     }
 
     @Test
+    fun getAllMyFavoriteEntries() {
+        assertDoesNotThrow {
+            api.getAllMyFavoriteEntries()
+        }
+    }
+
+    @Test
     fun getMyFavoriteComments() {
         assertDoesNotThrow {
             api.getMyFavoriteEntries(50, 0)
+        }
+    }
+
+    @Test
+    fun getAllMyFavoriteComments() {
+        assertDoesNotThrow {
+            api.getAllMyFavoriteComments()
         }
     }
 

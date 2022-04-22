@@ -55,6 +55,25 @@ internal class PublicUserAPI(private val httpClient: IHttpClient, private val si
         return response.result
     }
 
+    override suspend fun getAllUserComments(userID: Long): List<Comment> {
+        val user = getUserByID(userID)
+
+        val commentCount = user.counters?.comments
+        requireNotNull(commentCount) {
+            "comment count in null"
+        }
+
+        val comments = mutableListOf<Comment>()
+
+        for (offset in 0 until commentCount step 50) {
+            val comment = getUserComments(userID, 50, offset.toInt())
+
+            comments += comment
+        }
+
+        return comments
+    }
+
     override suspend fun getUserEntries(userID: Long, count: Int, offset: Int): List<Entry> {
         val endpointURL = "/user/$userID/entries"
         val params = mutableListOf<Pair<String, String>>()
@@ -73,5 +92,24 @@ internal class PublicUserAPI(private val httpClient: IHttpClient, private val si
         }
 
         return response.result
+    }
+
+    override suspend fun getAllUserEntries(userID: Long): List<Entry> {
+        val user = getUserByID(userID)
+
+        val entriesCounter = user.counters?.entries
+        requireNotNull(entriesCounter) {
+            "comment count in null"
+        }
+
+        val entries = mutableListOf<Entry>()
+
+        for (offset in 0 until entriesCounter step 50) {
+            val entry = getUserEntries(userID, 50, offset.toInt())
+
+            entries += entry
+        }
+
+        return entries
     }
 }

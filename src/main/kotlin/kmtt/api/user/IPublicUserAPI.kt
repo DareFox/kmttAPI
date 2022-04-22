@@ -14,13 +14,27 @@ interface IPublicUserAPI {
 
     /**
      * Получить комментарии пользователя
+     *
+     * Max count: 50
      */
     suspend fun getUserComments(userID: Long, count: Int, offset: Int): List<Comment>
 
     /**
+     * Получить все комментарии пользователя
+     */
+    suspend fun getAllUserComments(userID: Long): List<Comment>
+
+    /**
      * Получить записи пользователя
+     *
+     * Max count: 50
      */
     suspend fun getUserEntries(userID: Long, count: Int, offset: Int): List<Entry>
+
+    /**
+     * Получить записи пользователя
+     */
+    suspend fun getAllUserEntries(userID: Long): List<Entry>
 }
 
 interface IAuthUserAPI : IPublicUserAPI, Authable {
@@ -52,21 +66,49 @@ interface IAuthUserAPI : IPublicUserAPI, Authable {
 
     /**
      * Получить комментарии текущего пользователя
+     *
+     * Max count: 50
      */
     suspend fun getMyComments(count: Int, offset: Int): List<Comment>
 
     /**
+     * Получить все комментарии текущего пользователя
+     */
+    suspend fun getAllMyComments(): List<Comment>
+
+    /**
      * Получить записи текущего пользователя
+     *
+     * Max count: 50
      */
     suspend fun getMyEntries(count: Int, offset: Int): List<Entry>
 
     /**
+     * Получить все записи текущего пользователя
+     */
+    suspend fun getAllMyEntries(): List<Entry>
+
+    /**
      * Получить избранные записи текущего пользователя
+     *
+     * Max count: 50
      */
     suspend fun getMyFavoriteEntries(count: Int, offset: Int): List<Entry>
 
     /**
+     * Получить все избранные записи текущего пользователя
+     */
+    suspend fun getAllMyFavoriteEntries(): List<Entry>
+
+    /**
      * Получить избранные комментарии текущего пользователя
+     *
+     * Max count: 50
      */
     suspend fun getMyFavoriteComments(count: Int, offset: Int): List<Comment>
+
+    /**
+     * Получить все избранные комментарии текущего пользователя
+     */
+    suspend fun getAllMyFavoriteComments(): List<Comment>
 }

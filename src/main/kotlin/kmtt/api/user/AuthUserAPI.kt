@@ -2,7 +2,6 @@ package kmtt.api.user
 
 import io.ktor.client.request.*
 import io.ktor.http.*
-import kmtt.constants.Content
 import kmtt.ktor.IHttpClient
 import kmtt.ktor.request
 import kmtt.models.Notification
@@ -102,6 +101,25 @@ internal class AuthUserAPI(
         return response.result
     }
 
+    override suspend fun getAllMyComments(): List<Comment> {
+        val user = getMe()
+
+        val commentCount = user.counters?.comments
+        requireNotNull(commentCount) {
+            "comment count in null"
+        }
+
+        val comments = mutableListOf<Comment>()
+
+        for (offset in 0 until commentCount step 50) {
+            val comment = getMyComments(50, offset.toInt())
+
+            comments += comment
+        }
+
+        return comments
+    }
+
     override suspend fun getMyEntries(count: Int, offset: Int): List<Entry> {
         val endpointURL = "/user/me/comments"
         val params = mutableListOf<Pair<String, String>>()
@@ -120,6 +138,25 @@ internal class AuthUserAPI(
         }
 
         return response.result
+    }
+
+    override suspend fun getAllMyEntries(): List<Entry> {
+        val user = getMe()
+
+        val entriesCounter = user.counters?.entries
+        requireNotNull(entriesCounter) {
+            "comment count in null"
+        }
+
+        val entries = mutableListOf<Entry>()
+
+        for (offset in 0 until entriesCounter step 50) {
+            val entry = getMyEntries(50, offset.toInt())
+
+            entries += entry
+        }
+
+        return entries
     }
 
     override suspend fun getMyFavoriteEntries(count: Int, offset: Int): List<Entry> {
@@ -142,6 +179,25 @@ internal class AuthUserAPI(
         return response.result
     }
 
+    override suspend fun getAllMyFavoriteEntries(): List<Entry> {
+        val user = getMe()
+
+        val entriesCounter = user.counters?.favorites
+        requireNotNull(entriesCounter) {
+            "comment count in null"
+        }
+
+        val entries = mutableListOf<Entry>()
+
+        for (offset in 0 until entriesCounter step 50) {
+            val entry = getMyFavoriteEntries(50, offset.toInt())
+
+            entries += entry
+        }
+
+        return entries
+    }
+
     override suspend fun getMyFavoriteComments(count: Int, offset: Int): List<Comment> {
         val endpointURL = "/user/me/favorites/comments"
         val params = mutableListOf<Pair<String, String>>()
@@ -160,6 +216,25 @@ internal class AuthUserAPI(
         }
 
         return response.result
+    }
+
+    override suspend fun getAllMyFavoriteComments(): List<Comment> {
+        val user = getMe()
+
+        val entriesCounter = user.counters?.favorites
+        requireNotNull(entriesCounter) {
+            "comment count in null"
+        }
+
+        val comments = mutableListOf<Comment>()
+
+        for (offset in 0 until entriesCounter step 50) {
+            val comment = getMyFavoriteComments( 50, offset.toInt())
+
+            comments += comment
+        }
+
+        return comments
     }
 
 }
