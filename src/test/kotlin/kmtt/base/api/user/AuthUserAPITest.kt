@@ -6,10 +6,18 @@ import kmtt.common.Shared
 import org.junit.jupiter.api.Test
 
 import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Assumptions
+import org.junit.jupiter.api.BeforeAll
+import org.junit.jupiter.api.TestInstance
 
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 internal class AuthUserAPITest {
-    val api = AuthUserAPI(Shared.httpClient, Shared.website, Shared.token)
+    val api = AuthUserAPI(Shared.httpClient, Shared.website, Shared.token ?: "")
 
+    @BeforeAll
+    fun checkNullToken() {
+        Assumptions.assumeTrue(Shared.token != null)
+    }
     @Test
     fun getMe() {
         assertDoesNotThrow {
