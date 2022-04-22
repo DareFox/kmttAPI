@@ -26,7 +26,7 @@ import kotlinx.serialization.json.JsonNames
 data class Counters(
 
     @JsonNames("entries")
-    val propertyEntries: Long? = null,
+    val entries: Long? = null,
 
     @JsonNames("comments")
     val comments: Long? = null,
