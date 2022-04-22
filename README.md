@@ -14,8 +14,10 @@ And add **kmttAPI** to dependencies
 ```kotlin
 dependencies {
     // other dependencies...
-    implementation("com.github.DareFox:kmttAPI:0.2.1")
+    implementation("com.github.DareFox:kmttAPI:0.3.0")
 }
 ```
 
 > This snippets are for Gradle Kotlin DSL. To see code for your builder, visit [Jetpack.io repo](https://jitpack.io/#DareFox/kmttAPI "Jetpack.io repo")
+
+## Link to [Documentation](https://darefox.github.io/kmttAPI/)

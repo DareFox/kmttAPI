@@ -22,6 +22,27 @@ $dokka.location:kmtt.api.entry/IPublicEntryAPI///PointingToDeclaration/kmtt-a-p
 $dokka.location:kmtt.api.entry/IPublicEntryAPI/getEntry/#kotlin.Long/PointingToDeclaration/kmtt-a-p-i/kmtt.api.entry/-i-public-entry-a-p-i/get-entry.html
 $dokka.location:kmtt.api.entry/IPublicEntryAPI/getEntry/#kotlin.String/PointingToDeclaration/kmtt-a-p-i/kmtt.api.entry/-i-public-entry-a-p-i/get-entry.html
 $dokka.location:kmtt.api.entry/IPublicEntryAPI/getPopularEntriesByEntry/#kotlin.Long/PointingToDeclaration/kmtt-a-p-i/kmtt.api.entry/-i-public-entry-a-p-i/get-popular-entries-by-entry.html
+$dokka.location:kmtt.api.user////PointingToDeclaration/kmtt-a-p-i/kmtt.api.user/index.html
+$dokka.location:kmtt.api.user/IAuthUserAPI///PointingToDeclaration/kmtt-a-p-i/kmtt.api.user/-i-auth-user-a-p-i/index.html
+$dokka.location:kmtt.api.user/IAuthUserAPI/getAllMyComments/#/PointingToDeclaration/kmtt-a-p-i/kmtt.api.user/-i-auth-user-a-p-i/get-all-my-comments.html
+$dokka.location:kmtt.api.user/IAuthUserAPI/getAllMyEntries/#/PointingToDeclaration/kmtt-a-p-i/kmtt.api.user/-i-auth-user-a-p-i/get-all-my-entries.html
+$dokka.location:kmtt.api.user/IAuthUserAPI/getAllMyFavoriteComments/#/PointingToDeclaration/kmtt-a-p-i/kmtt.api.user/-i-auth-user-a-p-i/get-all-my-favorite-comments.html
+$dokka.location:kmtt.api.user/IAuthUserAPI/getAllMyFavoriteEntries/#/PointingToDeclaration/kmtt-a-p-i/kmtt.api.user/-i-auth-user-a-p-i/get-all-my-favorite-entries.html
+$dokka.location:kmtt.api.user/IAuthUserAPI/getMe/#/PointingToDeclaration/kmtt-a-p-i/kmtt.api.user/-i-auth-user-a-p-i/get-me.html
+$dokka.location:kmtt.api.user/IAuthUserAPI/getMyComments/#kotlin.Int#kotlin.Int/PointingToDeclaration/kmtt-a-p-i/kmtt.api.user/-i-auth-user-a-p-i/get-my-comments.html
+$dokka.location:kmtt.api.user/IAuthUserAPI/getMyEntries/#kotlin.Int#kotlin.Int/PointingToDeclaration/kmtt-a-p-i/kmtt.api.user/-i-auth-user-a-p-i/get-my-entries.html
+$dokka.location:kmtt.api.user/IAuthUserAPI/getMyFavoriteComments/#kotlin.Int#kotlin.Int/PointingToDeclaration/kmtt-a-p-i/kmtt.api.user/-i-auth-user-a-p-i/get-my-favorite-comments.html
+$dokka.location:kmtt.api.user/IAuthUserAPI/getMyFavoriteEntries/#kotlin.Int#kotlin.Int/PointingToDeclaration/kmtt-a-p-i/kmtt.api.user/-i-auth-user-a-p-i/get-my-favorite-entries.html
+$dokka.location:kmtt.api.user/IAuthUserAPI/getMyNotifications/#/PointingToDeclaration/kmtt-a-p-i/kmtt.api.user/-i-auth-user-a-p-i/get-my-notifications.html
+$dokka.location:kmtt.api.user/IAuthUserAPI/getMyNotificationsCount/#/PointingToDeclaration/kmtt-a-p-i/kmtt.api.user/-i-auth-user-a-p-i/get-my-notifications-count.html
+$dokka.location:kmtt.api.user/IAuthUserAPI/readAllNotifications/#/PointingToDeclaration/kmtt-a-p-i/kmtt.api.user/-i-auth-user-a-p-i/read-all-notifications.html
+$dokka.location:kmtt.api.user/IAuthUserAPI/readNotificationsById/#kotlin.Long/PointingToDeclaration/kmtt-a-p-i/kmtt.api.user/-i-auth-user-a-p-i/read-notifications-by-id.html
+$dokka.location:kmtt.api.user/IPublicUserAPI///PointingToDeclaration/kmtt-a-p-i/kmtt.api.user/-i-public-user-a-p-i/index.html
+$dokka.location:kmtt.api.user/IPublicUserAPI/getAllUserComments/#kotlin.Long/PointingToDeclaration/kmtt-a-p-i/kmtt.api.user/-i-public-user-a-p-i/get-all-user-comments.html
+$dokka.location:kmtt.api.user/IPublicUserAPI/getAllUserEntries/#kotlin.Long/PointingToDeclaration/kmtt-a-p-i/kmtt.api.user/-i-public-user-a-p-i/get-all-user-entries.html
+$dokka.location:kmtt.api.user/IPublicUserAPI/getUserByID/#kotlin.Long/PointingToDeclaration/kmtt-a-p-i/kmtt.api.user/-i-public-user-a-p-i/get-user-by-i-d.html
+$dokka.location:kmtt.api.user/IPublicUserAPI/getUserComments/#kotlin.Long#kotlin.Int#kotlin.Int/PointingToDeclaration/kmtt-a-p-i/kmtt.api.user/-i-public-user-a-p-i/get-user-comments.html
+$dokka.location:kmtt.api.user/IPublicUserAPI/getUserEntries/#kotlin.Long#kotlin.Int#kotlin.Int/PointingToDeclaration/kmtt-a-p-i/kmtt.api.user/-i-public-user-a-p-i/get-user-entries.html
 $dokka.location:kmtt.exception////PointingToDeclaration/kmtt-a-p-i/kmtt.exception/index.html
 $dokka.location:kmtt.exception/OsnovaRequestException///PointingToDeclaration/kmtt-a-p-i/kmtt.exception/-osnova-request-exception/index.html
 $dokka.location:kmtt.exception/OsnovaRequestException/OsnovaRequestException/#io.ktor.client.statement.HttpResponse#kmtt.models.generic.ErrorResponse/PointingToDeclaration/kmtt-a-p-i/kmtt.exception/-osnova-request-exception/-osnova-request-exception.html
@@ -33,9 +54,11 @@ $dokka.location:kmtt.impl//publicKmtt/#kmtt.models.enums.Website#kotlin.Boolean/
 $dokka.location:kmtt.impl/IAuthKmtt///PointingToDeclaration/kmtt-a-p-i/kmtt.impl/-i-auth-kmtt/index.html
 $dokka.location:kmtt.impl/IAuthKmtt/comments/#/PointingToDeclaration/kmtt-a-p-i/kmtt.impl/-i-auth-kmtt/comments.html
 $dokka.location:kmtt.impl/IAuthKmtt/entry/#/PointingToDeclaration/kmtt-a-p-i/kmtt.impl/-i-auth-kmtt/entry.html
+$dokka.location:kmtt.impl/IAuthKmtt/user/#/PointingToDeclaration/kmtt-a-p-i/kmtt.impl/-i-auth-kmtt/user.html
 $dokka.location:kmtt.impl/IPublicKmtt///PointingToDeclaration/kmtt-a-p-i/kmtt.impl/-i-public-kmtt/index.html
 $dokka.location:kmtt.impl/IPublicKmtt/comments/#/PointingToDeclaration/kmtt-a-p-i/kmtt.impl/-i-public-kmtt/comments.html
 $dokka.location:kmtt.impl/IPublicKmtt/entry/#/PointingToDeclaration/kmtt-a-p-i/kmtt.impl/-i-public-kmtt/entry.html
+$dokka.location:kmtt.impl/IPublicKmtt/user/#/PointingToDeclaration/kmtt-a-p-i/kmtt.impl/-i-public-kmtt/user.html
 $dokka.location:kmtt.models.attach////PointingToDeclaration/kmtt-a-p-i/kmtt.models.attach/index.html
 $dokka.location:kmtt.models.attach/Attach///PointingToDeclaration/kmtt-a-p-i/kmtt.models.attach/-attach/index.html
 $dokka.location:kmtt.models.attach/Attach/Attach/#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.Long?#kotlin.Long?#kotlin.Long?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kmtt.models.attach.AttachImage?/PointingToDeclaration/kmtt-a-p-i/kmtt.models.attach/-attach/-attach.html
@@ -185,8 +208,8 @@ $dokka.location:kmtt.models.enums/SocialAccountType.TWITTER///PointingToDeclarat
 $dokka.location:kmtt.models.enums/SocialAccountType.VK///PointingToDeclaration/kmtt-a-p-i/kmtt.models.enums/-social-account-type/-v-k/index.html
 $dokka.location:kmtt.models.enums/SocialAccountType///PointingToDeclaration/kmtt-a-p-i/kmtt.models.enums/-social-account-type/index.html
 $dokka.location:kmtt.models.enums/SocialAccountType/typeValue/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models.enums/-social-account-type/type-value.html
-$dokka.location:kmtt.models.enums/SortingType.ByDate///PointingToDeclaration/kmtt-a-p-i/kmtt.models.enums/-sorting-type/-by-date/index.html
-$dokka.location:kmtt.models.enums/SortingType.Popular///PointingToDeclaration/kmtt-a-p-i/kmtt.models.enums/-sorting-type/-popular/index.html
+$dokka.location:kmtt.models.enums/SortingType.BY_DATE///PointingToDeclaration/kmtt-a-p-i/kmtt.models.enums/-sorting-type/-b-y_-d-a-t-e/index.html
+$dokka.location:kmtt.models.enums/SortingType.POPULAR///PointingToDeclaration/kmtt-a-p-i/kmtt.models.enums/-sorting-type/-p-o-p-u-l-a-r/index.html
 $dokka.location:kmtt.models.enums/SortingType///PointingToDeclaration/kmtt-a-p-i/kmtt.models.enums/-sorting-type/index.html
 $dokka.location:kmtt.models.enums/SortingType/typeValue/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models.enums/-sorting-type/type-value.html
 $dokka.location:kmtt.models.enums/Vote.MINUS///PointingToDeclaration/kmtt-a-p-i/kmtt.models.enums/-vote/-m-i-n-u-s/index.html
@@ -304,7 +327,6 @@ $dokka.location:kmtt.models/AdditionalData.Type.JPG///PointingToDeclaration/kmt
 $dokka.location:kmtt.models/AdditionalData.Type.PNG///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-additional-data/-type/-p-n-g/index.html
 $dokka.location:kmtt.models/AdditionalData.Type.WEBP///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-additional-data/-type/-w-e-b-p/index.html
 $dokka.location:kmtt.models/AdditionalData.Type///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-additional-data/-type/index.html
-$dokka.location:kmtt.models/AdditionalData.Type/value/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-additional-data/-type/value.html
 $dokka.location:kmtt.models/AdditionalData///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-additional-data/index.html
 $dokka.location:kmtt.models/AdditionalData/AdditionalData/#kmtt.models.AdditionalData.Type?#kotlin.String?#kotlin.Long?#kotlin.String?#kotlin.Long?#kotlin.Boolean?/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-additional-data/-additional-data.html
 $dokka.location:kmtt.models/AdditionalData/duration/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-additional-data/duration.html
@@ -357,8 +379,8 @@ $dokka.location:kmtt.models/Company/url/#/PointingToDeclaration/kmtt-a-p-i/kmtt
 $dokka.location:kmtt.models/Counters///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-counters/index.html
 $dokka.location:kmtt.models/Counters/Counters/#kotlin.Long?#kotlin.Long?#kotlin.Long?/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-counters/-counters.html
 $dokka.location:kmtt.models/Counters/comments/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-counters/comments.html
+$dokka.location:kmtt.models/Counters/entries/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-counters/entries.html
 $dokka.location:kmtt.models/Counters/favorites/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-counters/favorites.html
-$dokka.location:kmtt.models/Counters/propertyEntries/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-counters/property-entries.html
 $dokka.location:kmtt.models/Cover///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-cover/index.html
 $dokka.location:kmtt.models/Cover/Cover/#kotlin.Int?#kmtt.models.AdditionalData?#kotlin.String?#kotlin.String?#kmtt.models.Size?#kotlin.String?/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-cover/-cover.html
 $dokka.location:kmtt.models/Cover/additionalData/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-cover/additional-data.html
@@ -420,11 +442,10 @@ $dokka.location:kmtt.models/Likes/count/#/PointingToDeclaration/kmtt-a-p-i/kmtt
 $dokka.location:kmtt.models/Likes/isHidden/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-likes/is-hidden.html
 $dokka.location:kmtt.models/Likes/isLiked/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-likes/is-liked.html
 $dokka.location:kmtt.models/Likes/summ/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-likes/summ.html
-$dokka.location:kmtt.models/LocateResponseResult.Type.entry///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-locate-response-result/-type/entry/index.html
-$dokka.location:kmtt.models/LocateResponseResult.Type.section///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-locate-response-result/-type/section/index.html
-$dokka.location:kmtt.models/LocateResponseResult.Type.user///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-locate-response-result/-type/user/index.html
+$dokka.location:kmtt.models/LocateResponseResult.Type.ENTRY///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-locate-response-result/-type/-e-n-t-r-y/index.html
+$dokka.location:kmtt.models/LocateResponseResult.Type.SECTION///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-locate-response-result/-type/-s-e-c-t-i-o-n/index.html
+$dokka.location:kmtt.models/LocateResponseResult.Type.USER///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-locate-response-result/-type/-u-s-e-r/index.html
 $dokka.location:kmtt.models/LocateResponseResult.Type///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-locate-response-result/-type/index.html
-$dokka.location:kmtt.models/LocateResponseResult.Type/value/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-locate-response-result/-type/value.html
 $dokka.location:kmtt.models/LocateResponseResult///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-locate-response-result/index.html
 $dokka.location:kmtt.models/LocateResponseResult/LocateResponseResult/#kmtt.models.LocateResponseResult.Type?#kotlin.Int?/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-locate-response-result/-locate-response-result.html
 $dokka.location:kmtt.models/LocateResponseResult/data/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-locate-response-result/data.html
@@ -448,27 +469,32 @@ $dokka.location:kmtt.models/MediaTypeSerializer/serialize/#kotlinx.serialization
 $dokka.location:kmtt.models/MyNotificationsCountResponseResult///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-my-notifications-count-response-result/index.html
 $dokka.location:kmtt.models/MyNotificationsCountResponseResult/MyNotificationsCountResponseResult/#kotlin.Long?/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-my-notifications-count-response-result/-my-notifications-count-response-result.html
 $dokka.location:kmtt.models/MyNotificationsCountResponseResult/count/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-my-notifications-count-response-result/count.html
-$dokka.location:kmtt.models/Notification.Icon.commentsAdded///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-icon/comments-added/index.html
-$dokka.location:kmtt.models/Notification.Icon.commentsReplyTo///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-icon/comments-reply-to/index.html
-$dokka.location:kmtt.models/Notification.Icon.iconMinusUnpublishMinusEntry///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-icon/icon-minus-unpublish-minus-entry/index.html
-$dokka.location:kmtt.models/Notification.Icon.likeDown///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-icon/like-down/index.html
-$dokka.location:kmtt.models/Notification.Icon.likeUp///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-icon/like-up/index.html
-$dokka.location:kmtt.models/Notification.Icon.pencil///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-icon/pencil/index.html
-$dokka.location:kmtt.models/Notification.Icon.uiArchive///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-icon/ui-archive/index.html
-$dokka.location:kmtt.models/Notification.Icon.uiChronograph///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-icon/ui-chronograph/index.html
+$dokka.location:kmtt.models/Notification.Icon.AVATAR///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-icon/-a-v-a-t-a-r/index.html
+$dokka.location:kmtt.models/Notification.Icon.CHECKMARK///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-icon/-c-h-e-c-k-m-a-r-k/index.html
+$dokka.location:kmtt.models/Notification.Icon.COMMENT///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-icon/-c-o-m-m-e-n-t/index.html
+$dokka.location:kmtt.models/Notification.Icon.COMMENTS_ADDED///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-icon/-c-o-m-m-e-n-t-s_-a-d-d-e-d/index.html
+$dokka.location:kmtt.models/Notification.Icon.COMMENTS_REPLY_TO///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-icon/-c-o-m-m-e-n-t-s_-r-e-p-l-y_-t-o/index.html
+$dokka.location:kmtt.models/Notification.Icon.DONATION///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-icon/-d-o-n-a-t-i-o-n/index.html
+$dokka.location:kmtt.models/Notification.Icon.ICON_MINUS_UNPUBLISH_MINUS_ENTRY///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-icon/-i-c-o-n_-m-i-n-u-s_-u-n-p-u-b-l-i-s-h_-m-i-n-u-s_-e-n-t-r-y/index.html
+$dokka.location:kmtt.models/Notification.Icon.LIKE_DOWN///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-icon/-l-i-k-e_-d-o-w-n/index.html
+$dokka.location:kmtt.models/Notification.Icon.LIKE_UP///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-icon/-l-i-k-e_-u-p/index.html
+$dokka.location:kmtt.models/Notification.Icon.MENTION///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-icon/-m-e-n-t-i-o-n/index.html
+$dokka.location:kmtt.models/Notification.Icon.PENCIL///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-icon/-p-e-n-c-i-l/index.html
+$dokka.location:kmtt.models/Notification.Icon.REPLY///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-icon/-r-e-p-l-y/index.html
+$dokka.location:kmtt.models/Notification.Icon.UI_ARCHIVE///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-icon/-u-i_-a-r-c-h-i-v-e/index.html
+$dokka.location:kmtt.models/Notification.Icon.UI_CHRONOGRAPH///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-icon/-u-i_-c-h-r-o-n-o-g-r-a-p-h/index.html
 $dokka.location:kmtt.models/Notification.Icon///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-icon/index.html
-$dokka.location:kmtt.models/Notification.Icon/value/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-icon/value.html
-$dokka.location:kmtt.models/Notification.Type._128///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-type/_128/index.html
-$dokka.location:kmtt.models/Notification.Type._16///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-type/_16/index.html
-$dokka.location:kmtt.models/Notification.Type._2///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-type/_2/index.html
-$dokka.location:kmtt.models/Notification.Type._32///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-type/_32/index.html
-$dokka.location:kmtt.models/Notification.Type._4///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-type/_4/index.html
-$dokka.location:kmtt.models/Notification.Type._64///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-type/_64/index.html
-$dokka.location:kmtt.models/Notification.Type._8///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-type/_8/index.html
+$dokka.location:kmtt.models/Notification.Type.BANNED///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-type/-b-a-n-n-e-d/index.html
+$dokka.location:kmtt.models/Notification.Type.COMMENT///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-type/-c-o-m-m-e-n-t/index.html
+$dokka.location:kmtt.models/Notification.Type.LIKE///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-type/-l-i-k-e/index.html
+$dokka.location:kmtt.models/Notification.Type.REPLY///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-type/-r-e-p-l-y/index.html
+$dokka.location:kmtt.models/Notification.Type.SYSTEM///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-type/-s-y-s-t-e-m/index.html
+$dokka.location:kmtt.models/Notification.Type.UNPUBLISH///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-type/-u-n-p-u-b-l-i-s-h/index.html
+$dokka.location:kmtt.models/Notification.Type.VACANCY///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-type/-v-a-c-a-n-c-y/index.html
 $dokka.location:kmtt.models/Notification.Type///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-type/index.html
 $dokka.location:kmtt.models/Notification.Type/value/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-type/value.html
 $dokka.location:kmtt.models/Notification///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/index.html
-$dokka.location:kmtt.models/Notification/Notification/#kotlin.Long?#kmtt.models.Notification.Type?#kotlin.Long?#kotlin.String?#kotlin.collections.List[kmtt.models.subsite.Subsite]?#kotlin.String?#kotlin.String?#kotlin.String?#kmtt.models.Notification.Icon?/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-notification.html
+$dokka.location:kmtt.models/Notification/Notification/#kotlin.Long?#kotlin.Int?#kotlin.Long?#kotlin.String?#kotlin.collections.List[kmtt.models.subsite.Subsite]?#kotlin.String?#kotlin.String?#kotlin.String?#kmtt.models.Notification.Icon?/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/-notification.html
 $dokka.location:kmtt.models/Notification/commentText/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/comment-text.html
 $dokka.location:kmtt.models/Notification/date/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/date.html
 $dokka.location:kmtt.models/Notification/dateRFC/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-notification/date-r-f-c.html
@@ -566,10 +592,9 @@ $dokka.location:kmtt.models/Watcher/Watcher/#kotlin.Long?#kotlin.String?#kotlin.
 $dokka.location:kmtt.models/Watcher/event/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-watcher/event.html
 $dokka.location:kmtt.models/Watcher/id/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-watcher/id.html
 $dokka.location:kmtt.models/Watcher/url/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-watcher/url.html
-$dokka.location:kmtt.models/Websocket.Type.commentVoted///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-websocket/-type/comment-voted/index.html
-$dokka.location:kmtt.models/Websocket.Type.contentVoted///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-websocket/-type/content-voted/index.html
+$dokka.location:kmtt.models/Websocket.Type.COMMENT_VOTED///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-websocket/-type/-c-o-m-m-e-n-t_-v-o-t-e-d/index.html
+$dokka.location:kmtt.models/Websocket.Type.CONTENT_VOTED///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-websocket/-type/-c-o-n-t-e-n-t_-v-o-t-e-d/index.html
 $dokka.location:kmtt.models/Websocket.Type///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-websocket/-type/index.html
-$dokka.location:kmtt.models/Websocket.Type/value/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-websocket/-type/value.html
 $dokka.location:kmtt.models/Websocket///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-websocket/index.html
 $dokka.location:kmtt.models/Websocket/Websocket/#kmtt.models.Websocket.Type?#kotlin.Long?#kotlin.Int?#kotlin.Long?#kotlin.Int?#kotlin.String?/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-websocket/-websocket.html
 $dokka.location:kmtt.models/Websocket/contentId/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-websocket/content-id.html
@@ -580,11 +605,11 @@ $dokka.location:kmtt.models/Websocket/type/#/PointingToDeclaration/kmtt-a-p-i/k
 $dokka.location:kmtt.models/Websocket/userHash/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-websocket/user-hash.html
 $dokka.location:kmtt.util////PointingToDeclaration/kmtt-a-p-i/kmtt.util/index.html
 $dokka.location:kmtt.util//addTokenIfNotNull/io.ktor.client.request.HttpRequestBuilder#kotlin.String?/PointingToDeclaration/kmtt-a-p-i/kmtt.util/add-token-if-not-null.html
-$dokka.location:kmtt.util//jsonParser/#/PointingToDeclaration/kmtt-a-p-i/kmtt.util/json-parser.html
 kmtt.api.auth
 kmtt.api.comment
 kmtt.api.common
 kmtt.api.entry
+kmtt.api.user
 kmtt.exception
 kmtt.impl
 kmtt.models
