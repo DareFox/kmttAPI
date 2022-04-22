@@ -14,7 +14,7 @@ import kotlin.properties.Delegates
 internal object Shared {
     val httpClient: IHttpClient
     val website: Website = Website.DTF
-    val token: String = System.getenv("TEST_DTF_TOKEN")
+    val token: String? = System.getenv("TEST_DTF_TOKEN")
 
     val comments: List<EntryComment> = listOf(
         EntryComment(1123335, 16158631, Website.DTF),

@@ -65,7 +65,9 @@ tasks.test {
         }
 
         val token = prop["test.dtf.token"]
-        environment("TEST_DTF_TOKEN", token ?: System.getenv("TEST_DTF_TOKEN"))
+        token?.let {
+            environment("TEST_DTF_TOKEN", it)
+        }
     }
     useJUnitPlatform()
 }
