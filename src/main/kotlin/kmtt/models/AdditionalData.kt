@@ -55,16 +55,16 @@ data class AdditionalData(
      * Values: gif,jpg,png
      */
     @OptIn(ExperimentalSerializationApi::class)
-@kotlinx.serialization.Serializable
-    enum class Type(val value: String) {
+    @kotlinx.serialization.Serializable
+    enum class Type() {
         @JsonNames("gif")
-        GIF("gif"),
+        GIF(),
         @JsonNames("jpg", "jpeg")
-        JPG("jpg"),
+        JPG(),
         @JsonNames("png")
-        PNG("png"),
+        PNG(),
         @JsonNames("webp")
-        WEBP("webp")
+        WEBP()
     }
 }
 

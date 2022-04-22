@@ -57,11 +57,12 @@ data class Websocket(
      *
      * Values: commentVoted,contentVoted
      */
-    enum class Type(val value: String) {
+    @kotlinx.serialization.Serializable
+    enum class Type() {
         @JsonNames("comment voted")
-        commentVoted("comment voted"),
+        COMMENT_VOTED(),
         @JsonNames("content voted")
-        contentVoted("content voted");
+        CONTENT_VOTED();
     }
 }
 

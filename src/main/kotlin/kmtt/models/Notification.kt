@@ -16,7 +16,7 @@ import kotlinx.serialization.json.JsonNames
  *
  *
  * @param id
- * @param type Тип уведомления:   * `2` - TYPE_LIKE   * `4` - TYPE_REPLY   * `8` - TYPE_BANNED   * `16` - TYPE_UNPUBLISH   * `32` - TYPE_COMMENT   * `64` - TYPE_SYSTEM   * `128` - TYPE_VACANCY
+ * @param type
  * @param date
  * @param dateRFC
  * @param users
@@ -33,9 +33,8 @@ data class Notification(
     @JsonNames("id")
     val id: Long? = null,
 
-    /* Тип уведомления:   * `2` - TYPE_LIKE   * `4` - TYPE_REPLY   * `8` - TYPE_BANNED   * `16` - TYPE_UNPUBLISH   * `32` - TYPE_COMMENT   * `64` - TYPE_SYSTEM   * `128` - TYPE_VACANCY  */
     @JsonNames("type")
-    val type: Notification.Type? = null,
+    val type: Int? = null,
 
     @JsonNames("date")
     val date: Long? = null,
@@ -62,49 +61,48 @@ data class Notification(
     ) {
 
     /**
-     * Тип уведомления:   * `2` - TYPE_LIKE   * `4` - TYPE_REPLY   * `8` - TYPE_BANNED   * `16` - TYPE_UNPUBLISH   * `32` - TYPE_COMMENT   * `64` - TYPE_SYSTEM   * `128` - TYPE_VACANCY
-     *
-     * Values: _2,_4,_8,_16,_32,_64,_128
+     * Тип уведомления
      */
+    @kotlinx.serialization.Serializable
     enum class Type(val value: Int) {
         @JsonNames("2")
-        _2(2),
+        LIKE(2),
         @JsonNames("4")
-        _4(4),
+        REPLY(4),
         @JsonNames("8")
-        _8(8),
+        BANNED(8),
         @JsonNames("1")
-        _16(16),
+        UNPUBLISH(16),
         @JsonNames("3")
-        _32(32),
+        COMMENT(32),
         @JsonNames("6")
-        _64(64),
+        SYSTEM(64),
         @JsonNames("18")
-        _128(128);
+        VACANCY(128);
     }
 
     /**
      * Название иконки, которая подставляется вместо аватарки.
-     *
-     * Values: commentsAdded,commentsReplyTo,likeUp,likeDown,uiChronograph,iconMinusUnpublishMinusEntry,pencil,uiArchive
      */
-    enum class Icon(val value: String) {
+
+    @kotlinx.serialization.Serializable
+    enum class Icon() {
         @JsonNames("comments_added")
-        commentsAdded("comments_added"),
+        COMMENTS_ADDED(),
         @JsonNames("comments_reply_to")
-        commentsReplyTo("comments_reply_to"),
+        COMMENTS_REPLY_TO(),
         @JsonNames("like_up")
-        likeUp("like_up"),
+        LIKE_UP(),
         @JsonNames("like_down")
-        likeDown("like_down"),
+        LIKE_DOWN(),
         @JsonNames("ui_chronograph")
-        uiChronograph("ui_chronograph"),
+        UI_CHRONOGRAPH(),
         @JsonNames("icon-unpublish-entry")
-        iconMinusUnpublishMinusEntry("icon-unpublish-entry"),
+        ICON_MINUS_UNPUBLISH_MINUS_ENTRY(),
         @JsonNames("pencil")
-        pencil("pencil"),
+        PENCIL(),
         @JsonNames("ui_archive")
-        uiArchive("ui_archive");
+        UI_ARCHIVE();
     }
 }
 

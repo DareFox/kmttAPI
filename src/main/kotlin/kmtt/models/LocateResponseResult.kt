@@ -37,13 +37,14 @@ data class LocateResponseResult(
      *
      * Values: user,entry,section
      */
-    enum class Type(val value: String) {
+    @kotlinx.serialization.Serializable
+    enum class Type() {
         @JsonNames("user")
-        user("user"),
+        USER(),
         @JsonNames("entry")
-        entry("entry"),
+        ENTRY(),
         @JsonNames("section")
-        section("section");
+        SECTION();
     }
 }
 
