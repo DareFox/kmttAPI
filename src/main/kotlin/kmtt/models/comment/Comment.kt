@@ -74,7 +74,7 @@ data class Comment(
     val entry: Entry? = null,
 
     @JsonNames("replyTo")
-    val replyTo: Int? = null,
+    val replyTo: Long? = null,
 
     @JsonNames("isFavorited")
     val isFavorited: Boolean? = null,
