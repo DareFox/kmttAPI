@@ -13,22 +13,22 @@ import kmtt.models.enums.SortingType
  */
 interface IPublicCommentAPI {
     /**
-     * Получить комментарии к записи
+     * Get comments to an entry
      */
     suspend fun getEntryComments(entryID: Long, sorting: SortingType): List<Comment>
 
     /**
-     * Получить комментарии к записи с ограничением по веткам
+     * Get comments of the record with thread level restriction
      */
     suspend fun getLevelComments(entryID: Long, sorting: SortingType): CommentsLevelLimited
 
     /**
-     * Получить комментарии к записи с ограничением по веткам
+     * Get comments of the record with thread restriction
      */
     suspend fun getThreadComments(entryID: Long, commentID: Long): List<Comment>
 
     /**
-     * Получить список лайкнувших комментарий
+     * Get a list of people who liked the comment
      */
     suspend fun getCommentVotes(commentID: Long): Map<String, Liker>
 }
@@ -40,7 +40,7 @@ interface IPublicCommentAPI {
  */
 interface IAuthCommentAPI: IPublicCommentAPI, Authable {
     /**
-     * Отправить количество увиденных комментариев
+     * Send the number of comments seen
      */
     suspend fun postSeenComments(entryID: Long, count: Long)
 }

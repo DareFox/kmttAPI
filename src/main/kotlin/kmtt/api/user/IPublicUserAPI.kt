@@ -8,31 +8,35 @@ import kmtt.models.subsite.Subsite
 
 interface IPublicUserAPI {
     /**
-     * Получить информацию о пользователе
+     * Get user information by ID
      */
     suspend fun getUserByID(userID: Long): Subsite
 
     /**
-     * Получить комментарии пользователя
+     * Get user comments
      *
      * Max count: 50
      */
     suspend fun getUserComments(userID: Long, count: Int, offset: Int): List<Comment>
 
     /**
-     * Получить все комментарии пользователя
+     * Get all user comments.
+     *
+     * If user has a lot of comments, it could take a long time to get all of them
      */
     suspend fun getAllUserComments(userID: Long): List<Comment>
 
     /**
-     * Получить записи пользователя
+     * Get user entries
      *
      * Max count: 50
      */
     suspend fun getUserEntries(userID: Long, count: Int, offset: Int): List<Entry>
 
     /**
-     * Получить записи пользователя
+     * Get all user entries.
+     *
+     * If user has a lot of entries, it could take a long time to get all of them
      */
     suspend fun getAllUserEntries(userID: Long): List<Entry>
 }
@@ -40,75 +44,83 @@ interface IPublicUserAPI {
 interface IAuthUserAPI : IPublicUserAPI, Authable {
 
     /**
-     * Получить информацию о текущем пользователе
+     * Get information about the current user
      */
     suspend fun getMe(): Subsite
 
     /**
-     * Получить список уведомлений
+     * Get notification list for the current user
      */
     suspend fun getMyNotifications(): List<Notification>
 
     /**
-     * Получить количество непрочитанных уведомлений у текущего пользователя
+     * Get the number of unread notifications for the current user
      */
     suspend fun getMyNotificationsCount(): Int
 
     /**
-     * Сделать уведомление прочитанным
+     * Mark the notification as read
      */
     suspend fun readNotificationsById(id: Long): Boolean
 
     /**
-     * Сделать уведомления прочитанными
+     * Mark all notifications as read
      */
     suspend fun readAllNotifications(): List<Notification>
 
     /**
-     * Получить комментарии текущего пользователя
+     * Get the current user's comments
      *
      * Max count: 50
      */
     suspend fun getMyComments(count: Int, offset: Int): List<Comment>
 
     /**
-     * Получить все комментарии текущего пользователя
+     * Get all comments of the current user.
+     *
+     * If user has a lot of comments, it could take a long time to get all of them
      */
     suspend fun getAllMyComments(): List<Comment>
 
     /**
-     * Получить записи текущего пользователя
+     * Get entries of the current user
      *
      * Max count: 50
      */
     suspend fun getMyEntries(count: Int, offset: Int): List<Entry>
 
     /**
-     * Получить все записи текущего пользователя
+     * Get all entries of the current user.
+     *
+     * If user has a lot of entries, it could take a long time to get all of them
      */
     suspend fun getAllMyEntries(): List<Entry>
 
     /**
-     * Получить избранные записи текущего пользователя
+     * Get the current user's favorites
      *
      * Max count: 50
      */
     suspend fun getMyFavoriteEntries(count: Int, offset: Int): List<Entry>
 
     /**
-     * Получить все избранные записи текущего пользователя
+     * Get all favorites of the current user.
+     *
+     * If user has a lot of entries, it could take a long time to get all of them
      */
     suspend fun getAllMyFavoriteEntries(): List<Entry>
 
     /**
-     * Получить избранные комментарии текущего пользователя
+     * Get the current user's favorite comments.
      *
      * Max count: 50
      */
     suspend fun getMyFavoriteComments(count: Int, offset: Int): List<Comment>
 
     /**
-     * Получить все избранные комментарии текущего пользователя
+     * Get all the current user's favorite comments.
+     *
+     * If user has a lot of entries, it could take a long time to get all of them
      */
     suspend fun getAllMyFavoriteComments(): List<Comment>
 }
