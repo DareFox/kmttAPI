@@ -19,7 +19,6 @@ buildscript {
     }
 }
 
-
 repositories {
     mavenCentral()
 }
@@ -52,6 +51,10 @@ publishing {
     }
 }
 
+java {
+    withSourcesJar()
+    withJavadocJar()
+}
 
 
 tasks.test {
