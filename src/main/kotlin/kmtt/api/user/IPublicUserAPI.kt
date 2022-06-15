@@ -27,6 +27,15 @@ interface IPublicUserAPI {
     suspend fun getAllUserComments(userID: Long): List<Comment>
 
     /**
+     * Get all user comments and after each get operation, run lambda block with result of get operation.
+     *
+     * If user has a lot of comments, it could take a long time to get all of them.
+     *
+     * @sample sampleEachOperation
+     */
+    suspend fun <T> getAllUserComments(userID: Long, eachGetOperation: (List<Comment>) -> T): List<Comment>
+
+    /**
      * Get user entries
      *
      * Max count: 50
@@ -39,6 +48,15 @@ interface IPublicUserAPI {
      * If user has a lot of entries, it could take a long time to get all of them
      */
     suspend fun getAllUserEntries(userID: Long): List<Entry>
+
+    /**
+     * Get all user entries and after each get operation, run lambda block with result of get operation.
+     *
+     * If user has a lot of entries, it could take a long time to get all of them.
+     *
+     * @sample sampleEachOperation
+     */
+    suspend fun <T> getAllUserEntries(userID: Long, eachGetOperation: (List<Entry>) -> T): List<Entry>
 }
 
 interface IAuthUserAPI : IPublicUserAPI, Authable {
@@ -83,6 +101,15 @@ interface IAuthUserAPI : IPublicUserAPI, Authable {
     suspend fun getAllMyComments(): List<Comment>
 
     /**
+     * Get all comments of the current user and after each get operation, run lambda block with result of get operation.
+     *
+     * If user has a lot of comments, it could take a long time to get all of them.
+     *
+     * @sample sampleEachOperation
+     */
+    suspend fun <T> getAllMyComments(eachGetOperation: (List<Comment>) -> T): List<Comment>
+
+    /**
      * Get entries of the current user
      *
      * Max count: 50
@@ -95,6 +122,15 @@ interface IAuthUserAPI : IPublicUserAPI, Authable {
      * If user has a lot of entries, it could take a long time to get all of them
      */
     suspend fun getAllMyEntries(): List<Entry>
+
+    /**
+     * Get all entries of the current user and after each get operation, run lambda block with result of get operation.
+     *
+     * If user has a lot of entries, it could take a long time to get all of them.
+     *
+     * @sample sampleEachOperation
+     */
+    suspend fun <T> getAllMyEntries(eachGetOperation: (List<Entry>) -> T): List<Entry>
 
     /**
      * Get the current user's favorites
@@ -111,6 +147,15 @@ interface IAuthUserAPI : IPublicUserAPI, Authable {
     suspend fun getAllMyFavoriteEntries(): List<Entry>
 
     /**
+     * Get all favorite entries of the current user and after each get operation, run lambda block with result of get operation.
+     *
+     * If user has a lot of favorites, it could take a long time to get all of them.
+     *
+     * @sample sampleEachOperation
+     */
+    suspend fun <T> getAllMyFavoriteEntries(eachGetOperation: (List<Entry>) -> T): List<Entry>
+
+    /**
      * Get the current user's favorite comments.
      *
      * Max count: 50
@@ -123,4 +168,13 @@ interface IAuthUserAPI : IPublicUserAPI, Authable {
      * If user has a lot of entries, it could take a long time to get all of them
      */
     suspend fun getAllMyFavoriteComments(): List<Comment>
+
+    /**
+     * Get all favorite comments of the current user and after each get operation, run lambda block with result of get operation.
+     *
+     * If user has a lot of favorite comments, it could take a long time to get all of them.
+     *
+     * @sample sampleEachOperation
+     */
+    suspend fun <T> getAllMyFavoriteComments(eachGetOperation: (List<Comment>) -> T): List<Comment>
 }
