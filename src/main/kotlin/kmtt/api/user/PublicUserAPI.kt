@@ -11,6 +11,7 @@ import kmtt.models.generic.SuccessResponse
 import kmtt.models.subsite.Subsite
 import kmtt.util.addTokenIfNotNull
 import kmtt.util.apiURL
+import kotlinx.coroutines.yield
 
 internal class PublicUserAPI(private val httpClient: IHttpClient, private val site: Website) : IPublicUserAPI {
     // Some public requests have restrictions without authentication.
@@ -59,7 +60,7 @@ internal class PublicUserAPI(private val httpClient: IHttpClient, private val si
         return getAllUserComments(userID) {}
     }
 
-    override suspend fun <T> getAllUserComments(userID: Long, eachGetOperation: (List<Comment>) -> T): List<Comment> {
+    override suspend fun <T> getAllUserComments(userID: Long, eachGetOperation: suspend (List<Comment>) -> T): List<Comment> {
         val user = getUserByID(userID)
 
         val commentCount = user.counters?.comments
@@ -70,6 +71,7 @@ internal class PublicUserAPI(private val httpClient: IHttpClient, private val si
         val comments = mutableListOf<Comment>()
 
         for (offset in 0 until commentCount step 50) {
+            yield()
             val comment = getUserComments(userID, 50, offset.toInt())
             eachGetOperation(comment)
             comments += comment
@@ -102,7 +104,7 @@ internal class PublicUserAPI(private val httpClient: IHttpClient, private val si
         return getAllUserEntries(userID) {}
     }
 
-    override suspend fun <T> getAllUserEntries(userID: Long, eachGetOperation: (List<Entry>) -> T): List<Entry> {
+    override suspend fun <T> getAllUserEntries(userID: Long, eachGetOperation: suspend (List<Entry>) -> T): List<Entry> {
         val user = getUserByID(userID)
 
         val entriesCounter = user.counters?.entries
@@ -113,6 +115,7 @@ internal class PublicUserAPI(private val httpClient: IHttpClient, private val si
         val entries = mutableListOf<Entry>()
 
         for (offset in 0 until entriesCounter step 50) {
+            yield()
             val entry = getUserEntries(userID, 50, offset.toInt())
             eachGetOperation(entry)
             entries += entry

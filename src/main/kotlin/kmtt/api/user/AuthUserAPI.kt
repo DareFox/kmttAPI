@@ -12,6 +12,7 @@ import kmtt.models.generic.SuccessResponse
 import kmtt.models.subsite.Subsite
 import kmtt.util.addTokenIfNotNull
 import kmtt.util.apiURL
+import kotlinx.coroutines.yield
 
 internal class AuthUserAPI(
     private val httpClient: IHttpClient,
@@ -105,7 +106,7 @@ internal class AuthUserAPI(
        return getAllMyComments { }
     }
 
-    override suspend fun <T> getAllMyComments(eachGetOperation: (List<Comment>) -> T): List<Comment> {
+    override suspend fun <T> getAllMyComments(eachGetOperation: suspend (List<Comment>) -> T): List<Comment> {
         val user = getMe()
 
         val commentCount = user.counters?.comments
@@ -116,6 +117,7 @@ internal class AuthUserAPI(
         val comments = mutableListOf<Comment>()
 
         for (offset in 0 until commentCount step 50) {
+            yield()
             val comment = getMyComments(50, offset.toInt())
             eachGetOperation(comment)
             comments += comment
@@ -148,7 +150,7 @@ internal class AuthUserAPI(
         return getAllMyEntries {  }
     }
 
-    override suspend fun <T> getAllMyEntries(eachGetOperation: (List<Entry>) -> T): List<Entry> {
+    override suspend fun <T> getAllMyEntries(eachGetOperation: suspend (List<Entry>) -> T): List<Entry> {
         val user = getMe()
 
         val entriesCounter = user.counters?.entries
@@ -159,6 +161,7 @@ internal class AuthUserAPI(
         val entries = mutableListOf<Entry>()
 
         for (offset in 0 until entriesCounter step 50) {
+            yield()
             val entry = getMyEntries(50, offset.toInt())
             eachGetOperation(entry)
             entries += entry
@@ -191,7 +194,7 @@ internal class AuthUserAPI(
         return getAllMyFavoriteEntries {  }
     }
 
-    override suspend fun <T> getAllMyFavoriteEntries(eachGetOperation: (List<Entry>) -> T): List<Entry> {
+    override suspend fun <T> getAllMyFavoriteEntries(eachGetOperation: suspend (List<Entry>) -> T): List<Entry> {
         val user = getMe()
 
         val entriesCounter = user.counters?.favorites
@@ -202,6 +205,7 @@ internal class AuthUserAPI(
         val entries = mutableListOf<Entry>()
 
         for (offset in 0 until entriesCounter step 50) {
+            yield()
             val entry = getMyFavoriteEntries(50, offset.toInt())
             eachGetOperation(entry)
             entries += entry
@@ -234,7 +238,7 @@ internal class AuthUserAPI(
         return getAllMyFavoriteComments {  }
     }
 
-    override suspend fun <T> getAllMyFavoriteComments(eachGetOperation: (List<Comment>) -> T): List<Comment> {
+    override suspend fun <T> getAllMyFavoriteComments(eachGetOperation: suspend (List<Comment>) -> T): List<Comment> {
         val user = getMe()
 
         val entriesCounter = user.counters?.favorites
@@ -245,6 +249,7 @@ internal class AuthUserAPI(
         val comments = mutableListOf<Comment>()
 
         for (offset in 0 until entriesCounter step 50) {
+            yield()
             val comment = getMyFavoriteComments( 50, offset.toInt())
             eachGetOperation(comment)
             comments += comment
