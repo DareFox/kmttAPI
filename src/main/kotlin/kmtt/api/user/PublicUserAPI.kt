@@ -56,6 +56,10 @@ internal class PublicUserAPI(private val httpClient: IHttpClient, private val si
     }
 
     override suspend fun getAllUserComments(userID: Long): List<Comment> {
+        return getAllUserComments(userID) {}
+    }
+
+    override suspend fun <T> getAllUserComments(userID: Long, eachGetOperation: (List<Comment>) -> T): List<Comment> {
         val user = getUserByID(userID)
 
         val commentCount = user.counters?.comments
@@ -67,7 +71,7 @@ internal class PublicUserAPI(private val httpClient: IHttpClient, private val si
 
         for (offset in 0 until commentCount step 50) {
             val comment = getUserComments(userID, 50, offset.toInt())
-
+            eachGetOperation(comment)
             comments += comment
         }
 
@@ -95,6 +99,10 @@ internal class PublicUserAPI(private val httpClient: IHttpClient, private val si
     }
 
     override suspend fun getAllUserEntries(userID: Long): List<Entry> {
+        return getAllUserEntries(userID) {}
+    }
+
+    override suspend fun <T> getAllUserEntries(userID: Long, eachGetOperation: (List<Entry>) -> T): List<Entry> {
         val user = getUserByID(userID)
 
         val entriesCounter = user.counters?.entries
@@ -106,7 +114,7 @@ internal class PublicUserAPI(private val httpClient: IHttpClient, private val si
 
         for (offset in 0 until entriesCounter step 50) {
             val entry = getUserEntries(userID, 50, offset.toInt())
-
+            eachGetOperation(entry)
             entries += entry
         }
 
