@@ -102,18 +102,22 @@ internal class AuthUserAPI(
     }
 
     override suspend fun getAllMyComments(): List<Comment> {
+       return getAllMyComments { }
+    }
+
+    override suspend fun <T> getAllMyComments(eachGetOperation: (List<Comment>) -> T): List<Comment> {
         val user = getMe()
 
         val commentCount = user.counters?.comments
         requireNotNull(commentCount) {
-            "comment count in null"
+            "comment count is null"
         }
 
         val comments = mutableListOf<Comment>()
 
         for (offset in 0 until commentCount step 50) {
             val comment = getMyComments(50, offset.toInt())
-
+            eachGetOperation(comment)
             comments += comment
         }
 
@@ -141,18 +145,22 @@ internal class AuthUserAPI(
     }
 
     override suspend fun getAllMyEntries(): List<Entry> {
+        return getAllMyEntries {  }
+    }
+
+    override suspend fun <T> getAllMyEntries(eachGetOperation: (List<Entry>) -> T): List<Entry> {
         val user = getMe()
 
         val entriesCounter = user.counters?.entries
         requireNotNull(entriesCounter) {
-            "comment count in null"
+            "entry count is null"
         }
 
         val entries = mutableListOf<Entry>()
 
         for (offset in 0 until entriesCounter step 50) {
             val entry = getMyEntries(50, offset.toInt())
-
+            eachGetOperation(entry)
             entries += entry
         }
 
@@ -180,18 +188,22 @@ internal class AuthUserAPI(
     }
 
     override suspend fun getAllMyFavoriteEntries(): List<Entry> {
+        return getAllMyFavoriteEntries {  }
+    }
+
+    override suspend fun <T> getAllMyFavoriteEntries(eachGetOperation: (List<Entry>) -> T): List<Entry> {
         val user = getMe()
 
         val entriesCounter = user.counters?.favorites
         requireNotNull(entriesCounter) {
-            "comment count in null"
+            "entry count is null"
         }
 
         val entries = mutableListOf<Entry>()
 
         for (offset in 0 until entriesCounter step 50) {
             val entry = getMyFavoriteEntries(50, offset.toInt())
-
+            eachGetOperation(entry)
             entries += entry
         }
 
@@ -219,18 +231,22 @@ internal class AuthUserAPI(
     }
 
     override suspend fun getAllMyFavoriteComments(): List<Comment> {
+        return getAllMyFavoriteComments {  }
+    }
+
+    override suspend fun <T> getAllMyFavoriteComments(eachGetOperation: (List<Comment>) -> T): List<Comment> {
         val user = getMe()
 
         val entriesCounter = user.counters?.favorites
         requireNotNull(entriesCounter) {
-            "comment count in null"
+            "comment count iы null"
         }
 
         val comments = mutableListOf<Comment>()
 
         for (offset in 0 until entriesCounter step 50) {
             val comment = getMyFavoriteComments( 50, offset.toInt())
-
+            eachGetOperation(comment)
             comments += comment
         }
 
