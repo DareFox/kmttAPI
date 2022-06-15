@@ -3,9 +3,8 @@ package kmtt.util
 import kmtt.models.comment.Comment
 
 fun Collection<Comment>.toTree(): List<CommentNode> {
-    val mutableList = this.toMutableList()
-    val topLevelComments = mutableList.filter { it.replyTo == 0L || it.replyTo == null }
-    val replyMap = mutableList.groupBy { it.replyTo }
+    val topLevelComments = this.filter { it.replyTo == 0L || it.replyTo == null }
+    val replyMap = this.groupBy { it.replyTo }
 
     return topLevelComments.map {
         createRecursiveNode(it, replyMap)
