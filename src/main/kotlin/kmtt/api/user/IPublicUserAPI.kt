@@ -33,7 +33,7 @@ interface IPublicUserAPI {
      *
      * @sample sampleEachOperation
      */
-    suspend fun <T> getAllUserComments(userID: Long, eachGetOperation: (List<Comment>) -> T): List<Comment>
+    suspend fun <T> getAllUserComments(userID: Long, eachGetOperation: suspend (List<Comment>) -> T): List<Comment>
 
     /**
      * Get user entries
@@ -56,7 +56,7 @@ interface IPublicUserAPI {
      *
      * @sample sampleEachOperation
      */
-    suspend fun <T> getAllUserEntries(userID: Long, eachGetOperation: (List<Entry>) -> T): List<Entry>
+    suspend fun <T> getAllUserEntries(userID: Long, eachGetOperation: suspend (List<Entry>) -> T): List<Entry>
 }
 
 interface IAuthUserAPI : IPublicUserAPI, Authable {
@@ -107,7 +107,7 @@ interface IAuthUserAPI : IPublicUserAPI, Authable {
      *
      * @sample sampleEachOperation
      */
-    suspend fun <T> getAllMyComments(eachGetOperation: (List<Comment>) -> T): List<Comment>
+    suspend fun <T> getAllMyComments(eachGetOperation: suspend (List<Comment>) -> T): List<Comment>
 
     /**
      * Get entries of the current user
@@ -130,7 +130,7 @@ interface IAuthUserAPI : IPublicUserAPI, Authable {
      *
      * @sample sampleEachOperation
      */
-    suspend fun <T> getAllMyEntries(eachGetOperation: (List<Entry>) -> T): List<Entry>
+    suspend fun <T> getAllMyEntries(eachGetOperation: suspend (List<Entry>) -> T): List<Entry>
 
     /**
      * Get the current user's favorites
@@ -153,7 +153,7 @@ interface IAuthUserAPI : IPublicUserAPI, Authable {
      *
      * @sample sampleEachOperation
      */
-    suspend fun <T> getAllMyFavoriteEntries(eachGetOperation: (List<Entry>) -> T): List<Entry>
+    suspend fun <T> getAllMyFavoriteEntries(eachGetOperation: suspend (List<Entry>) -> T): List<Entry>
 
     /**
      * Get the current user's favorite comments.
@@ -176,5 +176,5 @@ interface IAuthUserAPI : IPublicUserAPI, Authable {
      *
      * @sample sampleEachOperation
      */
-    suspend fun <T> getAllMyFavoriteComments(eachGetOperation: (List<Comment>) -> T): List<Comment>
+    suspend fun <T> getAllMyFavoriteComments(eachGetOperation: suspend (List<Comment>) -> T): List<Comment>
 }
