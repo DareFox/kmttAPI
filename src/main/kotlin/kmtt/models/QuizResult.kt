@@ -14,8 +14,6 @@ import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.JsonNames
 
 /**
- *
- *
  * @param items Ассоциативный массив ID элемента опроса -> объект с информацией
  * @param winner Id выигравшего элемента
  * @param userVoted Id выбранного пользователем элемента
@@ -25,11 +23,10 @@ import kotlinx.serialization.json.JsonNames
 @OptIn(ExperimentalSerializationApi::class)
 @kotlinx.serialization.Serializable
 
-data class QuizResultResponseResult(
-
+data class QuizResult(
     /* Ассоциативный массив ID элемента опроса -> объект с информацией */
     @JsonNames("items")
-    val items: Map<String, Int>? = null,
+    val items: Map<String, QuizItem>? = null,
 
     /* Id выигравшего элемента */
     @JsonNames("winner")
@@ -43,6 +40,12 @@ data class QuizResultResponseResult(
     // TODO Any was here
     @JsonNames("randomVotedUsers")
     val randomVotedUsers: Map<String, List<Subsite>>? = null,
+)
 
-    )
-
+@kotlinx.serialization.Serializable
+data class QuizItem(
+    val count: Int,
+    val total: Int,
+    val isWinner: Boolean,
+    val percentage: Int
+)
