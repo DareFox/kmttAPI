@@ -28,9 +28,8 @@ import kotlinx.serialization.json.JsonNames
 @OptIn(ExperimentalSerializationApi::class)
 @kotlinx.serialization.Serializable
 data class AdditionalData(
-
     @JsonNames("type")
-    val type: kmtt.models.AdditionalData.Type? = null,
+    val type: String? = null,
 
     @JsonNames("url")
     val url: String? = null,
@@ -48,23 +47,5 @@ data class AdditionalData(
     val hasAudio: Boolean? = null,
 
     ) {
-
-    /**
-     * Type of media file
-     */
-    @OptIn(ExperimentalSerializationApi::class)
-    @kotlinx.serialization.Serializable
-    enum class Type() {
-        @JsonNames("gif")
-        GIF(),
-        @JsonNames("jpg", "jpeg")
-        JPG(),
-        @JsonNames("png")
-        PNG(),
-        @JsonNames("webp")
-        WEBP(),
-        @JsonNames("mp4")
-        MP4()
-    }
 }
 
