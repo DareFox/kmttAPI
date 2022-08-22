@@ -22,6 +22,10 @@ $dokka.location:kmtt.api.entry/IPublicEntryAPI///PointingToDeclaration/kmtt-a-p
 $dokka.location:kmtt.api.entry/IPublicEntryAPI/getEntry/#kotlin.Long/PointingToDeclaration/kmtt-a-p-i/kmtt.api.entry/-i-public-entry-a-p-i/get-entry.html
 $dokka.location:kmtt.api.entry/IPublicEntryAPI/getEntry/#kotlin.String/PointingToDeclaration/kmtt-a-p-i/kmtt.api.entry/-i-public-entry-a-p-i/get-entry.html
 $dokka.location:kmtt.api.entry/IPublicEntryAPI/getPopularEntriesByEntry/#kotlin.Long/PointingToDeclaration/kmtt-a-p-i/kmtt.api.entry/-i-public-entry-a-p-i/get-popular-entries-by-entry.html
+$dokka.location:kmtt.api.quiz////PointingToDeclaration/kmtt-a-p-i/kmtt.api.quiz/index.html
+$dokka.location:kmtt.api.quiz/IAuthQuizAPI///PointingToDeclaration/kmtt-a-p-i/kmtt.api.quiz/-i-auth-quiz-a-p-i/index.html
+$dokka.location:kmtt.api.quiz/IPublicQuizAPI///PointingToDeclaration/kmtt-a-p-i/kmtt.api.quiz/-i-public-quiz-a-p-i/index.html
+$dokka.location:kmtt.api.quiz/IPublicQuizAPI/getResults/#kotlin.String/PointingToDeclaration/kmtt-a-p-i/kmtt.api.quiz/-i-public-quiz-a-p-i/get-results.html
 $dokka.location:kmtt.api.user////PointingToDeclaration/kmtt-a-p-i/kmtt.api.user/index.html
 $dokka.location:kmtt.api.user/IAuthUserAPI///PointingToDeclaration/kmtt-a-p-i/kmtt.api.user/-i-auth-user-a-p-i/index.html
 $dokka.location:kmtt.api.user/IAuthUserAPI/getAllMyComments/#/PointingToDeclaration/kmtt-a-p-i/kmtt.api.user/-i-auth-user-a-p-i/get-all-my-comments.html
@@ -64,6 +68,7 @@ $dokka.location:kmtt.impl/IAuthKmtt/user/#/PointingToDeclaration/kmtt-a-p-i/kmt
 $dokka.location:kmtt.impl/IPublicKmtt///PointingToDeclaration/kmtt-a-p-i/kmtt.impl/-i-public-kmtt/index.html
 $dokka.location:kmtt.impl/IPublicKmtt/comments/#/PointingToDeclaration/kmtt-a-p-i/kmtt.impl/-i-public-kmtt/comments.html
 $dokka.location:kmtt.impl/IPublicKmtt/entry/#/PointingToDeclaration/kmtt-a-p-i/kmtt.impl/-i-public-kmtt/entry.html
+$dokka.location:kmtt.impl/IPublicKmtt/quiz/#/PointingToDeclaration/kmtt-a-p-i/kmtt.impl/-i-public-kmtt/quiz.html
 $dokka.location:kmtt.impl/IPublicKmtt/user/#/PointingToDeclaration/kmtt-a-p-i/kmtt.impl/-i-public-kmtt/user.html
 $dokka.location:kmtt.models.attach////PointingToDeclaration/kmtt-a-p-i/kmtt.models.attach/index.html
 $dokka.location:kmtt.models.attach/Attach///PointingToDeclaration/kmtt-a-p-i/kmtt.models.attach/-attach/index.html
@@ -516,12 +521,18 @@ $dokka.location:kmtt.models/OperationNestedStatusResponseResult/result/#/Pointin
 $dokka.location:kmtt.models/PushSettingsResponse///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-push-settings-response/index.html
 $dokka.location:kmtt.models/PushSettingsResponse/PushSettingsResponse/#kotlin.Int?/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-push-settings-response/-push-settings-response.html
 $dokka.location:kmtt.models/PushSettingsResponse/result/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-push-settings-response/result.html
-$dokka.location:kmtt.models/QuizResultResponseResult///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-quiz-result-response-result/index.html
-$dokka.location:kmtt.models/QuizResultResponseResult/QuizResultResponseResult/#kotlin.collections.Map[kotlin.String,kotlin.Int]?#kotlin.String?#kotlin.String?#kotlin.collections.Map[kotlin.String,kotlin.collections.List[kmtt.models.subsite.Subsite]]?/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-quiz-result-response-result/-quiz-result-response-result.html
-$dokka.location:kmtt.models/QuizResultResponseResult/items/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-quiz-result-response-result/items.html
-$dokka.location:kmtt.models/QuizResultResponseResult/randomVotedUsers/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-quiz-result-response-result/random-voted-users.html
-$dokka.location:kmtt.models/QuizResultResponseResult/userVoted/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-quiz-result-response-result/user-voted.html
-$dokka.location:kmtt.models/QuizResultResponseResult/winner/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-quiz-result-response-result/winner.html
+$dokka.location:kmtt.models/QuizItem///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-quiz-item/index.html
+$dokka.location:kmtt.models/QuizItem/QuizItem/#kotlin.Int#kotlin.Int#kotlin.Boolean#kotlin.Int/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-quiz-item/-quiz-item.html
+$dokka.location:kmtt.models/QuizItem/count/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-quiz-item/count.html
+$dokka.location:kmtt.models/QuizItem/isWinner/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-quiz-item/is-winner.html
+$dokka.location:kmtt.models/QuizItem/percentage/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-quiz-item/percentage.html
+$dokka.location:kmtt.models/QuizItem/total/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-quiz-item/total.html
+$dokka.location:kmtt.models/QuizResult///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-quiz-result/index.html
+$dokka.location:kmtt.models/QuizResult/QuizResult/#kotlin.collections.Map[kotlin.String,kmtt.models.QuizItem]?#kotlin.String?#kotlin.String?#kotlin.collections.Map[kotlin.String,kotlin.collections.List[kmtt.models.subsite.Subsite]]?/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-quiz-result/-quiz-result.html
+$dokka.location:kmtt.models/QuizResult/items/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-quiz-result/items.html
+$dokka.location:kmtt.models/QuizResult/randomVotedUsers/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-quiz-result/random-voted-users.html
+$dokka.location:kmtt.models/QuizResult/userVoted/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-quiz-result/user-voted.html
+$dokka.location:kmtt.models/QuizResult/winner/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-quiz-result/winner.html
 $dokka.location:kmtt.models/Rate///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-rate/index.html
 $dokka.location:kmtt.models/Rate/Rate/#kotlin.String?#kotlin.Long?#kotlin.String?/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-rate/-rate.html
 $dokka.location:kmtt.models/Rate/change/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-rate/change.html
@@ -621,6 +632,7 @@ kmtt.api.auth
 kmtt.api.comment
 kmtt.api.common
 kmtt.api.entry
+kmtt.api.quiz
 kmtt.api.user
 kmtt.exception
 kmtt.impl
