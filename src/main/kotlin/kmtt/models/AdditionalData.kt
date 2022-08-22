@@ -62,7 +62,9 @@ data class AdditionalData(
         @JsonNames("png")
         PNG(),
         @JsonNames("webp")
-        WEBP()
+        WEBP(),
+        @JsonNames("mp4")
+        MP4()
     }
 }
 
