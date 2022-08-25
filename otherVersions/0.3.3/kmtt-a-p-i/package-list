@@ -619,10 +619,10 @@ $dokka.location:kmtt.util////PointingToDeclaration/kmtt-a-p-i/kmtt.util/index.h
 $dokka.location:kmtt.util//addTokenIfNotNull/io.ktor.client.request.HttpRequestBuilder#kotlin.String?/PointingToDeclaration/kmtt-a-p-i/kmtt.util/add-token-if-not-null.html
 $dokka.location:kmtt.util//toTree/kotlin.collections.Collection[kmtt.models.comment.Comment]#/PointingToDeclaration/kmtt-a-p-i/kmtt.util/to-tree.html
 $dokka.location:kmtt.util/CommentNode///PointingToDeclaration/kmtt-a-p-i/kmtt.util/-comment-node/index.html
-$dokka.location:kmtt.util/CommentNode/CommentNode/#kmtt.util.CommentNode?#kmtt.models.comment.Comment/PointingToDeclaration/kmtt-a-p-i/kmtt.util/-comment-node/-comment-node.html
+$dokka.location:kmtt.util/CommentNode/CommentNode/#kmtt.models.comment.Comment#kotlin.collections.List[kmtt.util.CommentNode]/PointingToDeclaration/kmtt-a-p-i/kmtt.util/-comment-node/-comment-node.html
 $dokka.location:kmtt.util/CommentNode/children/#/PointingToDeclaration/kmtt-a-p-i/kmtt.util/-comment-node/children.html
-$dokka.location:kmtt.util/CommentNode/nodeValue/#/PointingToDeclaration/kmtt-a-p-i/kmtt.util/-comment-node/node-value.html
-$dokka.location:kmtt.util/CommentNode/parent/#/PointingToDeclaration/kmtt-a-p-i/kmtt.util/-comment-node/parent.html
+$dokka.location:kmtt.util/CommentNode/nodeChildren/#/PointingToDeclaration/kmtt-a-p-i/kmtt.util/-comment-node/node-children.html
+$dokka.location:kmtt.util/CommentNode/value/#/PointingToDeclaration/kmtt-a-p-i/kmtt.util/-comment-node/value.html
 kmtt.api.auth
 kmtt.api.comment
 kmtt.api.common

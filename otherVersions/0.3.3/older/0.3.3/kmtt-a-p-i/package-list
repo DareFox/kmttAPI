@@ -333,13 +333,8 @@ $dokka.location:kmtt.models.webhook/WebhookDeleteResponse///PointingToDeclaratio
 $dokka.location:kmtt.models.webhook/WebhookDeleteResponse/WebhookDeleteResponse/#kotlin.Boolean?/PointingToDeclaration/kmtt-a-p-i/kmtt.models.webhook/-webhook-delete-response/-webhook-delete-response.html
 $dokka.location:kmtt.models.webhook/WebhookDeleteResponse/success/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models.webhook/-webhook-delete-response/success.html
 $dokka.location:kmtt.models////PointingToDeclaration/kmtt-a-p-i/kmtt.models/index.html
-$dokka.location:kmtt.models/AdditionalData.Type.GIF///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-additional-data/-type/-g-i-f/index.html
-$dokka.location:kmtt.models/AdditionalData.Type.JPG///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-additional-data/-type/-j-p-g/index.html
-$dokka.location:kmtt.models/AdditionalData.Type.PNG///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-additional-data/-type/-p-n-g/index.html
-$dokka.location:kmtt.models/AdditionalData.Type.WEBP///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-additional-data/-type/-w-e-b-p/index.html
-$dokka.location:kmtt.models/AdditionalData.Type///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-additional-data/-type/index.html
 $dokka.location:kmtt.models/AdditionalData///PointingToDeclaration/kmtt-a-p-i/kmtt.models/-additional-data/index.html
-$dokka.location:kmtt.models/AdditionalData/AdditionalData/#kmtt.models.AdditionalData.Type?#kotlin.String?#kotlin.Long?#kotlin.String?#kotlin.Long?#kotlin.Boolean?/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-additional-data/-additional-data.html
+$dokka.location:kmtt.models/AdditionalData/AdditionalData/#kotlin.String?#kotlin.String?#kotlin.Long?#kotlin.String?#kotlin.Long?#kotlin.Boolean?/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-additional-data/-additional-data.html
 $dokka.location:kmtt.models/AdditionalData/duration/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-additional-data/duration.html
 $dokka.location:kmtt.models/AdditionalData/hasAudio/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-additional-data/has-audio.html
 $dokka.location:kmtt.models/AdditionalData/propertySize/#/PointingToDeclaration/kmtt-a-p-i/kmtt.models/-additional-data/property-size.html
