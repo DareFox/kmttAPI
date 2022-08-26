@@ -41,8 +41,8 @@ data class Attach(
     @JsonNames("uuid")
     val uuid: String? = null,
 
-    @JsonNames("additionalData")
-    val additionalData: String? = null,
+    @JsonNames("data")
+    val data: AttachmentData? = null,
 
     @JsonNames("type")
     val type: String? = null,
@@ -76,6 +76,28 @@ data class Attach(
 
     @JsonNames("image")
     val image: AttachImage? = null,
+)
 
-    )
+@kotlinx.serialization.Serializable
+data class AttachmentData(
+    val width: Int? = null,
+    val height: Int? = null,
+    val time: Int? = null,
+    val thumbnail: AttachmentThumbnail? = null
+)
+@kotlinx.serialization.Serializable
+data class AttachmentThumbnail(
+    val type: String? = null,
+    val data: ThumbnailData? = null
+)
+@kotlinx.serialization.Serializable
+data class ThumbnailData(
+    val uuid: String? = null,
+    val width: Int? = null,
+    val height: Int? = null,
+    val size: Int? = null,
+    val type: String? = null,
+    val hash: String? = null,
+)
 
+// TODO: Add external service with empty array check

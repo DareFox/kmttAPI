@@ -34,9 +34,9 @@ import kotlinx.serialization.json.JsonNames
 
 data class Media(
 
-    /* Тип медиафайла:   * `1` - TYPE_IMAGE   * `2` - TYPE_VIDEO  */
+    /* Тип медиафайла */
     @JsonNames("type")
-    val type: Media.Type? = null,
+    val type: Type? = null,
 
     @JsonNames("imageUrl")
     val imageUrl: String? = null,
