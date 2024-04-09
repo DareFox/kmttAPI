@@ -1,3 +1,8 @@
+> [!CAUTION]
+> Archived due to API access removal and other often breaking changes on the DTF/VC/TJ site
+> 
+> Library is no longer supported and will no longer receive updates
+
 # kmttAPI
 API for cmtt.ru projects (DTF, VC, TJ) written in Kotlin/JVM
 
